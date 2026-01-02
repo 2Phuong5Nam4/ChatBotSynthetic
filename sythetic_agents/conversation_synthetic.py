@@ -8,14 +8,23 @@ from langchain.messages import SystemMessage
 from pathlib import Path
 import json
 from dotenv import load_dotenv
+import asyncio
 
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 raw_conversation_path = Path(__file__).parent.parent / "data" / "raw_conversation.json"
-RAW_CONVERSATIONS = [
-    conversation["messages"]
-    for conversation in json.load(open(raw_conversation_path, "r"))
-]
+synthetic_conversation_path = (
+    Path(__file__).parent.parent / "data" / "synthetic_conversation.json"
+)
+
+with open(raw_conversation_path, "r", encoding="utf-8") as f:
+    RAW_CONVERSATIONS = json.load(f)
+
+
+def conversation_to_prompt(conversation: dict) -> str:
+    """Return a JSON string of a conversation without the Script field."""
+    cleaned = {k: v for k, v in conversation.items() if k != "Script"}
+    return json.dumps(cleaned, ensure_ascii=False, indent=2)
 
 
 class SyntheticConversations(BaseModel):
@@ -44,6 +53,7 @@ Bạn là agent chuyên tạo sinh dữ liệu cho các hội thoại giữa kh�
 # Goals
 - Tạo đúng 3 đoạn hội thoại synthetic dựa trên hội thoại gốc, trong đó 1 conversation là perfect case, 2 conversation còn lại là edge case (khách hàng hỏi ngoài lề, tỏ ra khó chịu, viết tắt, không trả lời, ...).
 - Trong mỗi conversation, user và agent đều có thể hỏi/trả lời nhiều lần.
+- Các cuộc hội thoại sinh ra phải giống thực tế nhất có thể.
 
 # Steps
 1. Phân tích kĩ từng câu hỏi của user và so sánh với tổng quan các quy trình hiện tại để xác định quy trình nào phù hợp.
@@ -81,8 +91,8 @@ class ConversationSyntheticAgent:
             system_prompt=SystemMessage(content=SYSTEM_PROMPT),
         )
 
-    def invoke(self, original_conversation: str) -> SyntheticConversations:
-        res = self.agent.invoke(
+    async def ainvoke(self, original_conversation: str) -> SyntheticConversations:
+        res = await self.agent.ainvoke(
             {
                 "messages": [
                     {
@@ -100,8 +110,39 @@ Hãy tạo các hội thoại synthetic dựa trên hội thoại gốc sau:
         return SyntheticConversations.model_validate(res["structured_response"])
 
 
-if __name__ == "__main__":
+async def main():
+    print("Starting synthetic conversation generation...")
     agent = ConversationSyntheticAgent()
-    conversation_1 = RAW_CONVERSATIONS[0]
-    res = agent.invoke(conversation_1)
-    print(f"output: {res}")
+
+    for idx, conversation in enumerate(RAW_CONVERSATIONS):
+        print(f"\nProcessing conversation {idx+1}/{len(RAW_CONVERSATIONS)}")
+        all_convs = []
+        if synthetic_conversation_path.exists():
+            try:
+                with open(synthetic_conversation_path, "r", encoding="utf-8") as f:
+                    content = f.read().strip()
+                    if content:
+                        all_convs = json.loads(content)
+                print(f"Loaded {len(all_convs)} existing synthetic conversations.")
+            except json.JSONDecodeError:
+                # Corrupted or partially written file; start fresh but don't crash
+                print(
+                    "Warning: Corrupted or partially written synthetic conversation file. Starting fresh."
+                )
+                all_convs = []
+
+        prompt = conversation_to_prompt(conversation)
+        print("Prompt to agent:\n", prompt)
+        res = await agent.ainvoke(prompt)
+        all_convs.extend([conv.model_dump() for conv in res.synthetic_conversations])
+
+        print(
+            f"Writing {len(all_convs)} synthetic conversations to {synthetic_conversation_path}"
+        )
+        with open(synthetic_conversation_path, "w", encoding="utf-8") as f:
+            json.dump(all_convs, f, ensure_ascii=False, indent=2)
+    print("Synthetic conversation generation completed.")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

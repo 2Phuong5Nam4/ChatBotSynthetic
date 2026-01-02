@@ -7,4 +7,5 @@ requires-python = ">=3.13"
 dependencies = [
     "dotenv>=0.9.9",
     "langchain[openai]>=1.2.0",
+    "langgraph>=1.0.5",
 ]

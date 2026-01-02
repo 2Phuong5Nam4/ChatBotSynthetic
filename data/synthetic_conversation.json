@@ -1,0 +1,2920 @@
+[
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Anh/chị ơi, outlet Thượng Hải - 460 Minh Khai mã 63235514 đăng nhập bị khóa, báo sai mật khẩu. Nhờ hỗ trợ lấy lại mật khẩu."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận outlet Thượng Hải, mã 63235514 đúng không ạ? Anh/chị cho em xem ảnh lỗi (nếu có) để kiểm tra chi tiết nhé.\n\nVới lỗi bị khóa do nhập sai nhiều lần, anh/chị vui lòng vào app và nhấn \"Quên mật khẩu\", nhập mã outlet 63235514, nhận OTP gửi về SĐT đăng ký, sau đó tạo mật khẩu mới (12 ký tự, không trùng mật khẩu cũ).\n\nSau đó đăng nhập bằng mã outlet và mật khẩu mới. Anh/chị thao tác thử giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Dạ, em thực hiện được rồi. Cám ơn nhiều."
+      },
+      {
+        "role": "assistant",
+        "content": "Em cảm ơn anh/chị đã xác nhận. Nếu cần hỗ trợ gì thêm về tài khoản hoặc app, anh/chị cứ liên hệ lại kênh Zalo Heineken HVN Đặt Hàng hoặc tổng đài 1800234522 (phím 1) giúp em nha."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Tôi quên mật khẩu HVN, giờ đăng nhập bị báo lỗi. Cửa hàng của tôi tên Thượng Hải, ở 460 Minh Khai. Mã 63235514. Sao tài khoản lại bị khóa vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cung cấp cho em ảnh chụp màn hình lỗi để em kiểm tra cho cụ thể nhé. Việc tài khoản bị khóa thường do nhập sai mật khẩu nhiều lần.\n\nAnh/chị vào phần \"Quên mật khẩu\" trên app, nhập mã cửa hàng 63235514, hệ thống gửi OTP tới SĐT đăng ký. Anh/chị tạo mật khẩu mới theo hướng dẫn rồi đăng nhập lại. Mật khẩu mới cần đủ 12 ký tự và không dùng lại mật khẩu cũ nhé."
+      },
+      {
+        "role": "user",
+        "content": "Nếu tôi quên số điện thoại đăng ký thì lấy lại được không? Hay phải tạo tài khoản mới?"
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu anh/chị quên SĐT đăng ký hoặc đã đổi SĐT, vui lòng cung cấp thông tin: tên cửa hàng, mã cửa hàng, tên người liên hệ và SĐT mới. Em sẽ ghi nhận và chuyển bộ phận liên quan hỗ trợ cập nhật lại SĐT giúp anh/chị. Không cần tạo tài khoản mới đâu ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "M. k vào đc app HVN, có phải tk của mình bị khoá chưa ad? Giúp mình kb lại mk outlet 63235514 với."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị không đăng nhập được báo gì trên màn hình, có thể chuyển giúp em ảnh lỗi để kiểm tra được không ạ? Nếu hệ thống báo sai mật khẩu quá nhiều lần thì tài khoản sẽ bị khóa tạm thời."
+      },
+      {
+        "role": "user",
+        "content": "Mất ảnh rồi. Quên mật khẩu thì bấm vào đâu để lấy lại ạ? Có phải nhập outlet id gì không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Đúng rồi ạ, trên giao diện đăng nhập chọn \"Quên mật khẩu\", nhập outlet id 63235514. Hệ thống sẽ gửi OTP về số điện thoại đăng ký. Anh/chị đặt lại mật khẩu mới (12 ký tự, không giống mật khẩu cũ), sau đó dùng mã cửa hàng và mật khẩu vừa đặt để đăng nhập lại nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Anh bị mất mật khẩu HVN, giờ không đăng nhập được vào app."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh là chủ cửa hàng, nhân viên hay đại lý NPP ạ? Anh cho em xin mã cửa hàng hoặc SĐT đăng ký HVN để hỗ trợ nhé."
+      },
+      {
+        "role": "user",
+        "content": "Anh là chủ cửa hàng, mã là 10409303, SĐT 0938923122."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận đúng mã 10409303 nhé anh. Trường hợp quên mật khẩu, anh thao tác như sau: Trên màn hình đăng nhập của app HVN, anh chọn \"Quên mật khẩu\" → nhập mã 10409303 → nhận OTP → đặt lại mật khẩu mới (12 ký tự, không trùng mật khẩu cũ). Anh đã thử thao tác các bước này chưa ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Anh vừa thử nhưng nó vẫn báo mật khẩu trùng với cũ."
+      },
+      {
+        "role": "assistant",
+        "content": "Trường hợp báo trùng, anh vui lòng tạo mật khẩu hoàn toàn mới, thay đổi một số ký tự hoặc chữ, không lặp lại dãy số từng dùng. Nếu vẫn gặp lỗi, anh gửi cho em ảnh chụp màn hình thông báo lỗi nhé."
+      },
+      {
+        "role": "user",
+        "content": "Được rồi, cảm ơn em, anh sẽ thử lại theo hướng dẫn."
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng, anh nhớ dùng mật khẩu mới hoàn toàn nhé. Nếu vẫn không đặt được, anh báo lại cho bên em. Em luôn sẵn sàng hỗ trợ anh!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mật khẩu HVN cứ báo lỗi hoài, sao kỳ vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin tên/mã cửa hàng và số điện thoại đăng ký HVN để kiểm tra tài khoản nhé."
+      },
+      {
+        "role": "user",
+        "content": "Để em check lại, mà chị ơi, đổi mật khẩu có phải nhập đầy đủ 12 ký tự không, hay miễn dài chút là được?"
+      },
+      {
+        "role": "assistant",
+        "content": "Mật khẩu mới bắt buộc gồm 12 ký tự anh/chị nhé. Nếu đặt ít hơn hệ thống sẽ báo lỗi. Ngoài ra, không nên dùng lại các mật khẩu đã từng dùng trước đó trên HVN. Khi thao tác, có báo lỗi hay cảnh báo gì cụ thể không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Nó chỉ bảo là trùng mật khẩu cũ thôi, với lại nhiều khi muốn nhập lại số mới thì lại quên số cũ."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị nên đặt mật khẩu khác hẳn, ví dụ thay toàn bộ dãy số hoặc thêm cả chữ, ký tự đặc biệt. Nếu quên hết mật khẩu từng dùng thì thử một biến thể mới. Nếu không được thì nhờ anh/chị chụp màn hình lỗi gửi em kiểm tra nhé. Anh/chị thử thêm vài lần, nếu còn lỗi em sẽ chuyển bộ phận liên quan kiểm tra sâu hơn cho mình ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quên mật khẩu HVN, em có thể reset dùm không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Em không thể reset trực tiếp, nhưng sẽ hướng dẫn anh/chị thao tác: Anh/chị vào app HVN, tại màn hình đăng nhập chọn dòng \"Quên mật khẩu\" nhé."
+      },
+      {
+        "role": "user",
+        "content": "Tên đăng nhập là SĐT hay mã cửa hàng vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Tên đăng nhập chính là mã cửa hàng (ví dụ: 10409303). Anh/chị nhập mã đó, sau đó hệ thống sẽ gửi OTP về số điện thoại đã đăng ký HVN."
+      },
+      {
+        "role": "user",
+        "content": "Nếu không nhận được OTP thì làm sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị kiểm tra lại sóng điện thoại, tin nhắn rác, hoặc thử lại sau 3-5 phút. Nếu vẫn không nhận được OTP sau 3 lần, mình vui lòng báo lại, em sẽ chuyển bộ phận kỹ thuật để hỗ trợ cập nhật số điện thoại ạ."
+      },
+      {
+        "role": "user",
+        "content": "Ok, thanks. Nếu đặt lại được thì em sẽ báo lại."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, cảm ơn anh/chị. Nếu cần thêm hỗ trợ gì về tài khoản, đăng nhập, cứ nhắn lại kênh chat này hoặc liên hệ hotline 1800234522 nhấn phím 1 giúp em nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Anh cần lấy lại mật khẩu để đăng nhập app HVN, giúp anh với."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị cho em xin mã cửa hàng hoặc số điện thoại đăng ký để em kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Tên cửa hàng TRI KỶ QUÁN, mã cửa hàng 67254580."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận đây là điểm bán 67254580 TRI KỶ QUÁN đúng không ạ? Anh/chị đã từng đăng ký HVN, đúng không?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi, nhưng giờ quên mật khẩu."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, với trường hợp này anh thực hiện như sau giúp em:\n- Trên màn hình đăng nhập app HVN, chọn 'Quên mật khẩu'.\n- Nhập mã cửa hàng 67254580 làm tên đăng nhập.\n- Hệ thống sẽ gửi mã OTP về số điện thoại đăng ký.\n- Nhập OTP và tạo mật khẩu mới (12 ký tự, không trùng mật khẩu cũ).\nAnh cũng có thể đăng nhập bằng số điện thoại đã đăng ký (nhớ bỏ số 0 đầu tiên), hệ thống cũng gửi OTP về số đó.\nAnh làm thử và báo lại giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Anh thử được rồi, cảm ơn em nhiều nha."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em cảm ơn anh. Nếu cần hỗ trợ vấn đề khác, anh liên hệ lại kênh chat này hoặc hotline 1800234522 (phím 1) giúp em nhé. Chúc anh ngày mới tốt lành!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Cho anh mã nhân viên giới thiệu để anh cài app với."
+      },
+      {
+        "role": "assistant",
+        "content": "Em hỗ trợ anh/chị đăng ký tài khoản HVN nhé. Anh/chị đã có cửa hàng đăng ký HVN chưa? Cho em xin mã cửa hàng hoặc số điện thoại của mình ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Anh không nhớ mã cửa hàng. Chỉ nhớ số điện thoại thôi, 0987654321."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra số 0987654321 thấy đã gắn với cửa hàng TRI KỶ QUÁN, mã 67254580. Anh/chị đã từng đăng ký tài khoản HVN nha. Nếu anh quên mật khẩu, anh vào Quên mật khẩu trên ứng dụng, nhập mã 67254580, nhận OTP về số điện thoại này rồi tạo mật khẩu mới (12 ký tự).\n\nHoặc anh/chị có thể đăng nhập ngay bằng số điện thoại đăng ký, bỏ số 0 đầu tiên rồi nhận OTP.\nAnh thử thao tác lại xem sao nhé."
+      },
+      {
+        "role": "user",
+        "content": "Lỡ đặt lại mật khẩu rồi lại quên tiếp thì làm lại nữa đúng không em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ đúng rồi anh, mỗi lần quên mật khẩu, anh đều làm lại các bước như trên, không giới hạn số lần đâu ạ. Nếu gặp trở ngại, anh/chị cứ liên hệ lại em hỗ trợ thêm nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bên em cho xin mã NV giới thiệu cài app. Anh mới mở quán."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh đã có đăng ký điểm bán với bên em chưa ạ? Anh cho em xin tên và địa chỉ cửa hàng để em kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Quán TRI KỶ QUÁN, phường 2, quận 10."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra thì cửa hàng TRI KỶ QUÁN, mã 67254580 đã đăng ký tài khoản HVN rồi anh nhé. Anh có thể đăng nhập bằng mã cửa hàng hoặc số điện thoại đã đăng ký (bỏ số 0 đầu)."
+      },
+      {
+        "role": "user",
+        "content": "Nhưng anh quên mật khẩu rồi, vào chỗ nào để tạo lại em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh vào app chọn 'Quên mật khẩu', nhập mã cửa hàng 67254580, nhập OTP gửi về số điện thoại đăng ký, rồi đặt lại mật khẩu mới gồm 12 ký tự giúp em. Nếu không nhớ mã, có thể dùng số điện thoại đăng ký để nhận mã xác thực và đăng nhập luôn nhé."
+      },
+      {
+        "role": "user",
+        "content": "Sao đặt mật khẩu không được vậy, cứ báo trùng với mật khẩu cũ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh lưu ý mật khẩu mới phải khác hoàn toàn với các mật khẩu trước đó, trong đó có cả số và chữ, đủ 12 ký tự. Nếu vẫn không được, anh thử đổi thêm một vài ký tự hoặc đặt lại hoàn toàn khác với mật khẩu cũ giúp em nhé. Nếu vẫn gặp vấn đề, em sẽ tạo phiếu chuyển bộ phận kỹ thuật kiểm tra."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, mình là NPP, mình quên mật khẩu tài khoản HVN. Nhờ hỗ trợ đổi mật khẩu với."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, để xác thực thông tin, anh/chị cho em xin mã và tên nhà phân phối (NPP) được không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Dạ, mã NPP: 10399522, tên VP17."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ vâng, ở ô Tên đăng nhập anh/chị cần nhập đúng mã NPP là 10399522 nhé. Mật khẩu sẽ là mật khẩu anh/chị đã tự đặt lần trước."
+      },
+      {
+        "role": "user",
+        "content": "Nhưng mình quên mất mật khẩu rồi, làm thế nào để lấy lại?"
+      },
+      {
+        "role": "assistant",
+        "content": "Không sao ạ, anh/chị nhấn vào dòng chữ 'Quên mật khẩu' trên màn hình đăng nhập, nhập tên đăng nhập 10399522, sau đó sẽ nhận được mã OTP gửi về số điện thoại đăng ký. Anh/chị dùng mã này để tạo mật khẩu mới gồm 12 ký tự và không trùng mật khẩu cũ nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ok mình sẽ thử, cảm ơn bạn."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị thao tác xong nếu cần thêm hỗ trợ cứ liên hệ lại qua kênh chat này hoặc gọi 1800234522 (nhấn phím 1) giúp em nhé. Chúc anh/chị thành công!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "B ơi, mk tài khoản bị khóa rồi, giờ vào ko được. Giúp t cài lại với."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng cung cấp mã NPP hoặc tên NPP để em kiểm tra tài khoản nhé. Ngoài ra, anh/chị là chủ NPP hay nhân viên ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Mã NPP 10399522 VP17 nha. Còn mình là chủ NPP."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị kiểm tra giúp em, ô Tên đăng nhập đã nhập chưa hay đang để trống ạ? Trên hệ thống nếu ô này trống sẽ không đăng nhập được đâu ạ."
+      },
+      {
+        "role": "user",
+        "content": "Chưa nhập. Nhập mã đúng ko?"
+      },
+      {
+        "role": "assistant",
+        "content": "Đúng rồi, anh/chị cần nhập tên đăng nhập là 10399522 nhé. Về mật khẩu thì nhập mật khẩu cũ nếu còn nhớ. Nếu quên hoặc bị khóa do nhập sai nhiều lần, thực hiện thao tác 'Quên mật khẩu' giúp em."
+      },
+      {
+        "role": "user",
+        "content": "Làm sao lấy lại mật khẩu hả bạn? Sợ bị trùng nhiều lần nó khóa luôn á."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị bấm vào 'Quên mật khẩu', nhập mã NPP (10399522), nhận OTP về số điện thoại đăng ký, sau đó tạo lại mật khẩu mới (12 ký tự, khác mật khẩu trước). Nếu thao tác xong vẫn bị lỗi hoặc không nhận được OTP thì báo lại em ngay để hỗ trợ tiếp ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bn oi, e quên pass, làm cnao lay lai? Tk la NPP 10399522"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, anh/chị là Chủ NPP hay nhân viên vậy ạ? Vui lòng xác nhận để em hỗ trợ đúng nhé. Anh/chị đã nhập ô tên đăng nhập và nhập mã NPP 10399522 chưa?"
+      },
+      {
+        "role": "user",
+        "content": "uh, chủ NPP, mà ko nhớ cả pass lẫn nhập tên đăng nhập nào ấy"
+      },
+      {
+        "role": "assistant",
+        "content": "Ô Tên đăng nhập anh/chị cần nhập đúng mã NPP: 10399522. Với mật khẩu, nếu quên, anh/chị chọn Quên mật khẩu ngay bên dưới ô đăng nhập nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ko nhận đc OTP thì sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Trường hợp không nhận OTP, anh/chị kiểm tra lại số điện thoại đăng ký trên hệ thống, hoặc thử lại sau vài phút (đề phòng nghẽn mạng). Nếu vẫn không nhận được, anh/chị vui lòng liên hệ tổng đài 1800234522 nhấn phím 1 hoặc phản hồi lại đây để em hỗ trợ chuyển bộ phận liên quan kiểm tra và cập nhật số điện thoại nếu cần nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bạn ơi, mình không đăng nhập được app HVN, quên mật khẩu rồi."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, anh/chị là Chủ điểm bán, NPP hay nhân viên Heineken ạ? Cho em xin tên cửa hàng và số điện thoại đăng ký để hỗ trợ."
+      },
+      {
+        "role": "user",
+        "content": "Mình là chủ cửa hàng Nhã Vy, số điện thoại 0564382859, mà mình không nhớ mã cửa hàng."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra số điện thoại 0564382859 gắn với mã cửa hàng 64903867, Nhã Vy đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi, mình không biết nhập tên đăng nhập là gì nữa. Nhờ bạn chỉ giúp."
+      },
+      {
+        "role": "assistant",
+        "content": "Tên đăng nhập là mã cửa hàng 64903867 anh/chị nhé. Anh/chị vào 'Quên mật khẩu', nhập mã cửa hàng, nhận OTP và đặt lại mật khẩu mới (12 ký tự, khác mật khẩu cũ). Hoặc có thể đăng nhập bằng số điện thoại đã đăng ký (bỏ số 0 đầu). OTP sẽ gửi về số của mình."
+      },
+      {
+        "role": "user",
+        "content": "Ok rõ rồi, để mình thử. Cảm ơn bạn nhiều."
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu anh/chị còn vướng mắc gì thêm, cứ liên hệ lại kênh chat này hoặc hotline 1800234522 nhé. Chúc anh/chị thao tác thành công và ngày tốt lành ạ!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mình ko nhớ mã cửa hàng, làm sao lấy lại được mật khẩu bây giờ? Nhập cái gì trên app cũng báo sai."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin tên cửa hàng và số điện thoại đăng ký HVN để em tra cứu mã cửa hàng giúp nhé."
+      },
+      {
+        "role": "user",
+        "content": "Tên cửa hàng là Nhã Vy. SDT 0564382859. Nhưng mà thấy đăng nhập bằng số điện thoại cũng không vào được."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra số 0564382859 là của cửa hàng 64903867 Nhã Vy. Anh/chị đang nhập số điện thoại có bỏ số 0 đầu chưa ạ? Nhập số như 564382859 nhé, OTP sẽ gửi về số đó."
+      },
+      {
+        "role": "user",
+        "content": "À, quên mất vụ đó. À mà, đặt mật khẩu mới thì phải có những ký tự gì nhỉ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Mật khẩu mới yêu cầu tối thiểu 12 ký tự, không được trùng với mật khẩu cũ trước đó anh/chị nhé. Lưu ý có chữ cái và số càng tốt ạ."
+      },
+      {
+        "role": "user",
+        "content": "Nếu vẫn không được thì sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu thử lại vẫn không thành công hoặc không nhận được OTP, anh/chị vui lòng liên hệ hotline 1800234522 (bấm phím 1), hoặc gửi ảnh màn hình lỗi qua đây để em hỗ trợ thêm nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 2,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quên mật khẩu HVN sao lấy lại vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng cho em biết mình là chủ quán, NPP hay nhân viên Heineken ạ? Cho em thông tin cửa hàng hoặc số điện thoại đăng ký để em tra cứu hỗ trợ."
+      },
+      {
+        "role": "user",
+        "content": "Chủ Nhã Vy, 0564382859. App HVN bắt nhập cái gì cũng không biết luôn."
+      },
+      {
+        "role": "assistant",
+        "content": "Cửa hàng Nhã Vy mã 64903867 đúng không ạ? Anh/chị có thể:\n- Vào Quên mật khẩu > nhập tên đăng nhập là 64903867 > lấy OTP về số đã đăng ký > đặt mật khẩu mới (12 ký tự).\n- Hoặc đăng nhập bằng số điện thoại đăng ký, nhưng nhập số bỏ số 0 ở đầu (ví dụ 564382859).\nNếu chưa thử cách này, anh/chị thực hiện giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "App báo \"Tên đăng nhập không đúng định dạng\" là sao nhỉ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Thông báo đó thường do nhập thiếu hoặc sai mã cửa hàng. Anh/chị cần nhập đầy đủ 8 số của mã cửa hàng: 64903867. Nếu vẫn báo lỗi, gửi ảnh màn hình giúp em kiểm tra chi tiết hơn nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, mình muốn đăng nhập app HVN Đặt Hàng, mã cửa hàng của mình là 66111870, nhờ hỗ trợ nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em cảm ơn anh/chị đã cung cấp thông tin. Anh/chị là chủ cửa hàng Tạp hoá, mã 66111870 đúng không ạ? Em kiểm tra hiện tại cửa hàng mình đã bị đóng nên mình sẽ không đăng nhập được ứng dụng ạ."
+      },
+      {
+        "role": "user",
+        "content": "Vậy nếu muốn mở lại tài khoản thì làm thế nào vậy bạn?"
+      },
+      {
+        "role": "assistant",
+        "content": "Trường hợp này, anh/chị cần liên hệ với nhân viên Heineken hoặc tổng đài 19001845 để được hỗ trợ kích hoạt lại cửa hàng trên hệ thống. Em có thể hỗ trợ thêm gì cho anh/chị không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Không, cảm ơn nhiều nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu cần hỗ trợ thêm, anh/chị cứ nhắn lại qua kênh Zalo Heineken HVN Đặt Hàng hoặc gọi 19001845 giúp em nhé. Chúc anh/chị một ngày vui vẻ ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mình đăng nhập app không được, cứ hiện lỗi mã giới thiệu cửa hàng 66111870. Có phải app lỗi không bạn?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin thêm mã cửa hàng hoặc SĐT đăng ký, hoặc tên cửa hàng để em kiểm tra kỹ hơn thông tin giúp mình nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mã 66111870, tiệm tạp hoá nhỏ."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra thì cửa hàng mã 66111870 của mình đã ở trạng thái đóng nên anh/chị sẽ không thể đăng nhập được. Nếu anh/chị mới chuyển chủ hay vừa mở lại xin liên hệ nhân viên Heineken hoặc gọi 19001845 để được hướng dẫn kích hoạt lại tài khoản nha anh/chị."
+      },
+      {
+        "role": "user",
+        "content": "Sao tự nhiên lại bị đóng vậy bạn? Có phải lỗi app không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ đây là trạng thái cập nhật trên hệ thống. Nếu mình không hoạt động hoặc theo quy trình nội bộ, hệ thống sẽ tạm khóa/đóng cửa hàng trên app. Trường hợp này, anh/chị vui lòng liên hệ tổng đài 19001845 hoặc nhân viên kinh doanh khu vực để kiểm tra cụ thể và kích hoạt lại giúp em nhé. Em rất tiếc về bất tiện này. Anh/chị cần em hỗ trợ gì thêm nữa không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "cho mình hỏi chút, mã cửa hàng 66111870 này còn đăng nhập được nữa không? mình nhập không vào được"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xác nhận lại, mình là cửa hàng tạp hoá mã 66111870 đúng không ạ? Hiện tại em kiểm tra thì cửa hàng này đã đóng trên hệ thống nên sẽ không đăng nhập được app nha anh/chị. Anh/chị cần mở lại tài khoản không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đã đóng là sao? Gọi tổng đài gì vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Cửa hàng bị đóng nghĩa là tài khoản không còn hoạt động trên hệ thống. Muốn mở lại anh/chị liên hệ tổng đài Heineken 19001845 hoặc nhờ nhân viên kinh doanh hỗ trợ kích hoạt lại giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Có phải cập nhật số điện thoại thì đăng nhập lại được không bạn? Hay phải đợi kích hoạt?"
+      },
+      {
+        "role": "assistant",
+        "content": "Trường hợp cửa hàng đã đóng cần phải kích hoạt lại qua tổng đài/nhân viên Heineken trước anh/chị nhé thì mới đăng nhập lại được. Nếu chỉ đổi SĐT mà cửa hàng vẫn đóng trạng thái thì vẫn chưa dùng app được ạ. Anh/chị cần em hỗ trợ gì khác không?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Tôi đăng nhập bằng số điện thoại mà app báo không hợp lệ."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị cho em xin mã cửa hàng hoặc số điện thoại đăng ký để em kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mã 61504764."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận mình là SHOP CHỊ ĐIỆP đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi, chị Điệp nè."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị thử đăng nhập số điện thoại với số 0 ở đầu (kiểu 0xxxxxxxxx) giúp em nhé, bỏ dấu cách/kí tự đặc biệt nếu có. Anh/chị thao tác lại giúp em xem được chưa ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Được rồi em, đăng nhập thành công nhé. Cảm ơn nhiều!"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em cảm ơn chị đã xác nhận. Nếu cần thêm hỗ trợ, chị liên hệ lại kênh Zalo Heineken HVN Đặt Hàng hoặc tổng đài 19001845 giúp em nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao đăng nhập bằng số điện thoại hoài vẫn báo lỗi, mệt ghê!"
+      },
+      {
+        "role": "assistant",
+        "content": "Em xin lỗi vì sự bất tiện ạ. Phiền anh/chị cho em xin mã cửa hàng hoặc số điện thoại đăng ký để em kiểm tra kỹ hơn cho mình nha."
+      },
+      {
+        "role": "user",
+        "content": "61504764"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em xác nhận cửa hàng SHOP CHỊ ĐIỆP đúng không ạ? Anh/chị giúp em nhập số điện thoại có số 0 ở đầu (ví dụ 0912345678), bỏ khoảng trắng/ký tự đặc biệt rồi thử đăng nhập lại giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Đã thử 3 lần vẫn vậy. Có cách khác không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu vẫn báo lỗi, anh/chị thử bấm vào 'Quên mật khẩu' để đặt lại mật khẩu, hoặc chọn đăng nhập bằng mã cửa hàng 61504764 cộng mật khẩu nếu nhớ. Nếu cần thêm hướng dẫn, anh/chị gửi lại ảnh màn hình lỗi cho em để kiểm tra chi tiết hơn nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao lại bảo số điện thoại không hợp lệ, app gì khó dùng thế nhỉ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Em xin lỗi anh/chị gặp khó khăn. Cho em hỏi anh/chị đăng nhập bằng số điện thoại nào để em xác minh nhé? Hoặc anh/chị cho em biết mã cửa hàng hoặc tên cửa hàng để em hỗ trợ nhanh hơn."
+      },
+      {
+        "role": "user",
+        "content": "61504764"
+      },
+      {
+        "role": "assistant",
+        "content": "Đây là SHOP CHỊ ĐIỆP phải không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Phải"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị giúp em kiểm tra lại số điện thoại nhập đủ 10 số và có số 0 đầu tiên, không dính khoảng trắng hay ký hiệu lạ nha. Nếu dùng +84 thì thay bằng số 0 giúp em."
+      },
+      {
+        "role": "user",
+        "content": "Tôi nhập chuẩn nhưng vẫn không vào được, có thể lỗi do app không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu đã nhập đúng nhưng vẫn không đăng nhập được, anh/chị có thể thử cập nhật lại app lên phiên bản mới nhất hoặc thử đăng nhập bằng mã cửa hàng và mật khẩu. Nếu vấn đề vẫn tiếp diễn, anh/chị gửi giúp em ảnh màn hình lỗi và số điện thoại đăng nhập, em sẽ chuyển bộ phận kỹ thuật kiểm tra hỗ trợ nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, mình chưa đăng nhập được vào app để đặt hàng, bạn giúp mình với nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin mã cửa hàng hoặc SĐT đăng ký trên hệ thống để em kiểm tra và hỗ trợ đăng nhập nhé ạ."
+      },
+      {
+        "role": "user",
+        "content": "Dạ, đây là mã cửa hàng 67803609, SĐT 0327592751."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận đây là cửa hàng Thanh Vinh đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Vâng, đúng rồi."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị đã từng sử dụng app HVN Đặt Hàng để đặt bia chưa hay từ trước dùng kênh khác ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Trước giờ toàn đặt qua Sale, nay mới tải app."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị làm theo hướng dẫn sau nhé: mở app HVN Đặt Hàng, chọn Đăng nhập, nhập mã cửa hàng và mật khẩu. Nếu quên mật khẩu thì bấm Quên mật khẩu hoặc Đăng nhập bằng SĐT. Anh/chị thử thao tác giúp em, có vướng ở đâu báo lại để em hỗ trợ tiếp ạ!"
+      },
+      {
+        "role": "user",
+        "content": "Mình bấm Quên mật khẩu thì hệ thống báo tên người dùng chưa đăng kí."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ trường hợp này có nghĩa là cửa hàng mình chưa đăng ký sử dụng ứng dụng rồi ạ. Anh/chị vui lòng liên hệ Sale thị trường để được hỗ trợ đăng ký app HVN Đặt Hàng nhé. Nếu cần em hỗ trợ thông tin nào thêm nữa không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Cho hỏi chút, không liên quan lắm, nhưng bao giờ Heineken mở chương trình khuyến mại mới vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ hiện tại em chưa có thông tin về chương trình khuyến mại mới, khi có chương trình bên em sẽ thông báo trên app hoặc qua kênh Sale nhé. Cho em hỏi anh/chị cần hỗ trợ thêm gì với việc dùng app HVN không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "À, mình đang bị không vào được app đặt hàng, nó báo lỗi hoài."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin mã cửa hàng hoặc số điện thoại đăng ký để em kiểm tra hỗ trợ mình nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mã 67803609, sđt 0327592751."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ cửa hàng mình tên Thanh Vinh đúng không ạ? Anh/chị đã từng dùng ứng dụng HVN Đặt Hàng chưa hay trước đây đặt qua các kênh khác?"
+      },
+      {
+        "role": "user",
+        "content": "Trước giờ toàn đặt qua Sale, giờ mới cài app."
+      },
+      {
+        "role": "assistant",
+        "content": "Em hướng dẫn: Từ màn hình đăng nhập, nhập mã cửa hàng + mật khẩu, nếu quên mật khẩu chọn “Quên mật khẩu” hoặc đăng nhập bằng SĐT nhé. Tuy nhiên nếu báo chưa đăng ký, mình cần liên hệ Sale để Sale đăng ký ứng dụng cho cửa hàng anh/chị trước ạ."
+      },
+      {
+        "role": "user",
+        "content": "Oh, mình hiểu rồi. Vậy nhờ Sale hỗ trợ đăng ký đúng không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Đúng rồi ạ, anh/chị liên hệ Sale thị trường hoặc gọi tổng đài 19001845 để được hỗ trợ đăng ký app nhanh nhất nhé. Em có thể giúp gì thêm cho anh/chị không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mình bị lỗi gì đó khi vào app HVN Đặt Hàng, không biết đăng nhập kiểu gì luôn, chỉ muốn mua hàng thôi mà cũng khó quá."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em xin lỗi vì sự bất tiện này. Mình cho em xin mã cửa hàng hoặc số điện thoại đăng ký để em kiểm tra tài khoản nhé."
+      },
+      {
+        "role": "user",
+        "content": "Số 0327592751, mà user là gì không nhớ luôn."
+      },
+      {
+        "role": "assistant",
+        "content": "Em tra cứu giúp, đây là cửa hàng Thanh Vinh (mã 67803609) đúng không anh/chị?\nAnh/chị mới tải app phải không, trước đây có đăng nhập hoặc đặt trên app lần nào chưa ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Mình chỉ đặt qua Sale, app thì tải mới thôi, đăng nhập không được."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị làm các bước sau: Vào app HVN Đặt Hàng, chọn Đăng nhập, nhập mã cửa hàng 67803609 với mật khẩu. Nếu quên mật khẩu thì nhấn Quên mật khẩu, nhập mã cửa hàng để nhận OTP đặt lại mật khẩu hoặc chọn Đăng nhập bằng SĐT. Nếu hệ thống báo 'Tên người dùng chưa đăng ký', tức là cửa hàng mình chưa có tài khoản app, cần Sale thị trường đăng ký giúp mới dùng được app nhé."
+      },
+      {
+        "role": "user",
+        "content": "Phức tạp vậy… Sao không để ai cũng tự đăng ký cho tiện?"
+      },
+      {
+        "role": "assistant",
+        "content": "Em rất xin lỗi vì hiện tại quy trình đăng ký cần Sale xác thực để đảm bảo bảo mật dữ liệu cửa hàng. Anh/chị chịu khó liên hệ Sale hoặc gọi tổng đài 19001845 để được đăng ký nhanh ạ. Nếu có thông tin nào cần giải đáp thêm, bên em luôn sẵn sàng hỗ trợ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Alo, cho hỏi mật khẩu đăng nhập app lấy ở đâu vậy em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị vui lòng cho em xin mã cửa hàng hoặc số điện thoại đăng ký ứng dụng để em kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mã 64314419, số 0782685801. Tên cửa hàng là TH CÔ HƯƠNG."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận đây là cửa hàng TH CÔ HƯƠNG. Về mật khẩu, bên em không cung cấp trực tiếp ạ. Nếu quên mật khẩu, anh/chị vào app, chọn 'Quên mật khẩu' theo hướng dẫn, hoặc có thể đăng nhập bằng SĐT để nhận OTP rồi đặt lại mật khẩu mới giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Cảm ơn em, để anh thao tác thử."
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng, nếu trong quá trình thao tác gặp khó khăn, anh/chị nhắn lại bên em hỗ trợ ngay. Xin cảm ơn và chúc anh/chị một ngày tốt lành ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Alo, hỗ trợ mình đăng nhập đi, với lại hôm qua đặt đơn không thấy đâu hết em ơi?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, mình cần hỗ trợ đăng nhập, anh/chị cho em xin mã cửa hàng hoặc SĐT đăng ký ứng dụng trước nhé. Về đơn hàng hôm qua, anh/chị vui lòng cho em thêm mã đơn hoặc thông tin đặt hàng để em kiểm tra sau khi xong phần đăng nhập ạ."
+      },
+      {
+        "role": "user",
+        "content": "Mã 64314419, số 0782685801 nha em."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em xác nhận thông tin cửa hàng TH CÔ HƯƠNG. Về mật khẩu, bên em không cung cấp trực tiếp. Nếu quên, anh/chị chọn 'Quên mật khẩu' trên app hoặc đăng nhập bằng SĐT nhận OTP để đổi mật khẩu mới nhé. Riêng đơn hàng, anh/chị gửi thêm mã đơn hoặc chi tiết, em sẽ hỗ trợ tiếp ạ."
+      },
+      {
+        "role": "user",
+        "content": "Ừ để mình thử đăng nhập đã, đơn hàng để sau nha."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ vâng, anh/chị cứ thao tác thử. Nếu cần tra cứu đơn hàng hoặc có vấn đề gì thêm, anh/chị nhắn lại cho em nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "mk đăng nhập là gì vậy"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em xin mã cửa hàng hoặc số điện thoại đăng ký để kiểm tra và hỗ trợ mình nhé."
+      },
+      {
+        "role": "user",
+        "content": "64314419"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin thêm số điện thoại đăng ký hoặc tên cửa hàng để xác minh nhé."
+      },
+      {
+        "role": "user",
+        "content": "TH CÔ HƯƠNG, số 0782685801"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ đúng rồi, em xác định cửa hàng là TH CÔ HƯƠNG. Tổng đài không cung cấp được mật khẩu trực tiếp ạ. Nếu quên, anh/chị nhấn 'Quên mật khẩu' hoặc đăng nhập bằng số điện thoại nhận OTP để đặt lại mật khẩu mới nhé. Ngoài ra, anh/chị còn cần hỗ trợ gì thêm không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Chỉ cần như vậy, cảm ơn em."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ nếu có nhu cầu khác, anh/chị liên hệ kênh Zalo Heineken HVN Đặt Hàng hoặc tổng đài 19001845 giúp em nhé. Em cảm ơn!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, mình là Hiếu Cáo. Mình muốn cập nhật lại số điện thoại cho mã cửa hàng 66155112 vì app vẫn để số cũ."
+      },
+      {
+        "role": "assistant",
+        "content": "Em cảm ơn anh/chị đã liên hệ. Anh/chị cho em xác nhận lại, mã cửa hàng 66155112 là quán Hiếu Cáo đúng không ạ? Anh/chị đang cần cập nhật số mới phải không, nhờ anh/chị cung cấp số điện thoại mới muốn đổi luôn giúp em."
+      },
+      {
+        "role": "user",
+        "content": "Dạ đúng. Số mới của mình là 0985020323."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em đã ghi nhận thông tin. Tuy nhiên em kiểm tra, mã cửa hàng 66155112 hiện không thuộc quán Hiếu Cáo mà thuộc cửa hàng ANH TUYÊN - Mẫn Nhi. Anh/chị vui lòng kiểm tra lại mã cửa hàng hoặc cung cấp thêm số điện thoại đăng ký hoặc tên cửa hàng + địa chỉ để em xác minh và hỗ trợ cập nhật đúng ạ."
+      },
+      {
+        "role": "user",
+        "content": "À mình nhập nhầm. Cảm ơn em, lát nữa mình gửi lại đúng thông tin nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Không sao ạ. Khi nào cần hỗ trợ thêm, anh/chị vui lòng liên hệ lại kênh này hoặc tổng đài 19001845 giúp em. HVN xin chúc anh/chị một ngày tốt lành!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao app vẫn không đổi số được cho quán Hiếu Cáo, mã 66155112, hay bị lỗi gì vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng xác nhận lại giúp em mã cửa hàng 66155112 có phải của quán Hiếu Cáo không ạ? Theo kiểm tra trên hệ thống thì mã này lại đứng tên ANH TUYÊN - Mẫn Nhi. Anh/chị có thể cung cấp thêm số điện thoại đã đăng ký hoặc địa chỉ để em đối chiếu hỗ trợ nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ờ, chắc mình nhớ nhầm rồi, để lát cung cấp lại nha. Nhân tiện, lỡ dùng sai mã code thì có bị khoá tài khoản luôn không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Không sao đâu ạ, nếu nhập sai mã cửa hàng thì chỉ không cập nhật được thông tin, không bị khoá tài khoản đâu anh/chị nhé. Anh/chị cần cung cấp đúng mã cửa hàng để tránh cập nhật nhầm cho cửa hàng khác. Khi nào có mã đúng, anh/chị gửi lại cho em để hỗ trợ nhé. Nếu cần hỗ trợ gấp, có thể liên hệ thêm tổng đài 19001845 giúp em."
+      }
+    ]
+  },
+  {
+    "procedure_id": 1,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hiếu Cáo 66155112 0985020323 – update SĐT mới. Mà hình như ko đổi được. Update lại nhanh giúp đi!"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, cho em xác nhận lại thông tin ạ: Anh/chị muốn cập nhật số ĐT mới cho cửa hàng Hiếu Cáo, mã 66155112 đúng không? Tuy nhiên theo dữ liệu hệ thống, mã này đứng tên cửa hàng khác. Anh/chị kiểm tra lại mã code một lần nữa hoặc gửi cho em số điện thoại đăng ký app hiện tại hoặc địa chỉ gần đúng của quán để em hỗ trợ xác minh và cập nhật chính xác nhé.\n\nViệc nhập sai mã có thể khiến cập nhật nhầm sang cửa hàng khác, mình cứ kiểm tra kỹ trước khi gửi thông tin anh/chị nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ờ, vậy để chút nữa gửi lại mã chuẩn luôn nha. Tks. Mà em ơi, lâu không cập nhật có bị mất quyền đặt hàng không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ không ạ, nếu lâu chưa cập nhật hoặc nhập sai mã thì sẽ không bị mất quyền đặt hàng, chỉ cần kiểm tra lại mã cửa hàng đúng cho em là được. Anh/chị lưu ý dùng đúng mã cửa hàng và thông tin đăng ký app để tránh ảnh hưởng đơn hàng nhé. Khi nào cần đổi số, nhắn lại cho em ạ. Chúc anh/chị một ngày vui vẻ!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Shop đặt hàng trên SEM không thấy đơn về NPP, nhờ kiểm tra giúp ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, anh/chị cung cấp giúp em mã đơn hàng hoặc ảnh danh sách đơn cần kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Có nhiều mã lắm, đơn của hôm nay. Để em gửi 2 mã: 2510076469211, 2510076469212."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị xác nhận mình đặt đơn qua kênh SEM đúng không ạ? Ngoài ra, anh/chị vui lòng cung cấp luôn OutletID hoặc tên cửa hàng để em đối soát nhanh hơn ạ."
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi, SEM. OutletID 63298912 - Cửa hàng Thành Công anh nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Em sẽ chuyển thông tin sang Team SEM kiểm tra/push đơn. Trong thời gian này, anh/chị chủ động kiểm tra lại với NPP xem đã nhận/đang xử lý đơn chưa nhé. Có gì cần xử lý thêm anh/chị phản hồi lại em ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Ủa em nghĩ anh/chị vào tk heiway check giúp được mà, sao phải hỏi mã đơn vậy? NPP kêu ko thấy luôn."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, bên em chỉ kiểm tra qua mã đơn hàng, không được phép truy cập tài khoản cá nhân của anh/chị vì lý do bảo mật. Anh/chị vui lòng gửi giúp mã đơn hàng cần support, hoặc chụp ảnh màn hình danh sách đơn cũng được ạ."
+      },
+      {
+        "role": "user",
+        "content": "Vậy đơn ngày hôm qua cũng chưa thấy luôn, không biết lỗi gì nữa?"
+      },
+      {
+        "role": "assistant",
+        "content": "Cho em xin danh sách mã đơn hàng hôm qua và xác nhận tất cả đều đặt từ SEM giúp em. Sau đó em sẽ tổng hợp và gửi Team kỹ thuật kiểm tra đồng loạt nhé. Anh/chị cũng kiểm tra lại với NPP trong khi chờ phản hồi."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Các đơn đặt trên SEM hôm nay toàn bộ chưa hiển thị trên NPP. Có cách nào kiểm tra nhanh không, tại gấp lắm rồi, kế toán họ hỏi suốt."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, bên em cần mã đơn hàng để tra cứu. Anh/chị có thể gửi danh sách, hoặc chụp ảnh màn hình đơn giúp em? Nếu nhiều mã, ưu tiên đơn cần gấp nhất trước nhé."
+      },
+      {
+        "role": "user",
+        "content": "Đơn 2509123456789, 2509123456790. Đều đặt SEM, outlet 65001234."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em đã tiếp nhận thông tin. Trong lúc chuyển Team kiểm tra, anh/chị trao đổi thêm với phía NPP xem có nhận được thông báo hay đang trong quy trình xử lý chưa nhé. Khi có kết quả em sẽ báo lại sớm nhất ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nhờ đội add NPP cho các outlet sau: 68903869, 68903907, 10402194. Mình cần tạo đơn mà chưa gán MQH."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị vui lòng liên hệ Sale Admin để được hỗ trợ gắn mối quan hệ NPP giúp em ạ. L1 bên em chưa thực hiện trực tiếp thao tác này."
+      },
+      {
+        "role": "user",
+        "content": "Vậy mình tự thao tác trên SEM được không, hay bắt buộc phải qua Sale Admin?"
+      },
+      {
+        "role": "assistant",
+        "content": "Mối quan hệ giữa outlet và NPP/SubD cần Sale Admin tạo theo quy trình chuẩn trên hệ thống SEM. Anh/chị không thao tác trực tiếp mà cần nhờ SA hỗ trợ. Sau khi tạo MQH, mình chờ 24h để dữ liệu đồng bộ rồi đặt đơn nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Add giúp mình NPP cho outlet 10402194 SHY9A được không? Gắn càng sớm càng tốt nhé team."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, về thực hiện add MQH NPP thì mình cần liên hệ Sale Admin, bên em không xử lý trực tiếp anh/chị nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mình gửi Sales rồi mà chưa thấy gì, gấp mà không có ai hỗ trợ thì sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu đã gửi SA rồi thì anh/chị theo dõi thêm giúp em, thông thường sau khi SA thao tác sẽ cần chờ 24h đồng bộ trên hệ thống. Nếu vượt quá thời gian mà chưa có cập nhật, anh/chị có thể cung cấp minh chứng để bên em hỗ trợ escalate bộ phận liên quan."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bên bạn có add nhanh MQH NPP cho outlet 68903869 không vậy? Mình có thể gửi thông tin qua zalo này không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Bên em tiếp nhận thông tin nhưng quy trình add MQH outlet–NPP phải do Sale Admin thao tác. Anh/chị vui lòng liên hệ Sale Admin hoặc bộ phận phụ trách để gắn mqh giúp em."
+      },
+      {
+        "role": "user",
+        "content": "Mình có thể tra cứu MQH hiện tại ở đâu, lỡ add sai thì làm sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị có thể kiểm tra MQH outlet–NPP trên SEM, mục quản lý mối quan hệ. Nếu phát hiện add sai hoặc chưa hợp lệ, cần báo Sale Admin để sửa lại nhé. Bên em không thực hiện điều chỉnh MQH trực tiếp trên hệ thống."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, mình có đơn hàng của shop Thiêm Lý đặt hôm qua nhưng SubD chưa thấy đơn trên hệ thống để duyệt, nhờ bạn kiểm tra giúp."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin mã đơn hàng và mã outlet, mã subdist để em kiểm tra nhé?"
+      },
+      {
+        "role": "user",
+        "content": "Mã đơn là 250828636771, outlet 63400187, subdist 63401890."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra outlet 63400187 đã có mối quan hệ hợp lệ với subdist 63401890 trên SEM. Trường hợp SubD không thấy đơn để duyệt trên DIS Lite, anh/chị vui lòng liên hệ kênh Heineken HVN Đặt Hàng (B2B/DIS Lite/HVN): https://zalo.me/1896978230422342919 để được hỗ trợ thêm nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ok, cảm ơn bạn."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em cảm ơn anh/chị. Nếu cần hỗ trợ gì thêm, anh/chị cứ liên hệ lại qua kênh này giúp em ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bạn check giúp đơn SubD mã 63401890 hộ tớ, shop tên là Thiêm Lý. Đơn hôm qua gửi mà phía SubD vẫn không thấy hiển thị trên Dis Lite, bên bạn có thể xử lý không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin mã đơn hàng với mã outlet để em kiểm tra chi tiết ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đơn: 250828636771, outlet: 63400187."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ để em kiểm tra mối quan hệ giữa outlet và SubD ạ. Em xác nhận code 63400187 đã có mqh hợp lệ với SubD 63401890 trên SEM. Nếu trên Dis Lite SubD vẫn không thấy đơn, anh/chị vui lòng gửi yêu cầu hỗ trợ vào Zalo Heineken HVN Đặt Hàng (https://zalo.me/1896978230422342919) giúp em nhé. Bên em không trực tiếp xử lý hiển thị đơn trên Dis Lite ạ."
+      },
+      {
+        "role": "user",
+        "content": "Có phải trường hợp này thường do lỗi đồng bộ không, hay bên mình log L2 được không bạn?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ các lỗi hiển thị trên DIS Lite thì phải chuyển kênh sang B2B/DIS Lite/HVN xử lý. Nếu đã có MQH trên SEM mà vẫn không thấy đơn, anh/chị gửi thông tin sang kênh Zalo em gửi ở trên nha, để đội ngũ chuyên trách hỗ trợ nhanh nhất."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Shop của mình đặt đơn xong hôm qua rồi mà giờ SubD không thấy gì trên Dis Lite. Bao lâu thì mấy đơn này mới hiện lên vậy? Hay do mạng nhỉ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin mã đơn hàng và mã outlet – mã SubD cụ thể để em kiểm tra thử tình trạng cho mình nhé."
+      },
+      {
+        "role": "user",
+        "content": "Đây, đơn: 250828636771, outlet 63400187, sub 63401890."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra outlet 63400187 đã có mqh hợp lệ với subdist 63401890 trên SEM rồi ạ. Nếu SubD vẫn không thấy đơn trên Dis Lite thì nhiều khả năng là do lỗi đồng bộ hoặc sự cố hệ thống. Anh/chị thử hỏi SubD sync lại app hoặc đăng nhập lại, nếu vẫn không thấy thì liên hệ kênh Zalo Heineken HVN Đặt Hàng (https://zalo.me/1896978230422342919) để bên kỹ thuật hỗ trợ kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Nếu cần thì mình chỉ gửi mã đơn cho bên Zalo kia thôi đúng không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ đúng rồi anh/chị, chỉ cần cung cấp mã đơn và mã outlet/subdist là đủ để đội kỹ thuật hỗ trợ kiểm tra trên hệ thống. Anh/chị có thể gửi kèm ảnh màn hình nếu được để quá trình xử lý nhanh hơn nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào em, cho anh kiểm tra đơn gratis 2508136148634 đã được duyệt xong chưa?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em chào anh/chị, anh/chị cho em xin mã outlet hoặc tên cửa hàng để kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mã outlet 65032508, tên TRUNG DÊ. Cho anh hỏi luôn trạng thái xử lý đơn hàng này với."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em kiểm tra đơn gratis 2508136148634 của outlet TRUNG DÊ đã được SS/ASM approved rồi ạ. Các bước xử lý tiếp theo, như quá trình NPP lấy hàng, bên em không kiểm tra được. Anh/chị có thể nhờ SA liên hệ Team CS để kiểm tra giúp quá trình xử lý đơn hàng ạ."
+      },
+      {
+        "role": "user",
+        "content": "Ok em, vậy trong tháng 5/2025 cửa hàng TRUNG DÊ có đơn gratis nào nữa không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ trong tháng 5/2025 em thấy chỉ có 1 đơn gratis như anh/chị nêu trên và đã được approved ạ. Lưu ý, đơn gratis chỉ được order qua NPP, order qua SubD là không hợp lệ anh/chị nhé. Anh/chị còn cần hỗ trợ thông tin gì thêm không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chị kiểm tra giúp em các đơn gratis của cửa hàng 65032508, tháng 5 năm nay mà không thấy hiển thị trong tab gratis. Có bị lỗi gì không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị xác nhận giúp em cửa hàng TRUNG DÊ phải không ạ? Anh/chị đặt đơn qua kênh nào và anh/chị cho em biết luôn mã đơn hàng cần kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Tên Trung Dê, anh đặt qua SubD, có ghi là đơn xuất thay thế, mã đơn 2508136148634."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em kiểm tra thấy đơn gratis này đã được approved rồi ạ. Tuy nhiên, anh/chị lưu ý đơn gratis đặt qua SubD là không hợp lệ, chỉ đặt và được approve qua NPP thôi anh/chị nhé. Với trường hợp không thấy trên tab, có thể do kênh đặt không đúng hoặc hệ thống lọc theo kênh NPP. Anh/chị cần em hỗ trợ tra cứu thêm các đơn khác không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Có, từ tháng 3 tới giờ toàn bộ đơn gratis của cửa hàng này nhé, và lần sau hướng dẫn giúp anh đặt đúng kênh NPP luôn ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em kiểm tra từ tháng 3 đến nay cửa hàng TRUNG DÊ có 1 đơn gratis đều order qua SubD anh/chị nhé. Lần tới, anh/chị chỉ nên đặt đơn gratis qua NPP để được approve hợp lệ ạ. Nếu còn cần hỗ trợ gì thêm, anh/chị nhắn em nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao anh đặt đơn gratis mà mã 2508136148634 lại không thấy bên NPP báo gì hết nhỉ? Được approve rồi đúng không em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra nhanh, đơn gratis 2508136148634 đã được SS/ASM approved rồi anh ạ. Anh đặt qua NPP hay SubD vậy, cho em xác nhận lại kênh đặt đơn với loại hàng giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Anh đặt qua SubD. Mà nghe nói gratis chỉ order qua NPP, có đúng không em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, đúng rồi anh/chị, đơn gratis chỉ hợp lệ khi đặt và duyệt qua NPP thôi, đặt qua SubD là không hợp lệ ạ. Trường hợp này, mặc dù đơn được approve trên hệ thống nhưng quá trình giao nhận phía NPP sẽ không xử lý tiếp. Anh/chị cần hỗ trợ thêm gì không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Rồi rồi, vậy anh hỏi thêm: với các đơn gratis tháng 5 của TRUNG DÊ thì chỉ có duy nhất đơn này thôi đúng không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em kiểm tra trong tháng 5 chỉ có 1 đơn gratis với mã đơn 2508136148634, đều qua SubD và đã approved. Anh/chị chú ý lần sau đặt đúng NPP để tránh phát sinh lỗi không nhận đơn nhé. Nếu cần thêm hỗ trợ về tra cứu đơn hàng, anh/chị liên hệ lại với em qua kênh này nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bạn ơi, cho mình kiểm tra đơn SEM hôm qua chưa về NPP nhé?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin mã đơn hàng để em kiểm tra với bên NPP. Đơn anh/chị đặt qua kênh SEM, đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi, đặt qua SEM. Mã đơn 2308051101."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra thấy đơn hàng này đang ở trạng thái pending do NPP chưa xác nhận ạ. Anh/chị thử liên hệ NPP xem hỗ trợ nhận đơn nhanh hơn nhé. Đồng thời em sẽ log thông tin lên Team SEM để push đơn. Anh/chị có cần kiểm tra thêm đơn nào khác không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Không, cảm ơn em ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em ghi nhận. Nếu cần hỗ trợ gì thêm anh/chị vui lòng liên hệ lại kênh này giúp em nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Ad ơi đơn hàng em đặt mấy ngày rồi mà SubD chưa nhận được, bực ghê!"
+      },
+      {
+        "role": "assistant",
+        "content": "Em xin lỗi về sự bất tiện này ạ. Anh/chị gửi giúp em mã đơn hàng hoặc ảnh chụp để em kiểm tra. Đơn này đặt qua SEM luôn phải không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Ừ, đặt SEM, mà mã đơn em không nhớ lắm, chỉ nhớ đặt ngày 2/6 cho Shop Đạt Như thôi."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị thử kiểm tra trên lịch sử đơn SEM hoặc cung cấp OutletID/tên NPP, em sẽ hỗ trợ tra cứu. Ngoài ra, mình có thể nhờ NPP/SubD kiểm tra bên họ nhận đơn chưa trong lúc chờ bên em kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ờ, thôi để em kiểm tra lại rồi inbox tiếp. Sẵn tiện, bao lâu thì đơn pending sẽ về SubD vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Thông thường đơn SEM sẽ về NPP/SubD trong vòng ngày nếu mối quan hệ hợp lệ. Nếu quá 1 ngày và mối quan hệ đúng, bên em sẽ log L2 nhờ Team SEM kiểm tra và push đơn nhanh cho mình ạ. Nếu cần hỗ trợ thêm mình gửi lại mã đơn giúp em nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Đơn SEM tôi đặt báo pending mãi, mà agent check hộ có hàng chưa? Mã outlet 62300554."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin thêm mã đơn hàng cụ thể, vì 1 outlet có thể đặt nhiều đơn khác nhau. Mình đang đặt qua kênh SEM đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng SEM. À mà thôi, tôi hỏi hộ bạn, thực ra đơn Shop tôi nhận rồi. Có gì cần hỗ trợ thì nhắn tiếp qua đây cũng được chứ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ vâng, anh/chị cứ nhắn trên kênh này bất cứ khi nào cần kiểm tra đơn hàng hoặc hỗ trợ các vấn đề liên quan nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nhờ hướng dẫn cách xuất Gratis bia trên máy Sales Sup với, do thị trường SR đang TBA Sup phải cover."
+      },
+      {
+        "role": "assistant",
+        "content": "Cảm ơn anh/chị đã liên hệ Heineken. Em xác nhận anh/chị đang cần thao tác xuất đơn hàng Gratis trên SEM khi SR đang TBA và Sup đang cover thị trường đúng không ạ? Em sẽ tiếp nhận và chuyển thông tin này đến bộ phận SEM hỗ trợ hướng dẫn chi tiết cho anh/chị. Thời gian xử lý có thể mất một chút, anh/chị vui lòng chờ nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Trong thời gian chờ phản hồi, anh/chị có cần hỗ trợ thêm thông tin nào khác không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Không, chỉ cần giúp vấn đề đó thôi."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em ghi nhận hỗ trợ xuất Gratis bia trên máy Sup. Nếu cần thêm hỗ trợ về SEM hoặc vấn đề khác, anh/chị có thể liên hệ lại tổng đài hoặc Zalo Heineken HVN Đặt Hàng giúp em ạ. Chúc anh/chị thao tác thành công!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chị gửi file quy trình chi tiết xuất Gratis chưa? Nãy nhắn mà chưa thấy."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, hiện file quy trình chi tiết về thao tác xuất Gratis trên SEM dành cho Sup đang được bộ phận kỹ thuật kiểm tra lại, do mỗi thị trường có dữ liệu khác nhau ạ. Em sẽ chuyển hướng dẫn chi tiết sớm nhất khi có thông tin mới. Chị vui lòng chờ giúp em nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Ngoài thao tác Gratis, mình cần hỏi gì thêm về SEM không ạ hoặc cần em gửi lại hướng dẫn thao tác qua Zalo chứ?"
+      },
+      {
+        "role": "user",
+        "content": "Không cần đâu, chờ hướng dẫn giúp là được nha!"
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã ghi nhận nhu cầu và sẽ gửi lại tài liệu khi có. Nếu chị cần hỗ trợ nhanh hơn, có thể dùng tính năng lựa chọn vấn đề trên Zalo OA Heineken để chuyển đúng bộ phận. Em cảm ơn chị đã kiên nhẫn chờ hỗ trợ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sup muốn xuất Gratis trên SEM cho thị trường SR TBA nhưng không biết làm sao. Giúp nhanh nha, bận lắm."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị muốn thao tác xuất đơn Gratis trên máy Sup do SR đang tạm vắng mặt, đúng không ạ? Em tiếp nhận phản ánh của anh/chị và chuyển cho phòng SEM hướng dẫn. Thời gian có thể kéo dài vài phút, mong anh/chị thông cảm chờ phản hồi ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Hiện tại, các thao tác này cần tuân theo quy trình nội bộ, chưa thể cung cấp hướng dẫn ngay trên kênh chat. Nếu anh/chị cần thêm hướng dẫn SEM khác hoặc có lỗi phát sinh, có thể gửi ảnh màn hình giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Kiểm tra nhanh trạng thái giúp luôn, với gửi tài liệu thao tác càng sớm càng tốt. Đang gấp."
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã ghi nhận yêu cầu kiểm tra trạng thái và sẽ thông tin lại kết quả khi có phản hồi từ phòng SEM. Cảm ơn anh/chị đã phối hợp. Nếu có phát sinh lỗi, vui lòng gửi ảnh để bên em hỗ trợ xử lý kịp thời ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Em ơi, gratis anh raise giờ ASM approve được chưa em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh, anh đang hỏi về việc ASM đã approve được đơn gratis chưa đúng không ạ? Hiện tại đã quá 4 tiếng kể từ lúc thông báo nên ASM có thể approve đơn gratis rồi anh nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ok, vậy anh báo ASM luôn. Cảm ơn em."
+      },
+      {
+        "role": "assistant",
+        "content": "Nếu cần thêm tài liệu hướng dẫn tạo/approve đơn gratis trên SEM, anh báo em nhé. Em luôn sẵn sàng hỗ trợ. Chúc anh hoàn thành công việc thuận lợi ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Asm chưa approve được đơn anh gửi. Có phải chưa tới giờ không em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh cho em xin thời điểm bên em thông báo hoặc thời gian anh raise gratis để em kiểm tra giúp mình ạ."
+      },
+      {
+        "role": "user",
+        "content": "Thông báo lúc 9h, giờ mới hơn 12h thôi."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ trường hợp này phải chờ đủ 4 giờ tính từ thời điểm thông báo thì ASM mới approve được đơn gratis anh nhé. Anh giúp em theo dõi thêm, tới đủ thời gian mình thao tác lại giúp em ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Em ơi, raise đơn gratis xong thì bao lâu ASM mới approve được hả? Hay approve luôn cũng được?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em hỏi mình đang thao tác hệ thống SEM đúng không ạ? Thời gian chịu delay là 4 tiếng kể từ khi hệ thống thông báo hoặc anh/chị raise đơn gratis, sau mốc này ASM mới approve đơn được nhé anh/chị."
+      },
+      {
+        "role": "user",
+        "content": "Thế tầm chưa đến 4 tiếng là chưa approve được đâu nhỉ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Đúng rồi anh/chị, chưa đủ 4 tiếng hệ thống sẽ chưa cho ASM approve. Qua mốc đó ASM thao tác approve bình thường giúp em nhé. Mình còn vấn đề nào về FREE order hoặc hướng dẫn sử dụng SEM muốn hỗ trợ nữa không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nhờ team hướng dẫn chi tiết cách xuất đơn Gratis trên SEM với ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Cảm ơn anh/chị đã liên hệ kênh hỗ trợ. Để em xác minh lại thông tin một chút, anh/chị vui lòng cho em biết đang là Sales Sup hay SR, và SR có đang TBA để em gửi hướng dẫn phù hợp nhất ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Sales Sup, SR đang TBA nên Sup sẽ cover thị trường."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ cảm ơn anh/chị. Trong trường hợp SR TBA và Sup cover, Sup thao tác xuất đơn Gratis trên SEM như sau:\n1. Đảm bảo đã đồng bộ dữ liệu (Sync) trên SEM trước khi tạo đơn.\n2. Vào Outlet Order, chọn outlet cần xuất Gratis.\n3. Tìm SKU bằng ô tìm kiếm theo tên nếu trong bộ lọc không thấy.\n4. Chọn đúng mã SKU sự kiện nếu dùng cho mục tiêu Gratis.\n5. Kiểm tra các thông tin và xác nhận xuất đơn.\nNếu cần SOP hoặc hướng dẫn chi tiết bản PDF, em có thể gửi ngay. Anh/chị cần thêm hỗ trợ gì không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Cho em xin file hướng dẫn luôn nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em gửi tới anh/chị file hướng dẫn chi tiết xuất đơn Gratis trên SEM. Nếu có vướng mắc nào khi thao tác, anh/chị phản hồi lại để bên em hỗ trợ kịp thời. Anh/chị còn cần hỗ trợ thêm thông tin nào khác không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bên bạn gửi giúp hướng dẫn order Gratis trên SEM đi, tôi không biết bản mới thao tác sao nữa."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, anh/chị vui lòng cho em xin vai trò hiện tại (SR, Sup hay ASM) để em gửi quy trình phù hợp ạ. Ngoài ra, anh/chị cần hướng dẫn cho outlet cụ thể nào không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Tôi Sup, xuất cho nhiều outlet lắm. Sao tự dưng phức tạp vậy, trước thao tác đơn giản hơn nhiều."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, hệ thống SEM có cập nhật giao diện và quy trình mới để đảm bảo an toàn đơn hàng. Anh/chị yên tâm, em sẽ gửi hướng dẫn bản cập nhật mới nhất. Để thuận tiện, anh/chị vui lòng cho em 2–3 mã outlet tiêu biểu để em gửi minh họa cụ thể thao tác nhé."
+      },
+      {
+        "role": "user",
+        "content": "Outlets: 65432109, 65433222, 65432987. Gửi luôn hướng dẫn bằng hình cho tôi nhé, text nhiều quá đọc không rõ."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em ghi nhận các mã outlet 65432109, 65433222, 65432987. Em gửi anh/chị tài liệu và hướng dẫn thao tác kèm hình ảnh minh họa từng bước trên giao diện SEM bản mới nhất. Nếu khi thực hiện mà thao tác vẫn không ra đúng outlet/SKU, anh/chị chụp màn hình phản hồi lại giúp em hỗ trợ nhanh nhất ạ. Anh/chị cần bổ sung thêm thông tin nào khác không?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Cho hỏi xuất gratis trên SEM phải làm những bước gì? Tôi thao tác hoài không được, lỗi hoài."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị. Để hỗ trợ rõ nguyên nhân, anh/chị cho em xin mã outlet và thông tin SKU gặp lỗi được không ạ? Ngoài ra, anh/chị đang dùng vai trò SR hay Sup? Đã thử thao tác sync dữ liệu trên SEM chưa ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Sup, outlet 65032444, sku 10079520. Sync rồi mà không thấy SKU xuất hiện."
+      },
+      {
+        "role": "assistant",
+        "content": "Cảm ơn thông tin của anh/chị. Trường hợp đã sync rồi mà SKU 10079520 không hiển thị để xuất Gratis,\n- Anh/chị thử tìm SKU bằng chức năng tìm kiếm theo tên trực tiếp trong app xem có ra không ạ.\n- Nếu vẫn không thấy SKU, có thể SKU bị giới hạn với mã outlet đó hoặc lỗi cấu hình.\n\nEm sẽ chuyển bộ phận kỹ thuật kiểm tra SKU 10079520 trên SEM cho outlet 65032444. Trong lúc chờ, anh/chị vui lòng thử chọn outlet khác hoặc chụp màn hình lỗi gửi về đây giúp em xác minh thêm nhé. Em sẽ phản hồi ngay khi có kết quả kiểm tra!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào team, em không thấy nhãn Heineken trong phần đặt hàng trên SEM, nhờ giúp với! Code outlet của em là 61400511, NPP QNI29 và mã SKU 10079514."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin thêm mã code NPP QNI29 để kiểm tra nhé. Anh/chị có đang gặp vấn đề hiển thị với khách hàng nào khác không?"
+      },
+      {
+        "role": "user",
+        "content": "Mã NPP là 10375694. Ngoài ra các khách khác cũng không hiện NPP luôn."
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã nhận thông tin. Anh/chị thử tìm SKU bằng tên xem có hiển thị không ạ. Nếu vẫn không có, nhờ gửi thêm 2–3 mã outlet gặp lỗi giúp bên em kiểm tra tổng thể."
+      },
+      {
+        "role": "user",
+        "content": "Khi nhập tên SKU thì thấy, nhưng bộ lọc lại không có. Danh sách khách hàng cũng không hiện mối quan hệ với NPP luôn. Một số code: 61400498, 61400913, 61405423."
+      },
+      {
+        "role": "assistant",
+        "content": "Em ghi nhận các outlet và sẽ tiến hành kiểm tra, đồng thời force sync dữ liệu. Anh/chị vui lòng sync lại máy và báo lại sau khi hoàn thành để bên em hỗ trợ tiếp nhé."
+      },
+      {
+        "role": "user",
+        "content": "Em đã sync xong. Giờ làm gì nữa c?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em vừa Force Sync hệ thống, anh/chị sync lại lần nữa (nhớ giữ màn hình mở, không chuyển tab nhé). Sau đó kiểm tra lại xem NPP và SKU đã hiển thị bình thường chưa ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đã hiện NPP rồi, cảm ơn chị. Nhưng SKU vẫn không có lọc, phải tìm tay."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, với SKU này anh/chị nhập tên vào sẽ hiện đủ 2 mã thường và mã sự kiện. Một số SKU sẽ không hiện trong bộ lọc, đây là điểm chung của hệ thống. Nếu sau này tìm đủ cách mà vẫn không tìm được SKU thì báo lại bên em để kỹ thuật hỗ trợ xử lý triệt để nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ok, cảm ơn nhiều ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ nếu không còn vướng mắc nào khác, em xin phép kết thúc hỗ trợ tại đây. Mọi thông tin cần thiết anh/chị cứ liên hệ lại kênh chat này giúp em nhé ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "C ơi, có phải hệ thống lỗi không, em tìm nhãn Heineken không ra trong mục order, mà đồng nghiệp thì thấy bình thường?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin mã outlet, mã NPP/Sub và SKU không tìm thấy ạ? Đôi khi hệ thống có khác nhau do account hoặc đồng bộ dữ liệu, em kiểm tra thêm nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mã cửa hàng 61400511, NPP QNI29, mã SKU 10079514. Em cũng sync rồi mà vẫn y chang."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị thử nhập tên SKU vào ô tìm kiếm thay vì lọc thử giúp em nhé, bộ lọc đôi khi không hiện đủ mã anh/chị muốn. Có gặp lỗi này ở khách hàng khác không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Em cũng thử rồi, nhập tên thì ra nhưng mất thời gian. Khách mới mở cũng không nhìn thấy thông tin NPP trong danh sách luôn. Chat mãi rồi mà chưa ai xử lý."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, trường hợp danh sách khách hàng không hiển thị NPP, anh/chị gửi giúp em danh sách 2–3 code outlet cụ thể để em kiểm tra. Mã NPP của QNI29 là 10375694 đúng không ạ? Em cần để kiểm tra đồng bộ trên hệ thống luôn."
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi. Code: 61400498, 61400913, 61405423. Xử lý giúp em nhanh với."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em sẽ Force Sync lại hệ thống. Anh/chị sync tiếp 1 lần nữa, nhớ mở màn hình, đừng chuyển sang ứng dụng khác nhé. Sau thao tác này anh/chị kiểm tra và báo kết quả giúp em."
+      },
+      {
+        "role": "user",
+        "content": "Vẫn chưa thấy hiển thị NPP luôn. Bên chị làm ăn vậy thì bọn em biết xử lý sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Rất xin lỗi về trải nghiệm của anh/chị. Một số trường hợp hệ thống cần update đồng bộ chậm, nếu tới trưa nay vẫn chưa thấy hiện đủ NPP/SKU thì em sẽ escalate lên kỹ thuật và theo dõi riêng cho anh/chị. Anh/chị cho em xin thêm ảnh màn hình hoặc hashtag lỗi (nếu có) để dễ đối chiếu ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 5,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Ad, danh sách khách không thấy NPP hiển thị, mà vào order cũng không lọc được SKU, nhờ ad xử lý. Code: 61400511, NPP QNI29, mã SKU 10079514."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, tình trạng này anh/chị sync lại máy chưa? Nếu vẫn lỗi, xin cho em mã NPP đầy đủ và thêm 1–2 outlet khác cũng bị tương tự ạ."
+      },
+      {
+        "role": "user",
+        "content": "Sync rồi, NPP: 10375694. Thêm 2 outlet: 61400498 và 61400913."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, cảm ơn anh/chị đã cung cấp mã. Em sẽ Force Sync hệ thống, sau khi có thông báo anh/chị sync lại máy và chờ 15 phút nhé. Nếu chưa được, có thể gửi ảnh màn hình và bên em escalate kỹ thuật. Còn về SKU, anh/chị nhập tên SKU để tìm giúp em, vì đôi khi bộ lọc chưa cập nhật kịp, nhưng tìm tên là sẽ có."
+      },
+      {
+        "role": "user",
+        "content": "Cứ lần nào cũng phải tìm tay, thêm phiền. Nhờ bên kỹ thuật kiểm tra sớm giúp, team em toàn bị dính lỗi này!"
+      },
+      {
+        "role": "assistant",
+        "content": "Em ghi nhận feedback và sẽ chuyển kỹ thuật kiểm tra đặc biệt trường hợp của team anh/chị. Trong quá trình chờ, nếu cần hỗ trợ gì thêm anh/chị nhắn lại kênh này nhé. Mong anh/chị thông cảm vì sự bất tiện này."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nhờ ad hỗ trợ kiểm tra supplier của outlet 69001160 giúp mình với."
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng anh/chị. Anh/chị xác nhận lại là cần xem outlet này hiện gán với NPP/SubD nào đúng không ạ? Ngoài outlet 69001160 mình có kiểm tra thêm outlet nào không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi em, hiện SA báo đã gắn với SDIP Đoàn Hằng mà trên Sem của em vẫn là Supplier Hiền Đô. Kiểm tra giùm em nhé, chỉ outlet này thôi ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra trên SEM hiện tại outlet 69001160 chưa có mối quan hệ với Sub ĐOÀN HẰNG anh/chị nhé. Anh/chị liên hệ lại SA kiểm tra và tạo lại mối quan hệ giúp em, 24h sau hệ thống sẽ đồng bộ rồi vào order lại ạ."
+      },
+      {
+        "role": "user",
+        "content": "Ok cảm ơn em, có gì mới anh báo lại sau."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, nếu cần thêm hỗ trợ anh/chị cứ nhắn lại kênh này hoặc gọi qua hotline giúp em. Chúc anh/chị một ngày làm việc thuận lợi nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao SEM của em vẫn là Supplier Hiền Đô dù SA nói đã gắn Đoàn Hằng rồi? Hay hệ thống lỗi gì không ad?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin OutletID để em kiểm tra trạng thái mối quan hệ trên SEM nhé. Ngoài ra, SA tạo mqh với SDIP Đoàn Hằng từ khi nào ạ? Nếu mới tạo thường cần đợi hệ thống đồng bộ 24h đấy ạ."
+      },
+      {
+        "role": "user",
+        "content": "Outelt 69001160 ad nhé. SA báo làm hôm qua cơ, mà giờ vẫn chưa update."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra SEM thấy outlet 69001160 vẫn chưa có mqh với Sub ĐOÀN HẰNG đâu ạ. Anh/chị thử liên hệ lại SA để nhờ kiểm tra, có thể thao tác chưa thành công hoặc cần SA tạo lại mqh chuẩn cho đúng. Đợi đủ 24h sau khi SA xác nhận tạo lại rồi anh/chị vào order lại giúp em nha."
+      },
+      {
+        "role": "user",
+        "content": "Phải mỗi lần đều báo lại SA thế này à? Lần nào cũng bị delay."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em hiểu bất tiện của anh/chị. Việc đồng bộ mqh cần SA thao tác đúng và chờ hệ thống cập nhật 24h. Nếu đã tạo đúng mà sau 24h không hiện, anh/chị báo lại em sẽ hỗ trợ escalte lên kỹ thuật kiểm tra chi tiết hơn giúp mình ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Check hộ supplier của outlet 69001160 đi bạn. App bị lỗi không? Hôm trước SA nói có gắn Đoàn Hằng rồi."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em hỏi thêm: mình muốn kiểm tra mqh với Sub ĐOÀN HẰNG đúng không ạ? Anh/chị nhớ SA thao tác gắn mqh này vào thời điểm nào không để em tra lại lịch sử trên hệ thống?"
+      },
+      {
+        "role": "user",
+        "content": "Hôm qua SA báo gắn, mà sáng nay chưa thấy SEM thay đổi gì. Bình thường lâu vậy hả bạn?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, sau khi SA thực hiện gắn mqh thì SEM thường cần tối đa 24h để đồng bộ dữ liệu. Em kiểm tra hiện tại outlet 69001160 vẫn chưa có mqh với Sub ĐOÀN HẰNG. Nhờ anh/chị liên hệ lại SA xác nhận thao tác đã thành công chưa. Nếu sau 24h mà SEM chưa cập nhật, anh/chị phản hồi lại em kiểm tra/escalate bộ phận liên quan xử lý tiếp luôn nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Anh nhờ team gắn giúp mối quan hệ giữa outlet 66907628 - BHTC LÝ VĂN LÂM với NPP 10260229 - MH PHÚ CƯỜNG trên SEM nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ vâng anh ạ, để em kiểm tra mối quan hệ hiện tại giữa outlet và NPP giúp anh nhé. Mình xác nhận outlet 66907628 – BHTC LÝ VĂN LÂM và NPP 10260229 – MH PHÚ CƯỜNG đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi, cảm ơn em."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra thấy mối quan hệ giữa outlet này và NPP là do anh tự tạo nên không hợp lệ anh nhé. Anh vui lòng liên hệ Sale Admin hỗ trợ xóa mối quan hệ này rồi để SA tạo lại đúng chuẩn. Sau khi SA tạo mới, mình chờ 24h để hệ thống đồng bộ rồi order giúp em ạ."
+      },
+      {
+        "role": "user",
+        "content": "Rõ rồi, cảm ơn em nhiều."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh có cần hỗ trợ gì thêm nữa không ạ? Nếu cần thêm thông tin nào, anh nhắn lại kênh này nhé. Em cảm ơn và chúc anh một ngày tốt lành ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bạn ơi, giúp mình gắn mqh giữa outlet 66907628 với NPP 10260229 trên SEM nhé. Sao mình tạo trên hệ thống mà vẫn không đặt đơn được?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, để em kiểm tra giúp ạ. Mình xác nhận lại outlet 66907628 – BHTC LÝ VĂN LÂM với NPP 10260229 – MH PHÚ CƯỜNG đúng không anh/chị?"
+      },
+      {
+        "role": "user",
+        "content": "Ừ đúng rồi, mình tự add mà bị gì ấy."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị xác nhận đúng. Mối quan hệ này do anh/chị tự tạo nên hệ thống sẽ không nhận đơn. Anh/chị cần liên hệ Sale Admin để xóa và tạo lại mối quan hệ mới đúng quy trình nhé. Sau khi SA làm xong, mình chờ khoảng 24h để SEM cập nhật rồi hãy thử đặt đơn lại ạ."
+      },
+      {
+        "role": "user",
+        "content": "Phức tạp ghê... Thế có cách nào tự thêm mà hợp lệ không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Rất tiếc là chỉ Sale Admin mới tạo được mối quan hệ hợp lệ trên SEM anh/chị nhé. Quy trình bảo mật hệ thống nên chưa hỗ trợ tự tạo mqh hợp lệ được. Anh/chị yên tâm, SA sẽ hỗ trợ chuẩn nhanh chóng ạ. Mình còn cần em kiểm tra gì thêm không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Team hỗ trợ gắn mqh outlet 66907628 với NPP 10260229 giúp nhé"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ vâng, để em xác nhận lại: outlet 66907628 là BHTC LÝ VĂN LÂM và NPP 10260229 là MH PHÚ CƯỜNG phải không anh/chị?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi em. Nhưng hình như mình mới add trên hệ thống mà báo không hợp lệ ấy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra mqh hiện tại là do anh/chị tự thêm nên hệ thống không chấp nhận anh/chị nhé. Mình vui lòng liên hệ Sale Admin để họ xóa và tạo lại mqh theo đúng chuẩn quy định. Sau khi SA thao tác xong, mình chờ 24h để đồng bộ rồi order lại giúp em."
+      },
+      {
+        "role": "user",
+        "content": "Thanks. Mà quy trình này áp dụng cho tất cả outlet hả em hay chỉ mỗi trường hợp này?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ quy trình này áp dụng cho tất cả trường hợp muốn tạo mqh giữa outlet và NPP/SubD trên SEM anh/chị nhé. Chỉ Sale Admin có quyền tạo chính thức, còn tự add sẽ không hợp lệ. Nếu anh/chị có nhiều outlet cần kiểm tra/mqh thì báo em kiểm tra luôn ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nhờ em kiểm tra mối quan hệ giữa outlet Thanh Bình 66950860 và NPP CP8 giúp anh với."
+      },
+      {
+        "role": "assistant",
+        "content": "Em cảm ơn anh đã liên hệ! Anh đang cần kiểm tra về mối quan hệ giữa outlet này và NPP CP8 để phục vụ mục đích đặt đơn hay có vấn đề khác không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đặt đơn nhưng bên NPP không nhận được đơn của outlet này."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh cho em xin thêm mã đơn hàng gặp lỗi này để em tra cứu cụ thể giúp ạ. Ngoài ra, em kiểm tra mối quan hệ outlet 66950860 với NPP CP8 thì lần cập nhật gần nhất trạng thái là Inactive. Anh liên hệ SA để chuyển mối quan hệ sang Active, sau đó chờ 24h rồi đặt đơn lại giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Ok, cảm ơn em hỗ trợ nhanh nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, nếu anh cần hỗ trợ thêm về mối quan hệ hay thông tin đơn hàng nào khác anh cứ nhắn cho bên em nha. Em chúc anh một ngày làm việc hiệu quả."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Oi em ơi, hỏi chút: outlet thanh bình 66950860 có còn liên kết với NPP cp8 ko nhỉ? Hôm qua đặt mãi đơn NPP báo ko thấy gì chán ghê."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, để em kiểm tra lại mối quan hệ giữa outlet 66950860 và NPP CP8 cho anh ạ. Anh còn nhớ mã đơn nào đặt hôm qua bị lỗi không để em tra sát luôn không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Không nhớ mã đơn, chỉ nhớ là bị suốt mấy lần rồi. Với cả, nếu inactive thì làm sao để active lại?"
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng, em vừa check thì mối quan hệ gần nhất của outlet này với NPP CP8 đang ở trạng thái Inactive nhé anh. Trường hợp này, cần nhờ SA chuyển sang trạng thái Active và sau đó chờ 24 tiếng để hệ thống đồng bộ, anh mới đặt lại được. Anh có cần em hướng dẫn cụ thể cách liên hệ SA không hoặc hỗ trợ gì thêm nữa không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Thôi anh biết rồi, thanks nhé. Có gì hỏi tiếp sau."
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng, anh cần thêm thông tin thì cứ nhắn lại cho em bất cứ lúc nào nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "6685060-Thanh Bình với CP8 còn mqh ko? Hôm qua thử order thất bại."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh xác nhận lại giúp em, mã outlet Anh hỏi là 66950860 phải không ạ? Anh có thể cung cấp mã đơn hàng gặp vấn đề không để em kiểm tra sâu hơn cho mình ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Ừ đúng rồi. Đơn thì xóa luôn rồi, chán nên ko lưu."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra thì outlet 66950860 mối quan hệ với CP8 lần sửa đổi gần nhất là Inactive. Anh vui lòng liên hệ SA nhờ chuyển sang trạng thái Active, chờ 24h rồi đặt lại. Anh gặp các vấn đề lỗi tương tự với outlet khác có muốn check luôn không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Tạm thời chỉ mỗi outlet này thôi em, để anh báo lại cho SA. Cảm ơn."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, nếu có thêm trường hợp nào khác cần kiểm tra anh cứ nhắn em hỗ trợ nhé. Chúc anh công việc thuận lợi!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mình cần kiểm tra mối quan hệ của 3 outlet này với sub, vì báo cáo thể hiện có mà SEM lại không thấy."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng cung cấp mã outlet để em tra cứu trên SEM giúp mình nhé. Nếu biết tên hoặc mã Sub/NPP cụ thể thì cung cấp luôn càng tốt ạ."
+      },
+      {
+        "role": "user",
+        "content": "Các mã là 61502610, 61506873 với sub Cát Tiên và Cường Hải, mã nhân viên 1704504."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em kiểm tra:\n- Outlet 61502610 hiện không có mqh với SubD Cát Tiên trên SEM.\n- Outlet 61506873 không có mqh với Sub CƯỜNG HẢI.\n- Outlet 6158003 thì có mqh với Sub CƯỜNG HẢI ạ.\n\nNếu báo cáo hiển thị khác nhưng SEM chưa cập nhật và thao tác SA đã trên 24h, em sẽ gửi yêu cầu kiểm tra đồng bộ dữ liệu. Nếu mới tạo dưới 24h thì mình chờ đủ thời gian giúp em nhé.\nAnh/chị cần em hỗ trợ thêm gì nữa không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Ok, cảm ơn em."
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng ạ, nếu có thêm vấn đề cần hỗ trợ anh/chị cứ liên hệ lại kênh này nhé ạ. Em xin phép kết thúc cuộc trò chuyện tại đây."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Kiểm tra hộ 3 outlet xem liên kết với sub chưa bạn ơi, sao báo cáo ghi có mà vào SEM chẳng thấy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng gửi mã outlet, tên sub hoặc mã nhân viên để em kiểm tra chi tiết nhé. Nhờ anh/chị nói rõ báo cáo lấy ở đâu để em đối chiếu khi cần."
+      },
+      {
+        "role": "user",
+        "content": "Đây: 61502610 (sub Cát Tiên), 61506873 (CƯỜNG HẢI), 6158003 (CƯỜNG HẢI), mã nhân viên 1704504. Mình đang cần gấp á."
+      },
+      {
+        "role": "assistant",
+        "content": "Em vừa kiểm tra:\n- Outlet 61502610 hiện không có mqh với SubD Cát Tiên trên SEM ạ.\n- Outlet 61506873 chưa có mqh với Sub CƯỜNG HẢI.\n- Outlet 6158003 có mqh với Sub CƯỜNG HẢI nhé.\nNếu SA đã tạo/gắn mqh trên 24h mà SEM vẫn chưa cập nhật, em hỗ trợ gửi yêu cầu kiểm tra đồng bộ. Nếu dưới 24h, mình chờ thêm giúp em ạ."
+      },
+      {
+        "role": "user",
+        "content": "Sao mấy lần rồi chưa thấy update trên SEM, mình cần gấp lắm."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng xác nhận thao tác gắn mqh đã hơn 24h chưa và gửi giúp em ảnh báo cáo tạo mqh. Nếu đã đủ điều kiện mà vẫn không đồng bộ, em sẽ escalate bộ phận kỹ thuật kiểm tra ngay nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bạn kiểm tra giúp các outlet này có mqh với sub chưa? Báo cáo ghi có mà SEM thì không ra, lại bị sếp hỏi hoài."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cung cấp cụ thể mã các outlet cần kiểm tra, Sub cần xác nhận và thời điểm tạo/gắn mqh nếu có nhé. Nếu có mã nhân viên thì gửi luôn cho tiện ạ."
+      },
+      {
+        "role": "user",
+        "content": "Các mã: 61502610 – sub Cát Tiên, 61506873 và 6158003 – CƯỜNG HẢI. Sếp hỏi vì báo cáo cứ bị lệch thông tin. Mã nv 1704504"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, kết quả kiểm tra trên SEM:\n- 61502610 không có mqh với SubD Cát Tiên.\n- 61506873 không có mqh với Sub CƯỜNG HẢI.\n- 6158003 có mqh với Sub CƯỜNG HẢI.\nMột số trường hợp dữ liệu báo cáo và SEM khác nhau có thể do chưa đồng bộ. Nếu SA tạo/gắn mqh dưới 24h thì mình chờ thêm; nếu đã lâu hơn, vui lòng gửi ảnh đối chiếu để em hỗ trợ kiểm tra đồng bộ hoặc chuyển kỹ thuật xử lý. Anh/chị cần tra cứu hoặc hỗ trợ gì thêm không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào em, em kiểm tra giúp anh outlet 61700645 còn gán mối quan hệ với Sub Cô Là không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em kiểm tra outlet 61700645 không có mối quan hệ với Sub Cô Là trên SEM ạ. Anh/chị cần em hỗ trợ kiểm tra thêm outlet nào nữa không hay các mối quan hệ khác với outlet này ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Không, chỉ kiểm tra outlet đó thôi. Cảm ơn em nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, cảm ơn anh đã liên hệ. Nếu cần hỗ trợ gì thêm anh cứ nhắn lại kênh này giúp em ạ. Chúc anh một ngày tốt lành!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Outlets 61700645 và 61700999 còn liên kết Sub Cô Là chứ? Tra nhanh giúp anh, anh đang cần gấp."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh vui lòng cho em xác nhận lại là muốn kiểm tra cả hai outlet 61700645 và 61700999 xem còn gán mqh với Sub Cô Là đúng không ạ? Em kiểm tra thấy outlet 61700645 không còn mqh với Sub Cô Là trên SEM. Còn outlet 61700999, anh có thể cung cấp thêm tên outlet hoặc mã Sub khác nếu cần kiểm tra chi tiết hơn giúp em với ạ."
+      },
+      {
+        "role": "user",
+        "content": "Ờ, thôi chỉ cần 61700645 thôi cũng được. Thanks."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em ghi nhận, outlet 61700645 không còn mqh với Sub Cô Là trên SEM. Nếu anh có nhu cầu kiểm tra thêm, anh cứ nhắn lại cho em nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Làm ơn check hộ mối quan hệ của outlet 61700645 với Sub Cô Là với, mà với Sub khác thì sao, có kiểm tra được luôn không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em kiểm tra outlet 61700645 hiện không có mối quan hệ với Sub Cô Là trên SEM ạ. Nếu anh/chị muốn kiểm tra với Sub khác, vui lòng cung cấp tên hoặc mã Sub cụ thể để em hỗ trợ kiểm tra thêm nhé."
+      },
+      {
+        "role": "user",
+        "content": "Chỉ tò mò thôi, cảm ơn. Mà chức năng này chỉ check qua SEM thôi hả? Có cần liên hệ ai nữa không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, đúng rồi anh/chị. Kết quả kiểm tra sẽ dựa trên dữ liệu của SEM hiện tại. Nếu cần thực hiện gán hoặc chỉnh sửa mối quan hệ, anh/chị vui lòng liên hệ Sale Admin (SA) để được hỗ trợ tạo hoặc cập nhật nhé. Nếu cần hỗ trợ gì thêm em luôn sẵn sàng ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Đơn đặt trên SEM hôm qua vẫn chưa thấy về DIS Lite bên Sub Đại lý Thanh Hoàng (67404893) cho outlet Thanh Thảo (67404607), mã đơn: 2511197416078. Nhờ kiểm tra giúp mình nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Em cảm ơn anh/chị đã cung cấp thông tin. Đơn hàng này đặt qua kênh SEM đúng không ạ? Anh/chị xác nhận lại giúp em thời gian đặt đơn là hôm qua đúng không?\nEm sẽ kiểm tra trên hệ thống. Anh/chị vui lòng đợi trong giây lát ạ."
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi đặt SEM hôm qua nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em kiểm tra thấy đơn hàng chưa đồng bộ về DIS Lite cho Sub Đại lý Thanh Hoàng. Em sẽ log thông tin và chuyển bộ phận kỹ thuật hỗ trợ repush đơn hàng này ngay.\nKhi có kết quả, bên em sẽ phản hồi lại cho anh/chị. Anh/chị vui lòng cung cấp thêm số điện thoại liên hệ để em báo khi có cập nhật nhé."
+      },
+      {
+        "role": "user",
+        "content": "Số mình là 0972946507. Cảm ơn team nhiều nhé!"
+      },
+      {
+        "role": "assistant",
+        "content": "Em ghi nhận số điện thoại 0972946507. Khi có thông tin mới, bên em sẽ liên hệ lại ngay. Nếu cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng hoặc DIS Lite, anh/chị cứ liên hệ lại giúp em ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao mã đơn 2511197416078 không vào hệ thống của Sub được vậy team? Bên mình bị thiếu hàng rồi đó."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ chị cho em xin mã Sub, mã outlet để em kiểm tra thêm thông tin giúp chị ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Sub là Đại lý Thanh Hoàng mã 67404893, outlet là TH Thanh Thảo 67404607 nha. Nhanh giúp chứ shop đang gấp ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xin lỗi vì sự chậm trễ làm ảnh hưởng tới hoạt động shop mình. Em đang kiểm tra ngay trên hệ thống SEM và DIS Lite, chị vui lòng đợi chút nhé.\nChị cho em xin số điện thoại để khi có kết quả em sẽ chủ động gọi lại báo chị liền."
+      },
+      {
+        "role": "user",
+        "content": "Số cũ bên hệ thống 0972946507 chắc vẫn được đúng không? Có gì báo sớm giùm em nha."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ đúng rồi chị, em đã ghi nhận số 0972946507 của chị. Đơn hàng đang được team kỹ thuật hỗ trợ repush về DIS Lite, khi có phản hồi bên em sẽ chủ động báo chị ạ. Cảm ơn chị đã hợp tác!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Cho hỏi repush đơn 2511197416078 thì mất bao lâu? Hôm qua báo rồi mà giờ chưa thấy gì."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xin lỗi về sự chậm trễ. Anh/chị cho em xin lại mã Sub và outlet để em kiểm tra tình trạng hỗ trợ cho đơn này ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Sub Đại lý Thanh Hoàng 67404893, outlet Thanh Thảo 67404607. Đơn này khách báo thiếu hàng mà kẹt hết cả rồi."
+      },
+      {
+        "role": "assistant",
+        "content": "Em hiểu sự cấp bách của anh/chị. Em kiểm tra lại thì đơn hàng vẫn chưa đồng bộ về DIS Lite, bên em đang phối hợp với kỹ thuật để repush. Thông thường thời gian xử lý mất khoảng 1-2 tiếng nhưng có thể chậm hơn nếu lỗi hệ thống.\nAnh/chị vui lòng cho em số điện thoại liên hệ để em báo lại ngay khi có kết quả?"
+      },
+      {
+        "role": "user",
+        "content": "Số bên shop là 0972946507. Nhờ team hỗ trợ tối đa giúp chứ khách chờ lâu sốt ruột rồi."
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã ghi nhận số điện thoại 0972946507 và sẽ cập nhật ngay khi có kết quả mới. Rất mong anh/chị thông cảm, bên em sẽ đẩy nhanh xử lý nhất có thể ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào team, mình là SubD. Đơn hàng đặt từ hệ thống mà không thấy xuất hiện trên DIS Lite, nhờ hỗ trợ giúp mình với ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị vui lòng cung cấp giúp em:\n1. Mã SubD và tên đầy đủ\n2. Mã Outlet và tên Outlet\n3. Mã đơn hàng đang bị lỗi không hiển thị\nĐể em kiểm tra nhanh nhất cho mình ạ."
+      },
+      {
+        "role": "user",
+        "content": "SubD: 66002105 - Việt Anh Nga\nOutlet: 66016555 - Cô Hà C\nĐơn hàng: CO251124-01481"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị vui lòng xác nhận giúp em mã 66002105 là mã SubD đúng không ạ? Muốn chắc chắn để tránh nhầm lẫn ạ."
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi em, chính xác đó."
+      },
+      {
+        "role": "assistant",
+        "content": "Em cảm ơn anh/chị. Em sẽ kiểm tra thông tin đơn hàng này trên hệ thống, anh/chị vui lòng đợi trong giây lát nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Hiện tại đơn hàng CO251124-01481 đã hiển thị trên DIS Lite của SubD 66002105 Việt Anh Nga với trạng thái Created rồi anh/chị nhé. Anh/chị kiểm tra lại giúp em trên hệ thống. Nếu vẫn không thấy, vui lòng phản hồi lại hoặc gửi ảnh màn hình để em tiếp tục hỗ trợ thêm."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bên mình chờ mãi không thấy đơn đâu cả, check hộ cái!"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị có thể cung cấp giúp em mã SubD, tên SubD, mã Outlet và mã đơn hàng không ạ? Để em hỗ trợ kiểm tra chính xác ạ."
+      },
+      {
+        "role": "user",
+        "content": "Cái gì cũng hỏi hết, gửi rồi có check không thế? Hay lỗi hệ thống lại phải chờ lâu?"
+      },
+      {
+        "role": "assistant",
+        "content": "Em rất xin lỗi nếu anh/chị cảm thấy mất thời gian, tuy nhiên để kiểm tra đúng đơn hàng cần các dữ liệu này ạ. Nếu mình gửi giúp em:\n- Mã SubD, tên SubD\n- Mã Outlet và tên Outlet\n- Mã đơn hàng\nEm sẽ kiểm tra ngay trên hệ thống và thông báo kết quả sớm nhất cho mình. Mong anh/chị thông cảm nhé."
+      },
+      {
+        "role": "user",
+        "content": "62620088 Nam Bình 61990012 Tân Bằng CO251125-01991"
+      },
+      {
+        "role": "assistant",
+        "content": "Em cám ơn thông tin. Anh/chị vui lòng chờ chút, em đang kiểm tra mã đơn hàng CO251125-01991 trên hệ thống.\nKhi có kết quả, em sẽ báo lại ngay để anh/chị phối hợp kiểm tra với SubD Nam Bình nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Hiện tại em kiểm tra đơn CO251125-01991 đã hiển thị ở DIS Lite của SubD 62620088 Nam Bình với trạng thái Created rồi anh/chị nhé. Nếu không tìm thấy, vui lòng gửi ảnh màn hình hoặc cho biết chi tiết để bên em xử lý tiếp."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Các bạn cho hỏi, mình muốn tra cứu đơn hàng nhưng mà không nhớ rõ mã Outlet, chỉ biết tên thôi, có check được không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin tên SubD, tên Outlet và nếu có mã đơn hàng thì cung cấp giúp em nhé. Em sẽ tra cứu dựa vào thông tin anh/chị gửi."
+      },
+      {
+        "role": "user",
+        "content": "SubD là Hiệp Phát, outlet tên Cửa Hàng Minh Tâm. Đơn hàng hình như là CO251126-00345."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra lại: Tên SubD Hiệp Phát, Outlet Minh Tâm, mã đơn hàng CO251126-00345 đúng không ạ? Anh/chị còn biết địa chỉ outlet này không để em xác thực chính xác hơn không?"
+      },
+      {
+        "role": "user",
+        "content": "Cám ơn anh/chị. Em sẽ tra cứu trên hệ thống dựa vào thông tin: SubD Hiệp Phát, Outlet Minh Tâm - 101 Lê Lợi, đơn hàng CO251126-00345. Kết quả sẽ thông báo lại ngay.\nLưu ý lần sau nếu anh/chị có thể cung cấp mã Outlet sẽ giúp kiểm tra nhanh hơn nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra trên hệ thống, đơn hàng CO251126-00345 đã phát sinh trên DIS Lite của SubD Hiệp Phát với trạng thái Created. Anh/chị kiểm tra giúp em trên hệ thống nhé. Nếu vẫn có vấn đề, vui lòng phản hồi để được hỗ trợ tiếp."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "#hvn_dislite"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị! Anh/chị cần hỗ trợ gì về hệ thống DIS Lite ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Check giúp em, đơn này không hiện trên DIS Lite."
+      },
+      {
+        "role": "user",
+        "content": "Bida 92 Luxury, mã outlet 69228169, lấy hàng từ Dưỡng Nhánh 69200667. Mã đơn hàng 2512017604183."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra đơn hàng 2512017604183 thì outlet 69228169 hiện không có mối quan hệ hợp lệ với SubD 69200667 (Dưỡng Nhánh) trên DIS Lite. Anh/chị vui lòng nhờ Sale Admin kiểm tra và cập nhật lại mối quan hệ trên hệ thống nhé. Sau khi Sale Admin xử lý và hệ thống đồng bộ trong 24h, anh/chị nhắn lại để em tiếp tục kiểm tra và hỗ trợ repush đơn lên hệ thống."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "#hvn_dislite bị lỗi không nhận đơn, hay sao mãi không thấy update gì cả?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng cho em xin mã đơn hàng cần kiểm tra với ạ? Ngoài ra, anh/chị có thể nói rõ đơn của outlet/subD nào để em hỗ trợ tra cứu."
+      },
+      {
+        "role": "user",
+        "content": "Đơn của Bida 92 Luxury, không chắc mã, hình như lấy hàng chỗ Dưỡng Nhánh. Sao lâu vậy nhỉ, app chậm quá!"
+      },
+      {
+        "role": "assistant",
+        "content": "Em hỗ trợ nhanh nhất có thể ạ! Anh/chị giúp em xác nhận lại mã đơn hàng hoặc gửi ảnh chụp màn hình đơn hàng nếu có. Để tra cứu chính xác, em cần thông tin mã outlet và mã SubD lấy hàng. Sau đó, em sẽ kiểm tra trực tiếp và phản hồi sớm cho mình. Mong anh/chị thông cảm vì có thể xảy ra độ trễ do đồng bộ hệ thống."
+      }
+    ]
+  },
+  {
+    "procedure_id": 4,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Đơn của shop mình sao không thấy phản hồi gì cả?"
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin thông tin chi tiết: tên shop hoặc mã outlet, mã đơn và SubD lấy hàng. Em kiểm tra trên hệ thống và sẽ báo lại ngay cho mình."
+      },
+      {
+        "role": "user",
+        "content": "Shop Bida 92 Luxury. Gửi đơn mấy hôm rồi mà SubD Dưỡng Nhánh chưa nhận. Không nhớ mã đơn."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận hiện outlet Bida 92 Luxury chưa có mối quan hệ hợp lệ với SubD Dưỡng Nhánh trên hệ thống DIS Lite nên đơn có thể chưa được cập nhật. Nhờ anh/chị liên hệ Sale Admin hỗ trợ gắn lại mối quan hệ giữa outlet và SubD này. Đợi đồng bộ trong 24h rồi mình kiểm tra lại đơn, hoặc gửi em mã đơn cụ thể để kiểm tra chi tiết hơn nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, SubD không thấy đơn hàng đặt từ hệ thống SEM, nhờ kiểm tra giúp mình với. Mình đã có mã đơn đây."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin mã subdis, tên SubD, mã outlet, và danh sách mã đơn hàng để em kiểm tra trên hệ thống nhé ạ."
+      },
+      {
+        "role": "user",
+        "content": "Subdis 67511303 MINH QUANG, outlet 67508467 HOA SƠN QUÁN, mã đơn: 2511297580678, 2511297580464, 2511277554329."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em kiểm tra trên hệ thống thấy mối quan hệ giữa outlet 67508467 và SubD 67511303 đã hết hạn trên DIS Lite nên SubD không nhận được các đơn hàng này. Anh/chị vui lòng liên hệ Sale admin kiểm tra và điều chỉnh lại mối quan hệ, sau đó đợi khoảng 24h để hệ thống đồng bộ. Sau thời gian này, anh/chị liên hệ lại để bên em kiểm tra giúp ạ."
+      },
+      {
+        "role": "user",
+        "content": "Cảm ơn bạn, để mình làm theo hướng dẫn."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em cảm ơn anh/chị, nếu còn vấn đề nào khác cần hỗ trợ anh/chị cứ nhắn lại qua kênh chat hoặc hotline HVN 1800234522 nhấn phím 1 giúp em ạ. Chúc anh/chị một ngày tốt lành!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Có thấy báo order xong mà SubD chẳng thấy đơn, check hoài mấy lần vẫn không có luôn. Cụ thể là 3 đơn này: 2511297580678, 2511297580464, 2511277554329."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị vui lòng cung cấp giúp em mã SubD, tên SubD và outlet để em kiểm tra kỹ trên hệ thống ạ. Ngoài 3 mã đơn này còn trường hợp đơn nào khác không anh/chị?"
+      },
+      {
+        "role": "user",
+        "content": "Subdis 67511303, Minh Quang. Outlet 67508467. Hết rồi, chỉ có từng đó đơn. Mà lần nào cũng thao tác y vậy mà..."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em vừa kiểm tra thấy mqh giữa outlet và subdis này đã hết hạn trên DIS Lite, nên SubD không nhận được các đơn này. Anh/chị cần liên hệ Sale admin để điều chỉnh lại mqh trên hệ thống và chờ hệ thống đồng bộ trong 24h giúp em. Sau đó, mình có thể liên hệ lại để kiểm tra đơn nhé.\n\nNếu thao tác vẫn gặp lỗi sau khi đã điều chỉnh, anh/chị chụp màn hình và gửi lại giúp em để bên em kiểm tra sâu hơn ạ. Anh/chị còn cần hỗ trợ gì thêm không?"
+      },
+      {
+        "role": "user",
+        "content": "Alo, mà thao tác đổi quan hệ có nặng nề gì không? Sale admin làm luôn được phải không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, thao tác này chỉ phía Sale admin mới thực hiện được, cũng khá nhanh thôi ạ. Sau khi Sale admin tạo/điều chỉnh mối quan hệ xong, anh/chị chờ tối đa 24h để hệ thống đồng bộ rồi thử lại. Nếu có thêm thắc mắc, anh/chị nhắn lại cho em nhé!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mình gặp lỗi giống lần trước: SubD chưa nhận đơn order từ SEM, phải làm sao? Gửi mã cho nhanh nhé: 2511297580678, 2511297580464, 2511277554329. Trả lời mình gấp!"
+      },
+      {
+        "role": "assistant",
+        "content": "Em hỗ trợ anh/chị ngay ạ. Anh/chị có thể cho em mã SubD và mã outlet không để em kiểm tra tổng hợp luôn ạ?"
+      },
+      {
+        "role": "user",
+        "content": "67511303 Minh Quang, outlet 67508467 Hoa Sơn Quán."
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã tra cứu, nguyên nhân là mối quan hệ giữa outlet 67508467 và SubD 67511303 đã hết hạn trên hệ thống DIS Lite, nên đơn hàng không về SubD được. Anh/chị nhờ Sale admin kiểm tra, cập nhật lại mối quan hệ này rồi sau đó chờ tối đa 24h để hệ thống đồng bộ. Nếu sau thời gian này chưa nhận được đơn, anh/chị phản hồi lại với em nhé ạ.\n\nAnh/chị có muốn kiểm tra thêm đơn nào hoặc cần thêm hỗ trợ gì không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, mình cần kiểm tra đơn hàng này trên DIS Lite."
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng, anh/chị cho em xin mã đơn hàng để kiểm tra giúp ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Mã đơn là CO251108-08280."
+      },
+      {
+        "role": "assistant",
+        "content": "Em xác nhận anh/chị cần kiểm tra trạng thái đơn hàng này trên DIS Lite đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi em."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị chờ em kiểm tra hệ thống một chút nhé."
+      },
+      {
+        "role": "user",
+        "content": "Okay, cảm ơn em."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra thấy đơn hàng CO251108-08280 hiện MQH đã hết hạn trên DIS Lite nên đơn chưa về hệ thống của SubD 67001012 HỒNG GẤM. Anh/chị nhờ Sale Admin kiểm tra lại, sau 24h đồng bộ nhắn lại để bên em hỗ trợ repush đơn lên hệ thống nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "DIS Lite bị mất đơn rồi, không tìm ra đơn mới trên app!"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị cho em xin mã đơn hàng và outlet của mình để em tra cứu nguyên nhân cho chính xác được không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Mã thì anh cũng không nhớ, app của anh bị lỗi này suốt."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị có thể gửi ảnh màn hình đơn hàng/tên cửa hàng hoặc ngày đặt gần nhất giúp em không ạ? Ngoài ra, mình đã thử kiểm tra với NPP/Sub chưa ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Tên Sub là HỒNG GẤM, hình thì để anh kiếm thử. Sao cứ bị vậy hoài, hệ thống gì đâu..."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em hiểu sự bất tiện này. Việc đơn hàng không hiển thị có thể do MQH outlet và SubD/NPP hết hạn hoặc chưa đồng bộ. Khi anh cung cấp mã đơn/ảnh/tên cửa hàng cụ thể, em sẽ phối hợp kiểm tra kỹ và hỗ trợ log lên hệ thống cấp 2 để kiểm tra/repush đơn hàng ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "shop mình check hộ lý do đơn này không vào DIS Lite được không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, anh/chị cung cấp giúp em mã đơn hàng với mã SubD để em kiểm tra luôn ạ?"
+      },
+      {
+        "role": "user",
+        "content": "CO251108-08280, SubD 67001012."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, đơn này chưa về vì MQH với SubD 67001012 hiện đã hết hạn trên hệ thống. Anh/chị cần liên hệ Sale Admin hỗ trợ gắn lại MQH, sau 24h đồng bộ bên em sẽ repush đơn giúp mình nha. Anh/chị cho biết cần hỗ trợ thêm lỗi nào ngoài vấn đề này không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "À nhân tiện, app có hay bị chậm loading, phải làm sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Với tình trạng app chậm loading, anh/chị thử kiểm tra lại kết nối mạng, tắt chạy nền ứng dụng hoặc gỡ cài đặt rồi cài lại app. Nếu vẫn lỗi, gửi ảnh/video màn hình, bên em sẽ chuyển bộ phận chuyên môn hỗ trợ tiếp ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nhờ kiểm tra giúp 4 đơn hàng sau của đại lý Anh Việt: 2511157378308 NIỀM TIN, 2511157378301 SHOP 6L, 2511157378306 A BI ĐẠI LÍ, 2511157378303 TH HOÀNG MI. Đã duyệt giao hàng khi nào? Đại lý báo chưa nhận được."
+      },
+      {
+        "role": "assistant",
+        "content": "Cảm ơn anh/chị đã cung cấp thông tin. Anh/chị cần kiểm tra trạng thái và thời gian duyệt giao 4 đơn này trên DIS Lite đúng không ạ? Cho em xin mã code của SubD (Anh Việt) và mã code của 4 outlet đặt hàng để em tra cứu nhé."
+      },
+      {
+        "role": "user",
+        "content": "Đại lý Anh Việt - 65032511. Mã outlet: 65029401 (A Bi Đại Lí), 65051672 (NIỀM TIN), 65506899 (SHOP 6L), 65007389 (TH HOÀNG MI). Đơn đặt ngày 15/11."
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã ghi nhận thông tin gồm mã SubD 65032511 và các outlet. Để kiểm tra chính xác, em sẽ đối chiếu thông tin đơn hàng trên hệ thống và phản hồi lại. Anh/chị vui lòng chờ thông báo từ bên em qua Zalo nhé.\n\nDự kiến thời gian duyệt giao các đơn này là khoảng 21h ngày 15/11. Nếu cần danh sách thời gian chi tiết, em có thể gửi luôn cho mình ạ. Anh/chị có cần hỗ trợ gì khác về đơn hàng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Vậy đa số là duyệt giao vào tối hôm đó hả em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, đúng rồi anh/chị. Các đơn đều được hệ thống duyệt giao vào tối khoảng 9h ngày 15/11. Nếu có vấn đề nào đại lý vẫn chưa thấy, anh/chị cứ báo lại để bên em kiểm tra sâu hơn nhé.\n\nNếu chưa rõ gì thêm hoặc cần kiểm tra đơn tiếp theo, anh/chị liên hệ kênh này hoặc Zalo Heineken HVN Đặt Hàng giúp em ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Anh cần biết 4 đơn hàng đại lý Anh Việt đã được giao chưa và thời gian nào. Đơn gồm: 2511157378308, 2511157378301, 2511157378306, 2511157378303. Phản hồi đại lý báo không thấy đơn và cũng chưa nhận thông báo gì."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh cho em xin thêm mã đại lý (SubD) và mã của từng outlet giúp em đối chiếu chính xác nhé. Ngoài ra đại lý của mình là Anh Việt phải không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng Anh Việt nhé. SubD: 65032511. Outlet gồm: 65029401, 65051672, 65506899, 65007389. Đơn đều đặt ngày 15/11."
+      },
+      {
+        "role": "assistant",
+        "content": "Em cảm ơn anh đã xác nhận. Em kiểm tra trên hệ thống thì các đơn này đã được duyệt giao lúc 21h đêm 15/11 cho từng outlet rồi anh nhé. Tuy nhiên nếu đại lý chưa nhận được thông báo, mình vui lòng kiểm tra lại trên App hoặc báo lại với bên em để phối hợp kiểm tra thêm.\n\nAnh có cần hỗ trợ gì thêm với những đơn này hay muốn kiểm tra tình trạng giao hàng thực tế không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Thế có chắc chắn là hệ thống đã cập nhật chưa? Đại lý báo lo chưa thấy báo đẩy về máy."
+      },
+      {
+        "role": "assistant",
+        "content": "Trên hệ thống đã ghi nhận cập nhật trạng thái duyệt giao rồi anh/chị nhé. Tuy nhiên việc thông báo đến thiết bị có thể trễ do kết nối hoặc hệ thống. Nếu đại lý vẫn không thấy đơn trên app sau vài tiếng, anh/chị cung cấp ảnh màn hình hoặc thông tin chi tiết lỗi để bên em kiểm tra kỹ hơn giúp mình.\n\nNếu còn lỗi hoặc cần support về vấn đề nhận đơn, anh/chị liên lạc kênh này hoặc tổng đài HVN giúp em ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Nhờ kiểm tra thời gian giao hàng của 4 đơn đã duyệt. Đại lý Anh Việt báo không nhận được hàng."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin mã đơn hàng ạ? Nếu có mã đại lý (SubD) và mã Outlet càng tốt để em kiểm tra cho chính xác nha."
+      },
+      {
+        "role": "user",
+        "content": "Đây: 2511157378308, 2511157378301, 2511157378306, 2511157378303. Đại lý là Anh Việt 65032511. Outlet: 65029401, 65051672, 65506899, 65007389."
+      },
+      {
+        "role": "assistant",
+        "content": "Cảm ơn anh/chị cung cấp đầy đủ thông tin. Em xác nhận lại: Đặt ngày 15/11 đúng không ạ? Em đang kiểm tra trên hệ thống. Trong lúc đó, anh/chị xác nhận đại lý phản hồi là không thấy thông báo đơn trên app hay thực tế chưa giao hàng ạ? Nếu được, gửi thêm giúp em ảnh màn hình app đại lý nhé."
+      },
+      {
+        "role": "user",
+        "content": "Anh không rõ, đại lý chỉ bảo là chưa thấy trạng thái đơn thôi. Em kiểm tra giúp anh thời gian hệ thống duyệt giao nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ. Theo kiểm tra, các đơn này đều đã được duyệt giao thành công vào tối 15/11, cụ thể khoảng 21h. Nếu đại lý không thấy, có thể do đồng bộ dữ liệu chậm. Anh/chị hướng dẫn đại lý cập nhật lại ứng dụng hoặc thử đăng xuất vào lại. Nếu chưa thấy, vui lòng gửi ảnh màn hình về cho bên em để support thêm ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Anh cần check giúp đơn của SubD Bé Liên (64700667) đặt hôm qua, sáng nay vào app DIS Lite không thấy đơn treo đâu nữa."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin mã đơn hàng cụ thể hoặc ảnh danh sách đơn để em đối soát nhé. Các đơn này đều đặt trên DIS Lite đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Dạ có 3 mã đơn, em gửi ảnh qua đây luôn. Đều là đơn treo đặt trên DIS Lite hôm qua ạ, hôm nay vào không thấy."
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã nhận được hình. Hiện em kiểm tra trên hệ thống, 3 đơn này đang ở trạng thái Cancelled rồi ạ nên không hiển thị trên app. Anh/chị báo SubD kiểm tra lại trạng thái đơn giúp em nhé. Nếu cần hỗ trợ thêm về nguyên nhân huỷ hoặc thao tác đặt lại, anh/chị báo em hỗ trợ tiếp ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao tự nhiên mấy đơn treo của bên Bé Liên biến mất rồi? Có vấn đề gì không vậy? App này kỳ quá!"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ anh/chị cho em xin mã đơn hàng hoặc ảnh màn hình đơn anh/chị kiểm tra giúp em nhé để em đối chiếu chính xác ạ. Mình thao tác trên DIS Lite đúng không ạ? Ngoài ra anh/chị cần em kiểm tra thêm vấn đề gì ngoài đơn hàng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Gửi mã đây: 230412789, 230412790, 230412791. Ngoài ra app dạo này hơi lag, lâu load dữ liệu quá."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra 3 đơn trên hệ thống thì đều đã bị Cancelled trên DIS Lite ạ, nên không còn hiển thị trong danh sách đơn chờ nữa. Về phản ánh app bị chậm, em ghi nhận ý kiến và chuyển bộ phận kỹ thuật kiểm tra. Anh/chị cần hỗ trợ gì thêm về đơn hàng hoặc gặp lỗi gì khác báo em nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Có SubD bé liên, mã 64700667, check giúp đơn treo hôm qua không thấy, cũng không rõ bị gì. Cứ bị tình trạng này suốt, check hộ nhanh hộ mình nhé."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin mã đơn hàng cụ thể hoặc gửi hình ảnh màn hình đơn treo để em kiểm tra trên hệ thống ạ. Nếu hay gặp tình trạng đơn treo mất, anh/chị mô tả thêm giúp em tần suất và khung thời gian sự cố để em tổng hợp chuyển kỹ thuật xử lý triệt để ạ."
+      },
+      {
+        "role": "user",
+        "content": "Có 2 mã gần nhất: 250412321, 250412322. Đơn này hôm qua còn treo, sáng mất."
+      },
+      {
+        "role": "assistant",
+        "content": "Em tra cứu thấy 2 đơn này trạng thái đã bị huỷ (Cancelled) trên hệ thống DIS Lite nên SubD không nhìn thấy nữa anh/chị nhé. Nếu muốn kiểm tra thêm lý do huỷ hoặc cần hướng dẫn đặt lại đơn, anh/chị nhắn lại em hỗ trợ ngay."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Anh bị treo đơn trên hệ thống, cần kiểm tra tình trạng với hủy giúp anh."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh vui lòng cung cấp mã đơn hàng hoặc mã cửa hàng để em kiểm tra chi tiết nhé."
+      },
+      {
+        "role": "user",
+        "content": "Mã cửa hàng 69352321, tên AN TRƯỜNG PHÁT. Anh là chủ cửa hàng."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, cảm ơn anh đã xác nhận. Hiện em kiểm tra có 2 đơn hàng 69352321SI-001885 và 69352321SI-001888 đang ở trạng thái treo trên hệ thống.\nĐể hủy các đơn này, mình cần đăng nhập app HVN Đặt Hàng bằng máy tính rồi thao tác hủy anh nhé. Hiện tại em không thao tác thay được, mong anh thông cảm."
+      },
+      {
+        "role": "user",
+        "content": "Nhà anh chỉ có điện thoại, không dùng máy tính thì sao em?"
+      },
+      {
+        "role": "assistant",
+        "content": "Rất tiếc, việc hủy đơn treo chỉ thực hiện được trên máy tính. Nếu cần hỗ trợ thêm, anh có thể liên hệ tổng đài 19001845 hoặc nhờ bên nhà phân phối, nhân viên sale hỗ trợ thao tác trên máy tính giúp mình nhé."
+      },
+      {
+        "role": "user",
+        "content": "Vậy anh sẽ nhờ sale hỗ trợ. Cảm ơn em."
+      },
+      {
+        "role": "assistant",
+        "content": "Em cảm ơn anh. Nếu cần hỗ trợ kiểm tra đơn hàng khác hoặc gặp vấn đề về app HVN Đặt Hàng, anh cứ liên hệ lại bên em qua Zalo Heineken HVN Đặt Hàng hoặc tổng đài 19001845 nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Sao mã đơn của anh treo hoài không hủy được vậy?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, cho em xin mã đơn hàng cụ thể và mã cửa hàng để kiểm tra giúp anh nha?"
+      },
+      {
+        "role": "user",
+        "content": "Anh chỉ nhớ tên cửa hàng là AN TRƯỜNG PHÁT, không nhớ mã với lại cũng không rành công nghệ."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh có thể cung cấp số điện thoại đăng ký app hoặc thông tin đơn hàng gần đây giúp em tra cứu không ạ? Nếu không nhớ, anh có thể nhờ nhân viên sale hỗ trợ hoặc cung cấp thêm thông tin như địa chỉ quán giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "À số điện thoại 0989788123, địa chỉ 45 Lê Lợi. Anh chủ quán."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, cảm ơn anh đã cung cấp thông tin. Em kiểm tra thấy mã cửa hàng AN TRƯỜNG PHÁT là 69352321, hiện có 2 đơn hàng đang treo: 69352321SI-001885 và 69352321SI-001888. Để hủy, anh cần đăng nhập app HVN Đặt Hàng bằng máy tính mới thao tác được ạ."
+      },
+      {
+        "role": "user",
+        "content": "Có cách nào hủy nhanh bằng điện thoại không em? Anh lớn tuổi không quen máy tính."
+      },
+      {
+        "role": "assistant",
+        "content": "Rất tiếc là hệ thống chỉ cho phép hủy đơn treo qua trình duyệt máy tính. Nếu bất tiện, anh có thể nhờ nhân viên sale, hoặc người thân dùng máy tính hỗ trợ. Nếu chưa có người hỗ trợ, anh liên hệ tổng đài 19001845 để được tư vấn thêm nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Ad, sao mỗi lần vào là bay ra? Còn đơn treo sao bỏ mãi không được. Nản quá."
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ em xin lỗi vì bất tiện anh gặp phải. Mình giúp em gửi mã cửa hàng hoặc mã đơn hàng để em kiểm tra lại đơn treo cho mình nhé."
+      },
+      {
+        "role": "user",
+        "content": "Cửa hàng AN TRƯỜNG PHÁT, mã 69352321. Mà em hủy dùm anh đi, anh thao tác không được đâu."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra thấy 2 đơn (69352321SI-001885 và 69352321SI-001888) của outlet AN TRƯỜNG PHÁT đang 'treo' trên hệ thống. Tuy nhiên, thao tác hủy trên app hiện chỉ thực hiện được qua máy tính, bên em chưa hủy hộ được anh, mong anh thông cảm."
+      },
+      {
+        "role": "user",
+        "content": "Quán chỉ có điện thoại, mà mấy nay vào app toàn bị out ra ngoài."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh thử kiểm tra lại kết nối mạng, xóa cache hoặc cập nhật lại app giúp em nhé. Nếu chỉ cần thao tác hủy đơn thì anh nên nhờ người thân/cửa hàng bên cạnh hoặc nhân viên sale thực hiện trên máy tính hộ. Nếu vẫn không vào được, anh vui lòng gọi 19001845 để được hỗ trợ kỹ thuật chi tiết hơn ạ."
+      },
+      {
+        "role": "user",
+        "content": "Cảm ơn nha, để anh nhờ người. Chứ anh từ sáng tới giờ toàn bị thoát ứng dụng."
+      },
+      {
+        "role": "assistant",
+        "content": "Em rất xin lỗi vì bất tiện này. Nếu sau khi nhờ hỗ trợ mà anh vẫn gặp lỗi out app hoặc còn vấn đề về đơn hàng/đơn treo, anh cứ liên hệ lại kênh Zalo Heineken HVN Đặt Hàng, bên em hỗ trợ tiếp cho mình nhé. Chúc anh sớm xử lý được vấn đề!"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Team hỗ trợ giúp mình với, đơn hàng của SubD đã duyệt mà không lên hệ thống."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, anh/chị cho em xin mã đơn hàng và tên SubD để em kiểm tra ạ."
+      },
+      {
+        "role": "user",
+        "content": "Mã đơn là 67750799, SubD Nguyễn Văn Hùng."
+      },
+      {
+        "role": "assistant",
+        "content": "Cảm ơn anh/chị đã cung cấp thông tin. Mình xác nhận lại ý anh/chị là đơn đã duyệt trên DIS Lite nhưng không hiện trên hệ thống SubD đúng không ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Đúng rồi, duyệt rồi mà vẫn báo chưa xử lý bên SubD."
+      },
+      {
+        "role": "assistant",
+        "content": "Em kiểm tra đơn hàng 67750799 hiện trạng thái là fully delivered trên phía SubD rồi ạ. Nếu hệ thống của anh/chị vẫn chưa cập nhật trạng thái, anh/chị vui lòng gửi giúp em ảnh màn hình hệ thống chưa xử lý hoặc chỉ rõ tên hệ thống cần kiểm tra thêm để bên em hỗ trợ chính xác nhé."
+      },
+      {
+        "role": "user",
+        "content": "Để mình chụp ảnh gửi qua sau. Vậy còn đơn 67750799SI-000055 thì sao?"
+      },
+      {
+        "role": "assistant",
+        "content": "Đơn 67750799SI-000055 đã được SubD duyệt. Ngoài ra, có đơn 67750799SI-000050 và 67750799SI-000056 đều đang ở trạng thái Open. Với các đơn ở trạng thái Open, mình báo SubD dùng phiên bản web trên máy tính để duyệt thêm giúp em nhé.\nNếu cần hỗ trợ thông tin nào khác, anh/chị vui lòng trao đổi thêm hoặc liên hệ lại Zalo: Heineken HVN Đặt Hàng để được giải đáp ạ."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Tôi không hiểu sao đơn hôm qua vẫn chưa hệ thống nhận, hỗ trợ gì không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị. Để hỗ trợ, anh/chị giúp em cung cấp mã đơn hàng và tên SubD hoặc ảnh màn hình lỗi để em kiểm tra nhé."
+      },
+      {
+        "role": "user",
+        "content": "Nhiều mã quá, không nhớ hết, chỉ biết là không xuất hiện trong hệ thống SubD."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị có thể gửi ảnh danh sách đơn hoặc chọn 1–2 mã cụ thể nhất để em đối soát được không ạ? Nếu không cung cấp đủ mã đơn bên em rất khó kiểm tra chính xác tình trạng đơn hàng."
+      },
+      {
+        "role": "user",
+        "content": "Có thể giúp tôi duyệt tất cả được không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Về nghiệp vụ, bên em không can thiệp duyệt trực tiếp giúp đơn hàng. Bên em chỉ kiểm tra trạng thái đơn và hướng dẫn thao tác. Anh/chị cố gắng cung cấp mã, hoặc bảo SubD kiểm tra trạng thái đơn trên phiên bản web máy tính.\nNếu vẫn có đơn trạng thái Open không xử lý được, anh/chị chụp màn hình gửi lại để bên em xác nhận lỗi và hướng dẫn cụ thể nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Đơn bị lỗi, không nhảy lên hệ thống, cũng không báo gì rõ là lỗi gì, nhờ check hộ."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, trường hợp này anh/chị cho em xin mã đơn hàng cần kiểm tra và, nếu có thể, gửi hình ảnh thông báo lỗi giúp em với nhé."
+      },
+      {
+        "role": "user",
+        "content": "Tôi chỉ nhớ số là 67750799, còn có mấy số nữa đằng sau nhưng hay bị nhầm, chị kiểm tra đại được không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em sẽ cố gắng kiểm tra theo thông tin anh/chị cung cấp. Tuy nhiên, để đảm bảo kết quả chính xác nhất, anh/chị cố gắng cung cấp đầy đủ mã đơn hoặc chụp ảnh màn hình giúp em nhé."
+      },
+      {
+        "role": "user",
+        "content": "Nếu mã sai thì thôi, bên bạn bảo SubD lên web duyệt đi chứ app thấy không ổn, lúc có lúc không."
+      },
+      {
+        "role": "assistant",
+        "content": "Em ghi nhận feedback của anh/chị. Hiện tại, các đơn ở trạng thái Open bên SubD cần duyệt qua phiên bản web trên máy tính để đảm bảo đồng bộ dữ liệu. Nếu sau khi duyệt trên web vẫn gặp lỗi, anh/chị chụp lại lỗi và gửi để bên em hỗ trợ kỹ thuật sâu hơn nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi team, mình cần kiểm tra trạng thái đơn hàng trên ứng dụng Seller Portal (Dis Lite) ạ."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh/chị, cảm ơn anh/chị đã liên hệ. Anh/chị cung cấp giúp em các thông tin sau để kiểm tra đơn hàng nhé:\n- Mã đơn hàng\n- Mã code và tên outlet\n- Mã code và tên SubD (nếu có)"
+      },
+      {
+        "role": "user",
+        "content": "Mã đơn 123456789, outlet 65014050, SubD 247"
+      },
+      {
+        "role": "assistant",
+        "content": "Em đã nhận thông tin. Đơn hàng 123456789 của outlet 65014050 - SubD 247 hiện trạng thái: Đang chờ duyệt. Anh/chị vui lòng chờ phía SubD xác nhận hoặc có thể liên hệ SubD để cập nhật nhanh hơn. Anh/chị còn cần hỗ trợ gì thêm không ạ?"
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Chào bạn, mình kiểm tra đơn hàng Seller Portal mã 987654321 đi hộ mình với."
+      },
+      {
+        "role": "assistant",
+        "content": "Anh/chị cho em xin thêm tên outlet hoặc mã SubD để hỗ trợ tra cứu chính xác hơn ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Mình chỉ nhớ outlet là 65014050 thôi, SubD không rõ lắm."
+      },
+      {
+        "role": "assistant",
+        "content": "Vâng, không sao ạ. Đơn hàng 987654321 thuộc outlet 65014050 đang chờ cập nhật trạng thái từ SubD. Khi có tiến trình mới hệ thống sẽ báo về Seller Portal. Nếu cần kiểm tra thêm các đơn khác hoặc gặp vấn đề nhận/duyệt đơn, anh/chị vui lòng cung cấp thêm mã đơn hoặc liên hệ tổng đài hỗ trợ nhé."
+      }
+    ]
+  },
+  {
+    "procedure_id": 3,
+    "messages": [
+      {
+        "role": "user",
+        "content": "App Dis Lite lỗi hoài, mình sốt ruột không biết đơn giao tới đâu. 65014050 - sub 247, bạn kiểm tra lẹ giúp! Còn nhớ mình chứ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ, em vẫn còn giữ thông tin trao đổi với anh/chị. Mong anh/chị thông cảm vì app gặp lỗi. Em kiểm tra nhanh: Đơn hàng của outlet 65014050 - SubD 247 vẫn đang xử lý, chưa cập nhật trạng thái giao. Anh/chị kiểm tra lại sau hoặc liên hệ SubD để xác nhận tiến độ giao hàng. Có gì em sẽ hỗ trợ tiếp tục, anh/chị yên tâm ạ!"
+      }
+    ]
+  }
+]

@@ -1,0 +1,422 @@
+{
+  "tools": [
+    {
+      "name": "tra_cuu_thong_tin",
+      "description": "Tra cứu thông tin cửa hàng/NPP/SubD trên hệ thống",
+      "parameters": {
+        "ma_cua_hang": "string (optional) - Mã cửa hàng/OutletID 8 số",
+        "sdt": "string (optional) - Số điện thoại KH cung cấp để tra cứu (10 số)",
+        "ten_cua_hang": "string (optional) - Tên cửa hàng",
+        "ma_npp": "string (optional) - Mã NPP/SubD"
+      },
+      "returns": {
+        "ma_cua_hang": "string - Mã cửa hàng",
+        "ten_cua_hang": "string - Tên cửa hàng",
+        "sdt_dang_ky": "string - SĐT đăng ký HVN trong hệ thống (dùng để nhận OTP)",
+        "trang_thai": "string - active/đóng/inactive",
+        "da_dang_ky_app": "boolean - Đã đăng ký HVN chưa"
+      }
+    },
+    {
+      "name": "kiem_tra_mqh",
+      "description": "Kiểm tra mối quan hệ (MQH) giữa Outlet với NPP/SubD trên SEM",
+      "parameters": {
+        "outlet_id": "string - OutletID 8 số",
+        "npp_subd_id": "string (optional) - Mã NPP hoặc SubD cần kiểm tra"
+      },
+      "returns": {
+        "co_mqh": "boolean - Có MQH hay không",
+        "npp_subd_hien_tai": "string - Mã NPP/SubD hiện tại",
+        "ten_npp_subd": "string - Tên NPP/SubD",
+        "trang_thai_mqh": "string - Active/Inactive",
+        "last_modified": "string - Thời điểm chỉnh sửa gần nhất",
+        "modified_by": "string - SA/user/system",
+        "tu_tao": "boolean - MQH do user tự tạo hay không"
+      }
+    },
+    {
+      "name": "kiem_tra_don_hang",
+      "description": "Kiểm tra trạng thái đơn hàng trên hệ thống theo mã đơn và kênh đặt hàng. Sử dụng khi: KH hỏi về trạng thái đơn đã đặt, kiểm tra đơn không về NPP/SubD, xác minh đơn Gratis đã được approve chưa, tra cứu thông tin outlet và NPP/SubD liên quan đến đơn hàng",
+      "parameters": {
+        "ma_don_hang": "string (required) - Mã đơn hàng cần kiểm tra. Format thường gặp: số dài (VD: 2509076469100) hoặc mã có prefix (VD: CO251124-01481). Đây là thông tin bắt buộc phải hỏi KH trước khi gọi tool",
+        "kenh": "string (required) - Kênh đặt hàng. Giá trị hợp lệ: 'SEM' (Sales Force Execution Mobile), 'HVN' (Heineken Vietnam app), 'DIS_Lite' (Distributor Lite Portal). Phải hỏi KH để xác định kênh chính xác trước khi tra cứu"
+      },
+      "returns": {
+        "trang_thai": "string - Trạng thái hiện tại của đơn hàng. Possible values: 'Đã nhận', 'Đang xử lý', 'Chưa về NPP', 'Đã duyệt', 'Chờ duyệt'. Usage: Sử dụng để phản hồi KH về tình trạng đơn. Nếu 'Chưa về NPP' có thể cần kiểm tra MQH hoặc tạo ticket SEM",
+        "outlet_id": "string - Mã cửa hàng (OutletID 8 số) đã đặt đơn này. Format: 8 chữ số (VD: 63235514). Usage: Dùng để xác nhận đúng cửa hàng của KH, hoặc tra cứu thêm thông tin qua tra_cuu_thong_tin() nếu cần",
+        "npp_subd": "string - Mã NPP hoặc SubD được chỉ định nhận đơn hàng này. Format: 8 chữ số hoặc tên mã (VD: 10375694, Đoàn Hằng). Usage: Xác định NPP/SubD nào phụ trách đơn. Có thể dùng để kiểm tra MQH qua kiem_tra_mqh() nếu có vấn đề",
+        "ngay_dat": "string - Ngày đặt đơn hàng. Format: YYYY-MM-DD (VD: 2024-09-25). Usage: Dùng để xác minh thời gian đặt đơn, tính toán thời gian xử lý, hoặc kiểm tra quy tắc 24h đồng bộ",
+        "loai_don": "string - Loại đơn hàng. Possible values: 'Thường', 'Gratis'. Usage: Phân biệt đơn thường và đơn khuyến mãi miễn phí. Nếu là 'Gratis', kiểm tra thêm field 'approved' và lưu ý Gratis chỉ order qua NPP (không qua SubD)",
+        "approved": "boolean or null - Trạng thái approved của đơn Gratis. Chỉ có giá trị (true/false) khi loai_don='Gratis', còn lại là null. true: Đơn Gratis đã được ASM approve. false: Đơn Gratis chưa được approve hoặc bị từ chối. null: Không áp dụng (đơn Thường). Usage: Nếu loai_don='Gratis' và approved=false, hướng dẫn KH chờ ASM approve hoặc liên hệ ASM. Nếu approved=true, đơn đã sẵn sàng xử lý"
+      },
+      "usage_notes": [
+        "Luôn hỏi KH về 'mã đơn hàng' và 'kênh' trước khi gọi tool này",
+        "Sau khi nhận kết quả, phản hồi KH về trạng thái đơn một cách rõ ràng",
+        "Nếu trang_thai='Chưa về NPP', cần kiểm tra MQH giữa outlet_id và npp_subd bằng kiem_tra_mqh()",
+        "Nếu loai_don='Gratis' và đơn order qua SubD, cảnh báo KH đây là lỗi (Gratis chỉ qua NPP)",
+        "Có thể dùng outlet_id từ kết quả để tra cứu thêm thông tin cửa hàng qua tra_cuu_thong_tin()"
+      ],
+      "examples": [
+        {
+          "scenario": "KH hỏi đơn không về NPP",
+          "call": "kiem_tra_don_hang(ma_don_hang='2509076469100', kenh='SEM')",
+          "flow": "Xác nhận trang_thai → Nếu 'Chưa về NPP' kiểm tra MQH → Tạo ticket nếu cần"
+        },
+        {
+          "scenario": "Kiểm tra đơn Gratis đã approve chưa",
+          "call": "kiem_tra_don_hang(ma_don_hang='CO251124-01481', kenh='SEM')",
+          "flow": "Kiểm tra loai_don='Gratis' → Xem approved=true/false → Phản hồi KH về trạng thái approve"
+        }
+      ]
+    },
+    {
+      "name": "tao_ticket",
+      "description": "Tạo ticket chuyển tuyến cho team chuyên trách",
+      "parameters": {
+        "team": "string - Team xử lý (SEM/HVN/SA/CS/IT)",
+        "noi_dung": "string - Mô tả vấn đề",
+        "du_lieu": "object - Dữ liệu liên quan (OutletID, mã đơn, etc.)"
+      },
+      "returns": {
+        "ticket_id": "string - Mã ticket",
+        "trang_thai": "string - Đã tạo thành công"
+      }
+    },
+    {
+      "name": "force_sync",
+      "description": "Thực hiện Force Sync dữ liệu trên SEM",
+      "parameters": {
+        "outlet_id": "string - OutletID cần sync",
+        "npp_subd_id": "string (optional) - Mã NPP/SubD"
+      },
+      "returns": {
+        "thanh_cong": "boolean - Sync thành công hay không"
+      }
+    },
+    {
+      "name": "gui_huong_dan",
+      "description": "Gửi hướng dẫn/tài liệu SOP cho khách hàng",
+      "parameters": {
+        "loai_huong_dan": "string - xuất_gratis/đăng_nhập/quên_mật_khẩu/etc."
+      },
+      "returns": {
+        "da_gui": "boolean - Đã gửi thành công"
+      }
+    }
+  ],
+  "1": {
+    "tên": "Hỗ trợ đăng nhập",
+    "mục_tiêu": "Hỗ trợ khách hàng đăng nhập app HVN Đặt Hàng, xử lý lỗi thường gặp, xác minh thông tin tài khoản",
+    "luồng_thực_thi_chung": [
+      {
+        "bước": 1,
+        "mô_tả": "Thu thập thông tin định danh",
+        "chain_action": "hỏi mã cửa hàng/SĐT đăng ký/tên cửa hàng + địa chỉ"
+      },
+      {
+        "bước": 2,
+        "mô_tả": "Xác thực danh tính cửa hàng",
+        "chain_action": "tra_cuu_thong_tin(ma_cua_hang=KH_cung_cap) → xác nhận tên cửa hàng với KH (Mình là [result.ten_cua_hang] phải không ạ?)"
+      },
+      {
+        "bước": 3,
+        "mô_tả": "Kiểm tra trạng thái cửa hàng",
+        "chain_action": "kiểm tra result.trang_thai → nếu active tiếp tục bước 4 → nếu đóng/inactive chuyển edge case Cửa hàng đã đóng"
+      },
+      {
+        "bước": 4,
+        "mô_tả": "Kiểm tra tình trạng đăng ký ứng dụng",
+        "chain_action": "kiểm tra result.da_dang_ky_app → nếu false hướng dẫn liên hệ Sale/19001845 → nếu true tiếp tục bước 5"
+      },
+      {
+        "bước": 5,
+        "mô_tả": "Hướng dẫn đăng nhập",
+        "chain_action": "hướng dẫn cách 1 (mã CH + mật khẩu) hoặc cách 2 (result.sdt_dang_ky + OTP) → nếu quên mật khẩu hướng dẫn Quên mật khẩu"
+      },
+      {
+        "bước": 6,
+        "mô_tả": "Xác nhận hoàn tất",
+        "chain_action": "hỏi KH đã đăng nhập được chưa → cung cấp kênh hỗ trợ (Zalo/19001845)"
+      }
+    ],
+    "edge_cases": [
+      {
+        "case": "SĐT không hợp lệ/sai định dạng",
+        "điều_kiện": "App báo SĐT không hợp lệ khi đăng nhập",
+        "chain_action": "hướng dẫn thêm số 0 đầu → bỏ khoảng trắng/ký tự lạ → nhập định dạng 0xxxxxxxxx → yêu cầu thử lại"
+      },
+      {
+        "case": "Không nhận OTP",
+        "điều_kiện": "KH không nhận được OTP khi đăng nhập bằng SĐT",
+        "chain_action": "tra_cuu_thong_tin(ma_cua_hang=KH_cung_cap) → xác nhận lại result.sdt_dang_ky → kiểm tra sóng/tin nhắn rác → yêu cầu thử lại sau 3-5 phút → nếu vẫn không nhận chuyển edge case Cần cập nhật SĐT"
+      },
+      {
+        "case": "Quên mật khẩu",
+        "điều_kiện": "KH hỏi mật khẩu hoặc quên mật khẩu",
+        "chain_action": "thông báo không cung cấp mật khẩu trực tiếp → hướng dẫn chọn Quên mật khẩu → nhập mã CH → nhận OTP → đặt lại mật khẩu"
+      },
+      {
+        "case": "Tài khoản bị khóa tạm thời",
+        "điều_kiện": "KH nhập sai mật khẩu nhiều lần",
+        "chain_action": "giải thích nguyên nhân khóa → khuyên chờ vài phút → hướng dẫn reset mật khẩu bằng OTP qua Quên mật khẩu"
+      },
+      {
+        "case": "Mã CH không khớp tên cửa hàng",
+        "điều_kiện": "Thông tin mã CH và tên CH không khớp",
+        "chain_action": "tra_cuu_thong_tin(ma_cua_hang=KH_cung_cap) → so sánh result.ten_cua_hang với tên KH cung cấp → nếu khác thông báo không trùng khớp → yêu cầu kiểm tra lại mã → nếu vẫn sai tra_cuu_thong_tin(sdt=KH_SĐT hoặc ten_cua_hang=KH_tên) → tránh tiết lộ thông tin CH khác"
+      },
+      {
+        "case": "Cần cập nhật SĐT đăng ký",
+        "điều_kiện": "KH đổi SĐT hoặc không nhận OTP do số cũ",
+        "chain_action": "thu thập thông tin (mã CH, tên CH, SĐT cũ, SĐT mới, tên người liên hệ) → thông báo L1 không tự cập nhật → tao_ticket(team=SA, noi_dung=cập_nhật_SĐT, du_lieu={ma_ch, sdt_moi, ...}) hoặc hướng dẫn liên hệ 19001845"
+      },
+      {
+        "case": "Cửa hàng đã đóng/inactive",
+        "điều_kiện": "result.trang_thai == đóng hoặc inactive",
+        "chain_action": "thông báo cửa hàng đóng không đăng nhập được → hướng dẫn liên hệ nhân viên Heineken/19001845 → thu thập thông tin → tao_ticket(team=SA, noi_dung=kích_hoạt_lại, du_lieu={ma_ch, ten_ch, ...})"
+      }
+    ]
+  },
+  "2": {
+    "tên": "Quên/Đổi mật khẩu",
+    "mục_tiêu": "Hỗ trợ khách hàng lấy lại/đổi mật khẩu đăng nhập HVN an toàn, nhanh chóng",
+    "luồng_thực_thi_chung": [
+      {
+        "bước": 1,
+        "mô_tả": "Nhận diện và xác thực thông tin",
+        "chain_action": "hỏi đối tượng KH (chủ điểm bán/NPP/nhân viên) → xin mã cửa hàng/mã NPP hoặc tên + SĐT → tra_cuu_thong_tin(ma_cua_hang=KH_ma hoặc sdt=KH_sdt) → xác nhận thông tin"
+      },
+      {
+        "bước": 2,
+        "mô_tả": "Xác định tên đăng nhập",
+        "chain_action": "giải thích tên đăng nhập = mã cửa hàng/mã NPP → nếu KH không nhớ mã tra_cuu_thong_tin(sdt=KH_sdt, ten_cua_hang=KH_ten) → cung cấp result.ma_cua_hang → xác nhận tên đăng nhập"
+      },
+      {
+        "bước": 3,
+        "mô_tả": "Hướng dẫn đặt lại mật khẩu",
+        "chain_action": "hướng dẫn chọn Quên mật khẩu → nhập mã cửa hàng/NPP → nhập OTP từ result.sdt_dang_ky → tạo mật khẩu mới 12 ký tự không trùng cũ → xác nhận mật khẩu"
+      },
+      {
+        "bước": 4,
+        "mô_tả": "Hướng dẫn đăng nhập lại",
+        "chain_action": "hướng dẫn đăng nhập bằng mã cửa hàng + mật khẩu mới → hoặc đăng nhập bằng result.sdt_dang_ky (bỏ số 0 đầu) + OTP → xác nhận đăng nhập thành công"
+      },
+      {
+        "bước": 5,
+        "mô_tả": "Xác nhận hoàn tất",
+        "chain_action": "hỏi KH đã đăng nhập được chưa → xác nhận hoàn tất → cung cấp kênh hỗ trợ (Zalo/hotline 1800234522)"
+      }
+    ],
+    "edge_cases": [
+      {
+        "case": "Tài khoản bị khóa",
+        "điều_kiện": "KH báo tài khoản bị khóa do nhập sai mật khẩu nhiều lần",
+        "chain_action": "thông báo tài khoản bị khóa do nhập sai nhiều lần → hướng dẫn Quên mật khẩu để mở khóa → nhập mã cửa hàng → nhận OTP → tạo mật khẩu mới → xác nhận mở khóa thành công"
+      },
+      {
+        "case": "Không nhận được OTP",
+        "điều_kiện": "KH không nhận được OTP sau khi yêu cầu",
+        "chain_action": "tra_cuu_thong_tin(ma_cua_hang=KH_ma) → xác nhận lại result.sdt_dang_ky → hướng dẫn kiểm tra sóng/tin nhắn rác → yêu cầu thử lại sau 3-5 phút → nếu vẫn không nhận sau 3 lần tao_ticket(team=IT, noi_dung=cập_nhật_SĐT, du_lieu={ma_ch, sdt_moi, ...})"
+      },
+      {
+        "case": "Mật khẩu đã sử dụng trước đó",
+        "điều_kiện": "Hệ thống báo mật khẩu mới trùng với mật khẩu cũ",
+        "chain_action": "yêu cầu KH tạo mật khẩu hoàn toàn khác → hướng dẫn thay đổi nhiều ký tự/chữ/số → nếu vẫn báo trùng tao_ticket(team=IT, noi_dung=lỗi_mật_khẩu, du_lieu={ma_ch, ...})"
+      },
+      {
+        "case": "Không biết tên đăng nhập",
+        "điều_kiện": "KH hỏi nhập gì ở ô Tên đăng nhập",
+        "chain_action": "giải thích Tên đăng nhập = mã cửa hàng/mã NPP → nếu KH không nhớ mã tra_cuu_thong_tin(sdt=KH_sdt, ten_cua_hang=KH_ten) → cung cấp result.ma_cua_hang cho KH"
+      },
+      {
+        "case": "Không nhớ mã cửa hàng/NPP",
+        "điều_kiện": "KH không nhớ mã cửa hàng hoặc mã NPP",
+        "chain_action": "tra_cuu_thong_tin(ten_cua_hang=KH_ten, sdt=KH_sdt) → xác nhận thông tin với KH → cung cấp result.ma_cua_hang → hướng dẫn đăng nhập bằng SĐT (bỏ số 0 đầu) làm phương án thay thế"
+      },
+      {
+        "case": "Đổi/mất số điện thoại đăng ký",
+        "điều_kiện": "KH quên hoặc mất quyền truy cập SĐT đăng ký",
+        "chain_action": "thu thập thông tin (tên cửa hàng, mã cửa hàng, tên người liên hệ, SĐT mới) → giải thích không cần tạo tài khoản mới → tao_ticket(team=SA, noi_dung=cập_nhật_SĐT, du_lieu={ma_ch, sdt_moi, ten_nguoi_lien_he, ...})"
+      }
+    ]
+  },
+  "3": {
+    "tên": "Kiểm tra đơn hàng",
+    "mục_tiêu": "Xử lý các case kiểm tra đơn hàng, MQH với NPP/SubD, đơn Gratis trên SEM/HVN/DIS Lite",
+    "luồng_thực_thi_chung": [
+      {
+        "bước": 1,
+        "mô_tả": "Nhận diện loại yêu cầu",
+        "chain_action": "phân loại (đơn không về NPP/SubD, yêu cầu gắn MQH, kiểm tra đơn Gratis)"
+      },
+      {
+        "bước": 2,
+        "mô_tả": "Thu thập thông tin bắt buộc",
+        "chain_action": "hỏi kênh đặt đơn (SEM/HVN) → xin mã đơn hàng → xin OutletID → xin mã NPP/SubD → xin ngày đặt đơn → xin loại đơn (Thường/Gratis)"
+      },
+      {
+        "bước": 3,
+        "mô_tả": "Kiểm tra MQH trên SEM",
+        "chain_action": "kiem_tra_mqh(outlet_id=KH_outlet, npp_subd_id=KH_npp) → kiểm tra result.co_mqh và result.trang_thai_mqh → nếu không hợp lệ hướng dẫn liên hệ SA → nếu hợp lệ tiếp tục bước 4"
+      },
+      {
+        "bước": 4,
+        "mô_tả": "Kiểm tra và xử lý đơn hàng",
+        "chain_action": "kiem_tra_don_hang(ma_don_hang=KH_ma_don, kenh=KH_kenh) → xác định kênh → xử lý theo kênh (tao_ticket(team=SEM) hoặc chuyển kênh HVN) → hỏi KH kiểm tra với NPP/SubD"
+      },
+      {
+        "bước": 5,
+        "mô_tả": "Kết thúc và theo dõi",
+        "chain_action": "tóm tắt hành động đã làm → hỏi còn cần hỗ trợ gì thêm → kết thúc"
+      }
+    ],
+    "edge_cases": [
+      {
+        "case": "Đơn SEM không về NPP/SubD",
+        "điều_kiện": "KH báo đơn đặt qua SEM không hiển thị về NPP/SubD",
+        "chain_action": "thu thập mã đơn/ảnh danh sách → xác nhận ngày đặt → tao_ticket(team=SEM, noi_dung=đơn_không_về, du_lieu={outlet_id, ma_don, ma_npp, ngay_dat, ...}) → đề nghị KH kiểm tra lại với NPP/SubD"
+      },
+      {
+        "case": "SubD không thấy đơn trên DIS Lite",
+        "điều_kiện": "SubD không thấy đơn để duyệt trên DIS Lite dù có MQH",
+        "chain_action": "kiem_tra_mqh(outlet_id=KH_outlet, npp_subd_id=KH_subd) → xác nhận result.co_mqh == true → chuyển KH sang kênh Heineken HVN Đặt Hàng (https://zalo.me/1896978230422342919) để kiểm tra hiển thị/đồng bộ"
+      },
+      {
+        "case": "Kiểm tra đơn Gratis",
+        "điều_kiện": "KH yêu cầu kiểm tra trạng thái đơn Gratis",
+        "chain_action": "kiem_tra_don_hang(ma_don_hang=KH_ma_gratis, kenh=SEM) → kiểm tra result.loai_don == Gratis → kiểm tra result.approved → phản hồi trạng thái → nếu cần theo dõi xử lý tiếp theo hướng dẫn SA liên hệ Team CS → lưu ý Gratis chỉ order qua NPP không qua SubD"
+      },
+      {
+        "case": "Yêu cầu gắn MQH",
+        "điều_kiện": "KH yêu cầu gắn MQH NPP/SubD cho outlet",
+        "chain_action": "thông báo L1 không thực hiện gắn MQH → hướng dẫn liên hệ Sale Admin (SA) để add MQH"
+      },
+      {
+        "case": "Đơn Gratis order qua SubD",
+        "điều_kiện": "kiem_tra_don_hang() phát hiện result.loai_don == Gratis và result.npp_subd là SubD",
+        "chain_action": "thông báo không hợp lệ → giải thích Gratis chỉ được order qua NPP → hướng dẫn đặt lại qua NPP đúng quy trình"
+      }
+    ]
+  },
+  "4": {
+    "tên": "Kiểm tra MQH Outlet-NPP/SubD",
+    "mục_tiêu": "Kiểm tra mối quan hệ giữa Outlet với NPP/SubD trên hệ thống SEM, xử lý các vấn đề liên quan MQH",
+    "luồng_thực_thi_chung": [
+      {
+        "bước": 1,
+        "mô_tả": "Xác định mục đích yêu cầu",
+        "chain_action": "phân loại nhanh (kiểm tra MQH, yêu cầu gắn MQH, báo cáo chênh lệch, đặt đơn NPP không nhận, xác minh MQH với NPP/SubD cụ thể)"
+      },
+      {
+        "bước": 2,
+        "mô_tả": "Thu thập thông tin bắt buộc",
+        "chain_action": "xin OutletID (bắt buộc 8 số) → xin mã NPP/SubD nếu có → xin mã NV/ảnh báo cáo/thời điểm SA tạo/mã đơn hàng nếu liên quan"
+      },
+      {
+        "bước": 3,
+        "mô_tả": "Tra cứu trên SEM",
+        "chain_action": "kiem_tra_mqh(outlet_id=KH_outlet, npp_subd_id=KH_npp_subd) → ghi nhận result (npp_subd_hien_tai, ten_npp_subd, trang_thai_mqh, last_modified, modified_by, tu_tao) → đối chiếu với thông tin KH cung cấp"
+      },
+      {
+        "bước": 4,
+        "mô_tả": "Xử lý và phản hồi kết quả",
+        "chain_action": "phản hồi trạng thái MQH dựa trên result → hướng dẫn hành động tiếp theo (liên hệ SA/chờ 24h đồng bộ/escalate) → xác nhận với KH"
+      },
+      {
+        "bước": 5,
+        "mô_tả": "Ghi nhận và kết thúc",
+        "chain_action": "ghi nhận dữ liệu (OutletID, NPP/SubD, trạng thái, Last Modified) → hỏi còn cần hỗ trợ gì thêm → kết thúc"
+      }
+    ],
+    "edge_cases": [
+      {
+        "case": "Không có MQH hoặc chưa thấy trên SEM",
+        "điều_kiện": "result.co_mqh == false",
+        "chain_action": "thông báo chưa có MQH trên SEM → hướng dẫn liên hệ SA tạo/gắn MQH → nhắc chờ 24h đồng bộ sau khi SA tạo → nếu SA báo đã gắn nhưng SEM vẫn khác đề nghị SA kiểm tra và tạo lại"
+      },
+      {
+        "case": "MQH do user tự tạo (không hợp lệ)",
+        "điều_kiện": "result.tu_tao == true",
+        "chain_action": "thông báo MQH tự tạo không hợp lệ → hướng dẫn liên hệ SA xóa MQH tự tạo → hướng dẫn SA tạo lại MQH chuẩn → nhắc chờ 24h đồng bộ"
+      },
+      {
+        "case": "MQH Inactive",
+        "điều_kiện": "result.trang_thai_mqh == Inactive",
+        "chain_action": "thông báo MQH đang Inactive → hướng dẫn liên hệ SA chuyển MQH sang Active → nhắc chờ 24h đồng bộ → sau đó đặt đơn lại"
+      },
+      {
+        "case": "Chênh lệch dữ liệu báo cáo vs SEM",
+        "điều_kiện": "Báo cáo thể hiện có MQH nhưng result.co_mqh == false hoặc result khác báo cáo",
+        "chain_action": "kiem_tra_mqh(outlet_id) cho từng outlet → phản hồi trạng thái từng outlet → kiểm tra thời gian (result.last_modified) → nếu >24h tao_ticket(team=IT, noi_dung=chênh_lệch_dữ_liệu, du_lieu={outlet_id, bao_cao, sem_data, ...}) → nếu <24h hướng dẫn chờ đủ 24h"
+      },
+      {
+        "case": "Kiểm tra nhiều outlet",
+        "điều_kiện": "KH cung cấp list OutletID",
+        "chain_action": "loop: kiem_tra_mqh(outlet_id=each_outlet) → ghi nhận result từng outlet → phản hồi rõ từng OutletID và NPP/SubD tương ứng → nêu rõ outlet nào có/không MQH → áp dụng xử lý phù hợp cho từng outlet"
+      },
+      {
+        "case": "Đặt đơn nhưng NPP không nhận",
+        "điều_kiện": "KH báo đặt đơn nhưng NPP không nhận đơn",
+        "chain_action": "xin mã đơn hàng → kiem_tra_mqh(outlet_id=KH_outlet) → kiểm tra result → nếu result.co_mqh == false hoặc result.tu_tao == true hoặc result.trang_thai_mqh == Inactive hoặc result.last_modified <24h xử lý MQH trước → nếu result hợp lệ và >24h kiem_tra_don_hang(ma_don_hang=KH_ma_don) → nếu vẫn lỗi chuyển xử lý đơn hàng"
+      }
+    ]
+  },
+  "5": {
+    "tên": "Hướng dẫn xử lý đơn hàng SEM",
+    "mục_tiêu": "Hướng dẫn thao tác order/Gratis trên SEM, xử lý lỗi hiển thị SKU/NPP/Sub, Force Sync",
+    "luồng_thực_thi_chung": [
+      {
+        "bước": 1,
+        "mô_tả": "Xác định nhu cầu và phân loại",
+        "chain_action": "phân loại (hướng dẫn xuất Gratis, xác nhận điều kiện raise/approve Gratis, lỗi hiển thị dữ liệu)"
+      },
+      {
+        "bước": 2,
+        "mô_tả": "Thu thập thông tin bắt buộc",
+        "chain_action": "xin OutletID → xin mã NPP/SubD (tên + ID) → xin mã SKU + tên SKU → xin vai trò user (SR/Sup/ASM) → xin thời điểm thông báo hệ thống → xin ảnh màn hình lỗi"
+      },
+      {
+        "bước": 3,
+        "mô_tả": "Xử lý theo kịch bản",
+        "chain_action": "xác định kịch bản cụ thể → thực hiện hướng dẫn/kiểm tra → force_sync() nếu cần → tao_ticket(team=SEM) nếu cần"
+      },
+      {
+        "bước": 4,
+        "mô_tả": "Đồng bộ dữ liệu",
+        "chain_action": "hướng dẫn user Sync → force_sync(outlet_id=KH_outlet, npp_subd_id=KH_npp) → hướng dẫn user Sync lại (giữ màn hình mở) → xác nhận kết quả"
+      },
+      {
+        "bước": 5,
+        "mô_tả": "Xác nhận và kết thúc",
+        "chain_action": "xác nhận kết quả với user → hỏi còn cần hỗ trợ gì thêm → ghi nhận dữ liệu → kết thúc"
+      }
+    ],
+    "edge_cases": [
+      {
+        "case": "Hướng dẫn xuất đơn Gratis",
+        "điều_kiện": "User yêu cầu hướng dẫn xuất Gratis trên SEM",
+        "chain_action": "kiểm tra vai trò và ngữ cảnh (SR TBA, Sup cover) → hướng dẫn Sync SEM trước → hướng dẫn vào Outlet Order kiểm tra Sub/NPP → hướng dẫn tìm SKU theo tên (2 mã: thường/sự kiện) → gui_huong_dan(loai_huong_dan=xuất_gratis) nếu có SOP hoặc tao_ticket(team=SEM, noi_dung=hướng_dẫn_xuất_gratis, du_lieu={outlet_id, vai_tro, ...})"
+      },
+      {
+        "case": "Xác nhận điều kiện raise/approve Gratis",
+        "điều_kiện": "User hỏi có thể raise/ASM approve Gratis chưa",
+        "chain_action": "kiểm tra thời gian từ thông báo hệ thống → tính time_diff → nếu time_diff >4h xác nhận có thể raise/approve → nếu time_diff <4h thông báo chờ đủ 4 giờ"
+      },
+      {
+        "case": "Không hiển thị Sub trong Outlet Order",
+        "điều_kiện": "User báo không thấy Sub hiển thị sau khi Sync",
+        "chain_action": "hướng dẫn Sync lại SEM → hỏi sau Sync đã hiển thị Sub chưa → nếu vẫn chưa force_sync(outlet_id=KH_outlet) → hướng dẫn Sync lại → nếu vẫn không tao_ticket(team=SEM, noi_dung=không_hiển_thị_sub, du_lieu={outlet_id, npp_subd, ...})"
+      },
+      {
+        "case": "Không thấy SKU trong bộ lọc",
+        "điều_kiện": "User không tìm thấy SKU trong bộ lọc",
+        "chain_action": "thu thập mã SKU + tên SKU + OutletID + NPP/SubD → hướng dẫn tìm SKU bằng ô tìm kiếm theo tên → giải thích sẽ có 2 mã (thường/sự kiện) → nếu tìm mọi cách vẫn không thấy tao_ticket(team=SEM, noi_dung=sku_không_hiển_thị, du_lieu={sku, outlet_id, npp_subd, ...})"
+      },
+      {
+        "case": "Danh sách KH không hiển thị MQH với NPP/SubD",
+        "điều_kiện": "Danh sách khách hàng không hiển thị mối quan hệ với NPP/SubD",
+        "chain_action": "thu thập NPP/SubD (mã + ID) + 2-3 OutletID → hướng dẫn user Sync → force_sync(outlet_id=KH_outlets, npp_subd_id=KH_npp) → hướng dẫn user Sync lại (giữ màn hình mở, không chuyển tab) → kiểm tra result.thanh_cong → nếu true xác nhận NPP/Sub đã hiển thị và kết thúc → nếu false tao_ticket(team=SEM, noi_dung=mqh_không_hiển_thị, du_lieu={outlets, npp_subd, ...})"
+      }
+    ]
+  }
+}

@@ -10,13 +10,16 @@ This is a chatbot synthetic data generation project for Heineken Vietnam's order
 
 ### Setup
 ```bash
-# The project uses Python 3.13
+# The project uses Python 3.13 and UV for dependency management
 # Create and activate virtual environment (if needed)
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-# Install dependencies (currently none specified in pyproject.toml)
-# Dependencies will be added as the project evolves
+# Install dependencies using uv (recommended)
+uv sync
+
+# Or add new dependencies
+uv add <package-name>
 ```
 
 ### Running
@@ -24,8 +27,27 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 # Run the main script
 python main.py
 
-# Or using uv (recommended for this project based on pyproject.toml)
+# Or using uv (recommended for this project)
 uv run main.py
+```
+
+### Testing
+```bash
+# This project uses pytest for testing
+# Run all tests
+uv run python -m pytest
+
+# Run specific test file
+uv run python -m pytest tests/test_dataset_loader.py
+
+# Run with verbose output
+uv run python -m pytest -v
+
+# Run specific test function
+uv run python -m pytest tests/test_dataset_loader.py::TestDatasetLoader::test_load_train_dataset
+
+# Run tests excluding slow ones
+uv run python -m pytest -m "not slow"
 ```
 
 ## Architecture

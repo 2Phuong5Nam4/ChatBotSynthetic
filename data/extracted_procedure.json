@@ -1,109 +1,4 @@
 {
-  "tools": [
-    {
-      "name": "tra_cuu_thong_tin",
-      "description": "Tra cứu thông tin cửa hàng/NPP/SubD trên hệ thống",
-      "parameters": {
-        "ma_cua_hang": "string (optional) - Mã cửa hàng/OutletID 8 số",
-        "sdt": "string (optional) - Số điện thoại KH cung cấp để tra cứu (10 số)",
-        "ten_cua_hang": "string (optional) - Tên cửa hàng",
-        "ma_npp": "string (optional) - Mã NPP/SubD"
-      },
-      "returns": {
-        "ma_cua_hang": "string - Mã cửa hàng",
-        "ten_cua_hang": "string - Tên cửa hàng",
-        "sdt_dang_ky": "string - SĐT đăng ký HVN trong hệ thống (dùng để nhận OTP)",
-        "trang_thai": "string - active/đóng/inactive",
-        "da_dang_ky_app": "boolean - Đã đăng ký HVN chưa"
-      }
-    },
-    {
-      "name": "kiem_tra_mqh",
-      "description": "Kiểm tra mối quan hệ (MQH) giữa Outlet với NPP/SubD trên SEM",
-      "parameters": {
-        "outlet_id": "string - OutletID 8 số",
-        "npp_subd_id": "string (optional) - Mã NPP hoặc SubD cần kiểm tra"
-      },
-      "returns": {
-        "co_mqh": "boolean - Có MQH hay không",
-        "npp_subd_hien_tai": "string - Mã NPP/SubD hiện tại",
-        "ten_npp_subd": "string - Tên NPP/SubD",
-        "trang_thai_mqh": "string - Active/Inactive",
-        "last_modified": "string - Thời điểm chỉnh sửa gần nhất",
-        "modified_by": "string - SA/user/system",
-        "tu_tao": "boolean - MQH do user tự tạo hay không"
-      }
-    },
-    {
-      "name": "kiem_tra_don_hang",
-      "description": "Kiểm tra trạng thái đơn hàng trên hệ thống theo mã đơn và kênh đặt hàng. Sử dụng khi: KH hỏi về trạng thái đơn đã đặt, kiểm tra đơn không về NPP/SubD, xác minh đơn Gratis đã được approve chưa, tra cứu thông tin outlet và NPP/SubD liên quan đến đơn hàng",
-      "parameters": {
-        "ma_don_hang": "string (required) - Mã đơn hàng cần kiểm tra. Format thường gặp: số dài (VD: 2509076469100) hoặc mã có prefix (VD: CO251124-01481). Đây là thông tin bắt buộc phải hỏi KH trước khi gọi tool",
-        "kenh": "string (required) - Kênh đặt hàng. Giá trị hợp lệ: 'SEM' (Sales Force Execution Mobile), 'HVN' (Heineken Vietnam app), 'DIS_Lite' (Distributor Lite Portal). Phải hỏi KH để xác định kênh chính xác trước khi tra cứu"
-      },
-      "returns": {
-        "trang_thai": "string - Trạng thái hiện tại của đơn hàng. Possible values: 'Đã nhận', 'Đang xử lý', 'Chưa về NPP', 'Đã duyệt', 'Chờ duyệt'. Usage: Sử dụng để phản hồi KH về tình trạng đơn. Nếu 'Chưa về NPP' có thể cần kiểm tra MQH hoặc tạo ticket SEM",
-        "outlet_id": "string - Mã cửa hàng (OutletID 8 số) đã đặt đơn này. Format: 8 chữ số (VD: 63235514). Usage: Dùng để xác nhận đúng cửa hàng của KH, hoặc tra cứu thêm thông tin qua tra_cuu_thong_tin() nếu cần",
-        "npp_subd": "string - Mã NPP hoặc SubD được chỉ định nhận đơn hàng này. Format: 8 chữ số hoặc tên mã (VD: 10375694, Đoàn Hằng). Usage: Xác định NPP/SubD nào phụ trách đơn. Có thể dùng để kiểm tra MQH qua kiem_tra_mqh() nếu có vấn đề",
-        "ngay_dat": "string - Ngày đặt đơn hàng. Format: YYYY-MM-DD (VD: 2024-09-25). Usage: Dùng để xác minh thời gian đặt đơn, tính toán thời gian xử lý, hoặc kiểm tra quy tắc 24h đồng bộ",
-        "loai_don": "string - Loại đơn hàng. Possible values: 'Thường', 'Gratis'. Usage: Phân biệt đơn thường và đơn khuyến mãi miễn phí. Nếu là 'Gratis', kiểm tra thêm field 'approved' và lưu ý Gratis chỉ order qua NPP (không qua SubD)",
-        "approved": "boolean or null - Trạng thái approved của đơn Gratis. Chỉ có giá trị (true/false) khi loai_don='Gratis', còn lại là null. true: Đơn Gratis đã được ASM approve. false: Đơn Gratis chưa được approve hoặc bị từ chối. null: Không áp dụng (đơn Thường). Usage: Nếu loai_don='Gratis' và approved=false, hướng dẫn KH chờ ASM approve hoặc liên hệ ASM. Nếu approved=true, đơn đã sẵn sàng xử lý"
-      },
-      "usage_notes": [
-        "Luôn hỏi KH về 'mã đơn hàng' và 'kênh' trước khi gọi tool này",
-        "Sau khi nhận kết quả, phản hồi KH về trạng thái đơn một cách rõ ràng",
-        "Nếu trang_thai='Chưa về NPP', cần kiểm tra MQH giữa outlet_id và npp_subd bằng kiem_tra_mqh()",
-        "Nếu loai_don='Gratis' và đơn order qua SubD, cảnh báo KH đây là lỗi (Gratis chỉ qua NPP)",
-        "Có thể dùng outlet_id từ kết quả để tra cứu thêm thông tin cửa hàng qua tra_cuu_thong_tin()"
-      ],
-      "examples": [
-        {
-          "scenario": "KH hỏi đơn không về NPP",
-          "call": "kiem_tra_don_hang(ma_don_hang='2509076469100', kenh='SEM')",
-          "flow": "Xác nhận trang_thai → Nếu 'Chưa về NPP' kiểm tra MQH → Tạo ticket nếu cần"
-        },
-        {
-          "scenario": "Kiểm tra đơn Gratis đã approve chưa",
-          "call": "kiem_tra_don_hang(ma_don_hang='CO251124-01481', kenh='SEM')",
-          "flow": "Kiểm tra loai_don='Gratis' → Xem approved=true/false → Phản hồi KH về trạng thái approve"
-        }
-      ]
-    },
-    {
-      "name": "tao_ticket",
-      "description": "Tạo ticket chuyển tuyến cho team chuyên trách",
-      "parameters": {
-        "team": "string - Team xử lý (SEM/HVN/SA/CS/IT)",
-        "noi_dung": "string - Mô tả vấn đề",
-        "du_lieu": "object - Dữ liệu liên quan (OutletID, mã đơn, etc.)"
-      },
-      "returns": {
-        "ticket_id": "string - Mã ticket",
-        "trang_thai": "string - Đã tạo thành công"
-      }
-    },
-    {
-      "name": "force_sync",
-      "description": "Thực hiện Force Sync dữ liệu trên SEM",
-      "parameters": {
-        "outlet_id": "string - OutletID cần sync",
-        "npp_subd_id": "string (optional) - Mã NPP/SubD"
-      },
-      "returns": {
-        "thanh_cong": "boolean - Sync thành công hay không"
-      }
-    },
-    {
-      "name": "gui_huong_dan",
-      "description": "Gửi hướng dẫn/tài liệu SOP cho khách hàng",
-      "parameters": {
-        "loai_huong_dan": "string - xuất_gratis/đăng_nhập/quên_mật_khẩu/etc."
-      },
-      "returns": {
-        "da_gui": "boolean - Đã gửi thành công"
-      }
-    }
-  ],
   "1": {
     "tên": "Hỗ trợ đăng nhập",
     "mục_tiêu": "Hỗ trợ khách hàng đăng nhập app HVN Đặt Hàng, xử lý lỗi thường gặp, xác minh thông tin tài khoản",
@@ -252,7 +147,7 @@
       {
         "bước": 2,
         "mô_tả": "Thu thập thông tin bắt buộc",
-        "chain_action": "hỏi kênh đặt đơn (SEM/HVN) → xin mã đơn hàng → xin OutletID → xin mã NPP/SubD → xin ngày đặt đơn → xin loại đơn (Thường/Gratis)"
+        "chain_action": "hỏi kênh đặt đơn (SEM/HVN) → xin mã đơn hàng → xin OutletID → xin mã NPP/SubD → xin loại đơn (Thường/Gratis)"
       },
       {
         "bước": 3,

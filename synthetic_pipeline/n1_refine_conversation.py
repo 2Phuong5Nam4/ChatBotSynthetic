@@ -1,63 +1,340 @@
 """
 N1 Refine Conversation Pipeline
-Sử dụng GPT-5 reasoning model như teacher LLM để:
-1. Dạy LLM con cách think qua reasoning content
-2. Dạy cách sử dụng tool qua tool calls
-3. Viết lại conversation hoàn toàn theo đúng procedure
+Dual-Agent Architecture:
+1. CSKH Agent: Chuyên gia CSKH Heineken, chỉ biết procedure + tools
+2. User Agent: Simulate user behavior dựa trên raw_conversation, quyết định end
+
+Flow: User msg → CSKH response/tool → User Agent generates next msg → loop
 """
 
 import json
-from typing import Dict, List, Optional
-from openai import OpenAI
+from typing import Dict, List, Optional, cast
 
 from synthetic_pipeline.state import State
-from synthetic_pipeline.mock_tools import call_tool
-from openai.types.responses.tool_param import ToolParam
+# Note: mock tools (call_tool) will be used in n3 for expansion
+# In n1, we use Tool Result Agent for context-aware results
+from langchain_openai import ChatOpenAI
+from uuid import uuid4
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolCall, ToolMessage, BaseMessage
+from pydantic import BaseModel
 
-def build_system_instructions(
-    conversation_procedure: Dict,
-    tools: List[Dict],
-    raw_conversation: Dict
-) -> str:
-    """Build comprehensive instructions for teacher LLM"""
-    instructions = f"""Bạn là TEACHER LLM - chuyên gia dịch vụ khách hàng Heineken Vietnam.
 
-## NHIỆM VỤ
-Viết lại hoàn toàn hội thoại khách hàng theo đúng procedure đã phân loại.
-Mỗi turn bạn sẽ:
-1. Suy nghĩ (reasoning) theo 4 dòng chuẩn
-2. Gọi tools nếu procedure yêu cầu
-3. Trả lời khách hàng
-4. Tạo user message tiếp theo để tiếp tục hội thoại
+# =============================================================================
+# TOOL INSTRUCTIONS
+# =============================================================================
 
-## QUY TẮC QUAN TRỌNG
-- GIỮ NGUYÊN văn phong lịch sự, thân thiện (anh/chị/em, ạ)
-- GIỮ NGUYÊN vấn đề/issue của user từ hội thoại gốc
-- VIẾT LẠI assistant response để TUÂN THỦ CHÍNH XÁC procedure
-- MỖI bước trong procedure phải được thể hiện trong hội thoại
+def build_tool_instructions() -> str:
+    """Build detailed tool instructions with examples from mock_tools"""
+    return """
+## AVAILABLE TOOLS
 
-## PROCEDURE: {conversation_procedure['tên']}
-Mục tiêu: {conversation_procedure['mục_tiêu']}
+### 1. tra_cuu_thong_tin
+**Mục đích:** Tra cứu thông tin cửa hàng/NPP/SubD trên hệ thống
+
+**Khi nào dùng:**
+- Xác minh thông tin KH (OutletID, SĐT, ma_npp)
+- Kiểm tra KH đã đăng ký app HVN chưa
+- Lấy SĐT đăng ký để gửi OTP
+
+**Tham số:**
+- ma_cua_hang (optional): Mã cửa hàng/OutletID 8 số
+- sdt (optional): Số điện thoại 10 số
+- ma_npp (optional): Mã NPP/SubD
+
+**Ví dụ gọi:**
+```json
+{"name": "tra_cuu_thong_tin", "arguments": "{\\"ma_cua_hang\\": \\"63235514\\"}"}
+```
+
+**Kết quả trả về:**
+```json
+{
+    "ma_cua_hang": "63235514",
+    "ten_cua_hang": "Tạp Hóa Bảo Trân",
+    "sdt_dang_ky": "0912345678",
+    "trang_thai": "active",
+    "da_dang_ky_app": true
+}
+```
+
+**Cách xử lý kết quả:**
+- Nếu `da_dang_ky_app=false`: Hướng dẫn KH đăng ký app
+- Nếu `trang_thai="đóng"`: Thông báo cửa hàng đã đóng, hướng dẫn liên hệ SA
+- Dùng `sdt_dang_ky` để xác nhận SĐT nhận OTP
+
+---
+
+### 2. kiem_tra_mqh
+**Mục đích:** Kiểm tra mối quan hệ (MQH) giữa Outlet với NPP/SubD trên SEM
+
+**Khi nào dùng:**
+- KH không thấy NPP/SubD trên app
+- Đơn hàng không về NPP
+- Kiểm tra tính hợp lệ của MQH trước khi đặt hàng
+
+**Tham số:**
+- outlet_id (required): Mã cửa hàng 8 số
+- npp_subd_id (optional): Mã NPP/SubD cần kiểm tra
+
+**Ví dụ gọi:**
+```json
+{"name": "kiem_tra_mqh", "arguments": "{\\"outlet_id\\": \\"63235514\\", \\"npp_subd_id\\": \\"10375694\\"}"}
+```
+
+**Kết quả trả về:**
+```json
+{
+    "co_mqh": true,
+    "npp_subd_hien_tai": "10375694",
+    "ten_npp_subd": "NPP QNI29",
+    "trang_thai_mqh": "Active",
+    "last_modified": "2024-01-15 10:30:00",
+    "modified_by": "SA",
+    "tu_tao": false
+}
+```
+
+**Cách xử lý kết quả:**
+- Nếu `co_mqh=false`: Thông báo chưa có MQH, hướng dẫn liên hệ SA tạo MQH
+- Nếu `trang_thai_mqh="Inactive"`: MQH đã hết hiệu lực, cần SA kích hoạt lại
+- Nếu `tu_tao=true`: MQH do user tự tạo, có thể cần SA xác nhận
+- Kiểm tra `last_modified`: Nếu < 24h, nhắc KH chờ đồng bộ
+
+---
+
+### 3. kiem_tra_don_hang
+**Mục đích:** Kiểm tra trạng thái đơn hàng trên hệ thống
+
+**Khi nào dùng:**
+- KH hỏi về trạng thái đơn đã đặt
+- Kiểm tra đơn không về NPP/SubD
+- Xác minh đơn Gratis đã được approve chưa
+
+**Tham số:**
+- ma_don_hang (required): Mã đơn hàng (VD: 2509076469100, CO251124-01481)
+- kenh (required): Kênh đặt hàng - "SEM", "HVN", hoặc "DIS_Lite"
+
+**Ví dụ gọi:**
+```json
+{"name": "kiem_tra_don_hang", "arguments": "{\\"ma_don_hang\\": \\"2509076469100\\", \\"kenh\\": \\"SEM\\"}"}
+```
+
+**Kết quả trả về:**
+```json
+{
+    "trang_thai": "Đang xử lý",
+    "outlet_id": "63235514",
+    "npp_subd": "10375694",
+    "ngay_dat": "2024-01-15",
+    "loai_don": "Thường",
+    "approved": null
+}
+```
+
+**Cách xử lý kết quả:**
+- `trang_thai="Chưa về NPP"`: Kiểm tra MQH bằng kiem_tra_mqh()
+- `loai_don="Gratis"` và `approved=false`: Đơn chờ ASM approve
+- `loai_don="Gratis"` qua SubD: Lỗi, Gratis chỉ qua NPP
+
+---
+
+### 4. tao_ticket
+**Mục đích:** Tạo ticket chuyển tuyến cho team chuyên trách
+
+**Khi nào dùng:**
+- Vấn đề cần team khác xử lý (SEM/HVN/SA/CS/IT)
+- Escalate case phức tạp
+
+**Tham số:**
+- team (required): Team xử lý - "SEM", "HVN", "SA", "CS", "IT"
+- noi_dung (required): Mô tả vấn đề
+- du_lieu (required): JSON string chứa dữ liệu liên quan
+
+**Ví dụ gọi:**
+```json
+{"name": "tao_ticket", "arguments": "{\\"team\\": \\"SEM\\", \\"noi_dung\\": \\"Đơn không về NPP\\", \\"du_lieu\\": \\"{\\\\\\"outlet_id\\\\\\": \\\\\\"63235514\\\\\\", \\\\\\"ma_don\\\\\\": \\\\\\"2509076469100\\\\\\"}\\"}"}
+```
+
+**Kết quả trả về:**
+```json
+{
+    "ticket_id": "TKT123456",
+    "trang_thai": "Đã tạo thành công"
+}
+```
+
+---
+
+### 5. force_sync
+**Mục đích:** Thực hiện Force Sync dữ liệu trên SEM
+
+**Khi nào dùng:**
+- Sau khi SA tạo/sửa MQH, cần sync ngay
+- Dữ liệu không đồng bộ giữa các hệ thống
+
+**Tham số:**
+- outlet_id (required): Mã cửa hàng 8 số
+- npp_subd_id (optional): Mã NPP/SubD
+
+**Ví dụ gọi:**
+```json
+{"name": "force_sync", "arguments": "{\\"outlet_id\\": \\"63235514\\", \\"npp_subd_id\\": \\"10375694\\"}"}
+```
+
+**Kết quả trả về:**
+```json
+{
+    "thanh_cong": true
+}
+```
+
+---
+
+### 6. gui_huong_dan
+**Mục đích:** Gửi hướng dẫn/tài liệu SOP cho khách hàng
+
+**Khi nào dùng:**
+- KH cần hướng dẫn chi tiết về quy trình
+- Gửi tài liệu hỗ trợ
+
+**Tham số:**
+- loai_huong_dan (required): Loại hướng dẫn - "xuat_gratis", "dang_nhap", "quen_mat_khau", "dat_hang", etc.
+
+**Ví dụ gọi:**
+```json
+{"name": "gui_huong_dan", "arguments": "{\\"loai_huong_dan\\": \\"quen_mat_khau\\"}"}
+```
+
+**Kết quả trả về:**
+```json
+{
+    "da_gui": true
+}
+```
+"""
+
+
+# =============================================================================
+# CSKH AGENT - Customer Support Agent
+# =============================================================================
+
+def build_cskh_instructions(conversation_procedure: Dict) -> str:
+    """Build instructions for CSKH Agent - only knows procedure and tools"""
+
+    tool_instructions = build_tool_instructions()
+
+    instructions = f"""Bạn là nhân viên CSKH (Chăm sóc khách hàng) của Heineken Vietnam.
+
+## Bạn cần tuân thủ quy trình sau: {conversation_procedure.get('tên', 'Unknown')}
+Mục tiêu: {conversation_procedure.get('mục_tiêu', 'Unknown')}
 
 ### Luồng thực thi chính:
 """
+    for step in conversation_procedure.get('luồng_thực_thi_chung', []):
+        instructions += f"- Bước {step['bước']}: {step['mô_tả']} → {step['chain_action']}\n"
 
-    for step in conversation_procedure['luồng_thực_thi_chung']:
-        instructions += f"\n**Bước {step['bước']}**: {step['mô_tả']}\n"
-        instructions += f"  Chain action: {step['chain_action']}\n"
-
-    instructions += "\n### Edge cases (Trường hợp đặc biệt):\n"
+    instructions += "\n### Các trường hợp ngoại lệ:\n"
     for edge_case in conversation_procedure.get('edge_cases', []):
-        instructions += f"\n- **{edge_case['case']}**\n"
-        instructions += f"  Điều kiện: {edge_case['điều_kiện']}\n"
-        instructions += f"  Xử lý: {edge_case['chain_action']}\n"
+        instructions += f"- {edge_case['case']}: {edge_case['chain_action']}\n"
 
-    instructions += "\n\n## HỘI THOẠI GỐC (để tham khảo văn phong và issue):\n"
-    instructions += f"- Loại: {raw_conversation.get('Sub_Category', 'unknown')}\n"
-    instructions += f"- Đối tượng: {raw_conversation.get('Targeted_Customers', 'unknown')}\n"
-    instructions += f"- Ý định: {raw_conversation.get('Intentions', 'unknown')}\n\n"
-    instructions += "Nội dung:\n"
-    
+    instructions += """
+
+## QUY TẮC XỬ LÝ
+
+### Xác định yêu cầu KH khi chưa rõ ý định khách hàng:
+- Hỏi rõ vấn đề KH đang gặp phải
+
+### Mỗi turn bạn CHỈ làm MỘT việc:
+1. Trả lời khách hàng (assistant_response), HOẶC
+2. Gọi tool để lấy thông tin (tool_call)
+
+### KHÔNG ĐƯỢC:
+- Xử lý nhiều bước cùng lúc
+
+## FORMAT REASONING
+```
+Tình huống: [KH đang hỏi/yêu cầu gì?]
+Quy trình: [Cần sử dụng quy trình nào?]
+Bước: [Bước hiện tại trong quy trình]
+Thông tin có: [Đã biết gì?]
+Thông tin cần thêm: [Cần gì thêm?]
+Hành động: [Trả lời / Gọi tool]
+```
+Lưu ý: 
+- Quy trình có thể là "không xác định": chưa rõ ý định khách hàng, "không liên quan": khách hỏi linh tinh
+- Bước: 1, 2, 3, ... - [mô tả bước] hoặc "ngoại lệ - [mô tả ngoại lệ]" hoặc bỏ trống nếu không xác định/không liên quan. Bước tối đa gồm 2 phần như ví dụ, không giải thích gì thêm. Không trộn bước 1,2 ,3 ... với ngoại lệ. ngoại lệ cần theo chuẩn "ngoại lệ - [mô tả ngoại lệ]"
+##### Ví dụ:
+
+```
+Tình huống: KH quên mật khẩu đăng nhập app
+Quy trình: Đăng ký/Quên mật khẩu
+Bước: 2 - Xác thực thông tin KH
+Thông tin có: KH cung cấp SĐT 0912345678
+Thông tin cần thêm: Xác nhận OutletID
+Hành động: Gọi tool tra_cuu_thong_tin để lấy thông tin đăng ký
+```
+
+```
+Tình huống: KH chưa nêu rõ vấn đề
+Quy trình: không xác định
+Bước:
+Thông tin có: Chưa có thông tin
+Thông tin cần thêm: vấn đề KH đang gặp phải
+Hành động: Hỏi KH vấn đề đang gặp phải
+```
+
+```
+Tình huống: KH hỏi vấn đề không liên quan đến CSKH
+Quy trình: không liên quan
+Bước:
+Thông tin có: không liên quan
+Thông tin cần thêm: không cần thêm
+Hành động: Thân thiện từ chối trả lời, hướng KH liên hệ kênh phù hợp
+```
+
+```
+Tình huống: KH hỏi về trạng thái đơn hàng
+Quy trình: Kiểm tra đơn hàng
+Bước: ngoại lệ - đơn hàng bị hủy
+Thông tin có: KH cung cấp mã đơn hàng 2509076469100
+Thông tin cần thêm: Kiểm tra trạng thái đơn hàng
+Hành động: Gọi tool kiem_tra_don_hang để kiểm tra trạng thái đơn
+```
+
+
+## VĂN PHONG
+- Lịch sự, thân thiện (anh/chị/em, ạ)
+- Ngắn gọn, đi thẳng vào vấn đề
+"""
+
+    instructions += tool_instructions
+
+    return instructions
+
+
+# =============================================================================
+# USER AGENT - Simulates user behavior
+# =============================================================================
+
+def build_user_instructions(raw_conversation: Dict) -> str:
+    """Build instructions for User Agent - knows the original conversation"""
+
+    instructions = f"""Bạn đóng vai KHÁCH HÀNG trong cuộc hội thoại với CSKH Heineken Vietnam.
+
+## NHIỆM VỤ
+Dựa trên hội thoại gốc bên dưới, bạn sẽ simulate hành vi của khách hàng:
+- Đặt câu hỏi tương tự như hội thoại gốc
+- Cung cấp thông tin khi được hỏi
+- Phản hồi tự nhiên như khách hàng thật
+
+## HỘI THOẠI GỐC (tham khảo để biết user cần gì):
+- Loại vấn đề: {raw_conversation.get('Sub_Category', 'unknown')}
+- Đối tượng KH: {raw_conversation.get('Targeted_Customers', 'unknown')}
+- Ý định: {raw_conversation.get('Intentions', 'unknown')}
+
+### Nội dung hội thoại gốc:
+"""
+
     for msg in raw_conversation.get('messages', []):
         role = msg.get('role', 'unknown')
         content = msg.get('content', '')
@@ -65,311 +342,297 @@ Mục tiêu: {conversation_procedure['mục_tiêu']}
 
     instructions += """
 
-## FORMAT REASONING (4 dòng bắt buộc - hãy suy nghĩ theo format này):
-Nhận diện tình huống: [Phân tích tình huống hiện tại của KH]
-Xác định quy trình áp dụng: [Tên procedure]
-Xác định bước hiện tại trong quy trình: [Bước số mấy - mô tả]
-Chuỗi hành động: [action A → action B → action C]
+## QUY TẮC
 
-## CẤU TRÚC RESPONSE
-Mỗi turn của bạn phải bao gồm:
-1. Reasoning (model sẽ tự động tạo reasoning tokens khi suy nghĩ)
-2. Tool calls (nếu cần) - gọi tools từ danh sách available tools
-3. Assistant response (câu trả lời gửi cho user)
-4. Để tiếp tục hội thoại: tạo user message tiếp theo ở cuối response với format:
-   
-   NEXT_USER_MESSAGE: [nội dung user reply]
-   
-5. Hoặc kết thúc hội thoại với:
-   
-   END_CONVERSATION: true
+### Bạn phải:
+1. Giữ nguyên VẤN ĐỀ CHÍNH của khách hàng trong hội thoại gốc
+2. Cung cấp thông tin tương tự (OutletID, SĐT, tên cửa hàng, etc.)
+3. Phản hồi tự nhiên, không quá formal
+4. Quyết định khi nào kết thúc hội thoại (khi vấn đề đã được giải quyết)
 
-Hãy bắt đầu xử lý hội thoại!
+### Văn phong khách hàng:
+- Có thể viết tắt, không dấu
+- Đôi khi thiếu kiên nhẫn nếu chờ lâu
+- Cảm ơn khi được hỗ trợ tốt
+
+## OUTPUT FORMAT
+```json
+{
+  "reasoning": "Phân tích: CSKH vừa hỏi X, theo hội thoại gốc mình cần trả lời Y",
+  "user_message": "Nội dung tin nhắn của khách hàng",
+  "end_conversation": false
+}
+```
+
+### Khi nào set end_conversation = true:
+- CSKH đã giải quyết xong vấn đề
+- Đã nhận được hướng dẫn/thông tin cần thiết
+- Tương đương với kết thúc trong hội thoại gốc
 """
 
     return instructions
 
 
-async def refine_conversation(state: State) -> Dict:
-    """
-    Refine conversation using GPT-5 reasoning model as teacher LLM.
+# =============================================================================
+# TOOL RESULT AGENT - Generates context-aware tool results
+# =============================================================================
 
-    Flow:
-    1. Build instructions với procedure + tools + raw conversation
-    2. Teacher generate responses với:
-       - reasoning (automatic reasoning tokens)
-       - tool_calls (nếu cần)
-       - assistant_response
-       - next_user_message (để tiếp tục hội thoại)
-    3. Execute tool calls và add results
-    4. Repeat until END_CONVERSATION
-    5. Save refined conversation
+def build_tool_result_instructions(raw_conversation: Dict) -> str:
+    """Build instructions for Tool Result Agent - generates realistic tool results"""
+
+    instructions = f"""Bạn là TOOL RESULT GENERATOR cho hệ thống CSKH Heineken Vietnam.
+
+## NHIỆM VỤ
+Khi CSKH gọi một tool, bạn sẽ tạo kết quả tool phù hợp với:
+1. Luồng hội thoại gốc (để conversation đi đúng hướng)
+2. Thông tin KH đã cung cấp trong conversation
+3. Logic nghiệp vụ của tool
+
+## HỘI THOẠI GỐC (tham khảo để biết kết quả mong đợi):
+- Loại vấn đề: {raw_conversation.get('Sub_Category', 'unknown')}
+- Đối tượng KH: {raw_conversation.get('Targeted_Customers', 'unknown')}
+- Ý định: {raw_conversation.get('Intentions', 'unknown')}
+
+### Nội dung hội thoại gốc:
+"""
+
+    for msg in raw_conversation.get('messages', []):
+        role = msg.get('role', 'unknown')
+        content = msg.get('content', '')
+        instructions += f"[{role}]: {content}\n"
+
+    instructions += """
+
+## TOOL SCHEMAS
+
+### tra_cuu_thong_tin
+Output: {"ma_cua_hang": str, "ten_cua_hang": str, "sdt_dang_ky": str, "trang_thai": "active"|"đóng"|"inactive", "da_dang_ky_app": bool}
+
+### kiem_tra_mqh
+Output: {"co_mqh": bool, "npp_subd_hien_tai": str|null, "ten_npp_subd": str|null, "trang_thai_mqh": "Active"|"Inactive"|null, "last_modified": str|null, "modified_by": str|null, "tu_tao": bool}
+
+### kiem_tra_don_hang
+Output: {"trang_thai": str, "outlet_id": str, "npp_subd": str, "ngay_dat": str, "loai_don": "Thường"|"Gratis", "approved": bool|null}
+
+### tao_ticket
+Output: {"ticket_id": str, "trang_thai": "Đã tạo thành công"}
+
+### force_sync
+Output: {"thanh_cong": bool}
+
+### gui_huong_dan
+Output: {"da_gui": bool}
+
+## QUY TẮC
+
+### Bạn PHẢI:
+1. Trả về kết quả JSON hợp lệ theo schema của tool
+2. Dựa vào hội thoại gốc để biết kết quả nên là gì (VD: nếu conversation về login thành công → trang_thai="active")
+3. Giữ nhất quán với thông tin KH đã cung cấp (OutletID, SĐT, etc.)
+4. Tạo dữ liệu realistic (8 số cho OutletID, 10 số cho SĐT, etc.)
+
+### Ví dụ:
+- Nếu hội thoại gốc là về "quên mật khẩu" và CSKH gọi tra_cuu_thong_tin → trả về trang_thai="active", da_dang_ky_app=true
+- Nếu hội thoại gốc có vấn đề về MQH → kiem_tra_mqh có thể trả về co_mqh=false hoặc trang_thai_mqh="Inactive"
+
+## OUTPUT FORMAT
+Trả về reasoning và tool_result (JSON string).
+"""
+
+    return instructions
+
+
+class ToolResultResponse(BaseModel):
+    """Response from Tool Result Agent"""
+    reasoning: str
+    tool_result: str  # JSON string of the tool result
+
+
+# =============================================================================
+# PYDANTIC MODELS
+# =============================================================================
+
+class ToolCallRequest(BaseModel):
+    name: str
+    arguments: str
+
+
+class CSKHResponse(BaseModel):
+    """Response from CSKH Agent"""
+    reasoning_content: str
+    assistant_response: Optional[str] = None
+    tool_call: Optional[ToolCallRequest] = None
+
+
+class UserResponse(BaseModel):
+    """Response from User Agent"""
+    reasoning: str
+    user_message: str
+    end_conversation: bool = False
+
+
+# =============================================================================
+# MAIN PIPELINE
+# =============================================================================
+
+async def refine_conversation(state: State) -> State:
     """
+    Triple-agent conversation refinement:
+    1. CSKH Agent: Responds to user, calls tools
+    2. User Agent: Generates next user message based on raw_conversation
+    3. Tool Result Agent: Generates context-aware tool results
+    """
+
     raw_conversation = state.raw_conversation
     procedure_id = state.procedure_id
     conversation_procedure = state.procedures.get(procedure_id, {})
-    tools = state.tools
 
-    # Initialize OpenAI client
-    client = OpenAI()
+    # Build instructions for all agents
+    cskh_instructions = build_cskh_instructions(conversation_procedure)
+    user_instructions = build_user_instructions(raw_conversation)
+    tool_result_instructions = build_tool_result_instructions(raw_conversation)
 
-    # Build instructions
-    instructions = build_system_instructions(conversation_procedure, tools, raw_conversation)
+    # Initialize LLMs
+    cskh_llm = ChatOpenAI(
+        model="gpt-4.1",
+        temperature=0.1
+    ).with_structured_output(CSKHResponse)
 
-    # Convert tools to OpenAI function format
-    openai_tools: List[ToolParam] = []
-    for tool in tools:
-        # Convert parameters từ string description sang JSON Schema proper format
-        parameters_schema = {
-            "type": "object",
-            "properties": {},
-            "required": []
-        }
-        
-        # Parse parameters từ description format
-        if "parameters" in tool and isinstance(tool["parameters"], dict):
-            for param_name, param_desc in tool["parameters"].items():
-                # Parse description để extract type và required
-                # Format: "type (optional/required) - description"
-                param_type = "string"  # default
-                is_required = True
-                description = param_desc
-                
-                if isinstance(param_desc, str):
-                    # Extract type from description
-                    if "string" in param_desc.lower():
-                        param_type = "string"
-                    elif "boolean" in param_desc.lower():
-                        param_type = "boolean"
-                    elif "object" in param_desc.lower():
-                        param_type = "object"
-                    elif "number" in param_desc.lower():
-                        param_type = "number"
-                    
-                    # Check if optional
-                    if "(optional)" in param_desc or "optional" in param_desc.lower():
-                        is_required = False
-                    
-                    # Extract description after "-"
-                    if " - " in param_desc:
-                        description = param_desc.split(" - ", 1)[1]
-                    else:
-                        description = param_desc
-                
-                parameters_schema["properties"][param_name] = {
-                    "type": param_type,
-                    "description": description
-                }
-                
-                if is_required:
-                    parameters_schema["required"].append(param_name)
-        
-        # Nếu không có parameters, vẫn phải có object rỗng
-        if not parameters_schema["properties"]:
-            parameters_schema = {
-                "type": "object",
-                "properties": {},
-                "additionalProperties": False
-            }
-        else:
-            parameters_schema["additionalProperties"] = False
-        
-        openai_tools.append({
-            "type": "function",
-            "name": tool["name"],
-            "description": tool["description"],
-            "parameters": parameters_schema,
-            "strict": True  # Không bắt buộc strict với reasoning model
-        })
+    user_llm = ChatOpenAI(
+        model="gpt-4.1-mini",
+        temperature=0.2
+    ).with_structured_output(UserResponse)
 
-    # Initialize conversation với user messages từ đầu
-    origin_messages = raw_conversation.get('messages', [])
-    conversation_input: List[Dict] = []
+    tool_result_llm = ChatOpenAI(
+        model="gpt-4.1-mini",
+        temperature=0.1  # Lower temperature for more consistent tool results
+    ).with_structured_output(ToolResultResponse)
 
-    # Add tất cả user messages liên tiếp từ đầu
-    for msg in origin_messages:
-        role = msg.get('role', 'unknown')
-        content = msg.get('content', '')
-        if role == 'user':
-            conversation_input.append({
-                "role": "user",
-                "content": content
-            })
-        elif role == 'assistant' and not conversation_input:
-            # Skip assistant greeting nếu là message đầu tiên
-            continue
-        else:
-            # Stop khi gặp assistant message sau user messages
+    # Conversation histories (separate for each agent)
+    cskh_history: List[BaseMessage] = [SystemMessage(content=cskh_instructions)]
+    user_history: List[BaseMessage] = [SystemMessage(content=user_instructions)]
+    tool_result_history: List[BaseMessage] = [SystemMessage(content=tool_result_instructions)]
+
+    # Output: refined messages
+    refined_messages: List[Dict] = []
+
+    # Get first user message from raw_conversation
+    first_user_msg = None
+    for msg in raw_conversation.get('messages', []):
+        if msg['role'] == 'user':
+            first_user_msg = msg['content']
             break
 
-    # Nếu không có user message nào, tạo từ context
-    if not conversation_input:
-        first_user_content = "Tôi cần hỗ trợ"
-        for msg in origin_messages:
-            if msg.get('role') == 'user':
-                first_user_content = msg.get('content', first_user_content)
-                break
-        conversation_input.append({
-            "role": "user",
-            "content": first_user_content
-        })
+    if not first_user_msg:
+        first_user_msg = "Alo"
 
-    # Track refined messages cho output
-    refined_messages: List[Dict] = []
-    for msg in conversation_input:
-        refined_messages.append(msg)
+    # Add first user message
+    cskh_history.append(HumanMessage(content=first_user_msg))
+    refined_messages.append({"role": "user", "content": first_user_msg})
 
-    # Main conversation loop
-    turn_count = 0
+    print(f"Starting conversation refinement")
+    print(f"First user message: {first_user_msg}")
+
     max_turns = 20  # Safety limit
+    turn_count = 0
 
     while turn_count < max_turns:
         turn_count += 1
-        print(f"\n=== Turn {turn_count} ===")
+        print(f"\n--- Turn {turn_count} ---")
 
-        # Call GPT-5 với reasoning
-        try:
-            print("Calling GPT-5 with conversation input...", conversation_input)
-            response = client.responses.create(
-                model="gpt-5-mini",
-                reasoning={
-                    "effort": "medium",
-                    "summary": "detailed"
-                },
-                instructions=instructions,
-                input=conversation_input,
-                tools=openai_tools,
-                max_output_tokens=4000
-            )
-        except Exception as e:
-            print(f"Error calling GPT-5 at turn {turn_count}: {e}")
-            break
+        # =================================================================
+        # STEP 1: CSKH Agent responds
+        # =================================================================
+        cskh_response = cast(CSKHResponse, await cskh_llm.ainvoke(cskh_history))
 
-        # Check for incomplete response
-        if response.status == "incomplete":
-            print(f"Response incomplete: {response.incomplete_details}")
-            break
+        reasoning = cskh_response.reasoning_content
+        assistant_response = cskh_response.assistant_response
+        tool_call = cskh_response.tool_call
 
-        # Extract reasoning summary
-        reasoning_summary = ""
-        assistant_content = ""
-        tool_calls_made = []
-        
-        # Parse output items
-        for item in response.output:
-            if item.type == "reasoning" and hasattr(item, 'summary'):
-                # Extract reasoning summary
-                for summary_item in item.summary:
-                    if summary_item.type == "summary_text":
-                        reasoning_summary = summary_item.text
-                        
-            elif item.type == "function_call":
-                # Store tool call
-                tool_calls_made.append({
-                    "call_id": item.call_id,
-                    "name": item.name,
-                    "arguments": item.arguments
-                })
-                
-            elif item.type == "message":
-                # Extract assistant message
-                for content_item in item.content:
-                    if content_item.type == "output_text":
-                        assistant_content += content_item.text
+        # Build refined content with thinking
+        refine_content = f"<think>{reasoning}</think>\n"
 
-        # Build full assistant message với thinking tags
-        assistant_parts = []
-        if reasoning_summary:
-            assistant_parts.append(f"<thinking>\n{reasoning_summary}\n</thinking>")
+        if tool_call:
+            # CSKH wants to call a tool
+            tool_name = tool_call.name
+            tool_args = json.loads(tool_call.arguments)
+            tool_id = str(uuid4())
 
-        # Execute tool calls nếu có
-        if tool_calls_made:
-            # Add tool calls to conversation input for next turn
-            for tool_call in tool_calls_made:
-                try:
-                    # Parse arguments
-                    args = json.loads(tool_call["arguments"])
-                    
-                    # Call tool
-                    tool_result = call_tool(tool_name=tool_call["name"], **args)
-                    tool_result_str = json.dumps(tool_result, ensure_ascii=False)
 
-                    # Add notation to assistant message
-                    tool_notation = f"[Tool: {tool_call['name']}({tool_call['arguments']})]"
-                    assistant_parts.append(tool_notation)
-                    assistant_parts.append(f"[Tool Result: {tool_result_str}]")
+            # Add to history
+            tool_call_obj = ToolCall(name=tool_name, args=tool_args, id=tool_id, type="tool_call")
+            ai_message = AIMessage(content="", tool_calls=[tool_call_obj])
+            cskh_history.append(ai_message)
 
-                    # Add tool result to conversation input
-                    conversation_input.append({
-                        "type": "function_call_output",
-                        "call_id": tool_call["call_id"],
-                        "output": tool_result_str
-                    })
+            # Save to refined messages
+            refine_content += f"<tool_call>{{'name': '{tool_name}', 'arguments': {tool_args}}}</tool_call>"
+            refined_messages.append({"role": "assistant", "content": refine_content})
+            print(f"CSKH calls tool: {refine_content}")
+            tool_context = f"""Tool được gọi: {tool_name}
+Arguments: {json.dumps(tool_args, ensure_ascii=False)}
 
-                except Exception as e:
-                    print(f"Error calling tool {tool_call['name']}: {e}")
-                    assistant_parts.append(f"[Tool Error: {tool_call['name']} - {str(e)}]")
+Conversation history hiện tại:
+"""
+            for msg in refined_messages:
+                tool_context += f"[{msg['role']}]: {msg['content'][:200]}\n"
 
-            # Nếu có tool calls, cần gọi lại model để lấy response sau tool
-            # Keep reasoning items theo docs recommendation
+            tool_context += "\nHãy tạo tool result phù hợp với luồng hội thoại."
+
+            tool_result_history.append(HumanMessage(content=tool_context))
+            tool_result_response = cast(ToolResultResponse, await tool_result_llm.ainvoke(tool_result_history))
+
+
+            tool_result_str = tool_result_response.tool_result
+            print(f"+ Tool result: {tool_result_str}")
+
+            # Update tool_result_history with the response for context
+            tool_result_history.append(AIMessage(content=tool_result_str))
+
+            # Add tool result to CSKH history
+            tool_message = ToolMessage(content=tool_result_str, tool_call_id=tool_id)
+            cskh_history.append(tool_message)
+            refined_messages.append({"role": "tool", "content": tool_result_str})
+
+            # Continue loop - CSKH will process tool result
             continue
 
-        # Add assistant response
-        if assistant_content:
-            assistant_parts.append(assistant_content)
+        elif assistant_response:
+            # CSKH responds to user
 
-        # Combine assistant message
-        full_assistant_message = "\n".join(assistant_parts)
-        
-        # Add to refined messages
-        refined_messages.append({
-            "role": "assistant",
-            "content": full_assistant_message
-        })
+            refine_content += assistant_response
+            cskh_history.append(AIMessage(content=assistant_response))
+            refined_messages.append({"role": "assistant", "content": refine_content})
+            print(f"CSKH response: {refine_content}")
+            # Also add to user_history so User Agent sees the response
+            user_history.append(AIMessage(content=assistant_response))
 
-        # Add assistant message to conversation input
-        conversation_input.append({
-            "role": "assistant",
-            "content": assistant_content
-        })
-
-        # Parse assistant content để tìm next user message hoặc end signal
-        if "END_CONVERSATION: true" in assistant_content or "END_CONVERSATION:true" in assistant_content:
-            print("Conversation ended by assistant")
-            break
-
-        # Extract NEXT_USER_MESSAGE
-        next_user_msg = None
-        lines = assistant_content.split('\n')
-        for line in lines:
-            if line.startswith("NEXT_USER_MESSAGE:"):
-                next_user_msg = line.replace("NEXT_USER_MESSAGE:", "").strip()
-                break
-
-        if next_user_msg:
-            # Add next user message
-            refined_messages.append({
-                "role": "user",
-                "content": next_user_msg
-            })
-            conversation_input.append({
-                "role": "user",
-                "content": next_user_msg
-            })
         else:
-            # No next message and no END signal -> end anyway
-            print("No next user message found, ending conversation")
+            raise ValueError("CSKH must provide either assistant_response or tool_call")
+
+        # =================================================================
+        # STEP 2: User Agent generates next message
+        # =================================================================
+        # Add context about what CSKH just said
+        user_history.append(HumanMessage(content=f"CSKH vừa trả lời: {assistant_response}\n\nHãy tạo tin nhắn tiếp theo của khách hàng."))
+
+        user_response = cast(UserResponse, await user_llm.ainvoke(user_history))
+
+        if user_response.end_conversation:
+            print("User Agent decided to end conversation.")
+            # Optionally add a final thank you message
+            if user_response.user_message:
+                refined_messages.append({"role": "user", "content": user_response.user_message})
+                cskh_history.append(HumanMessage(content=user_response.user_message))
             break
 
-    # Save refined conversation
-    refined_data = {
-        **raw_conversation,
-        "refined_messages": refined_messages,
-        "procedure_id": procedure_id,
-        "total_turns": turn_count
-    }
+        # Add user message
+        user_msg = user_response.user_message
+        print(f"User message: <think>{user_response.reasoning}</think>\n {user_msg}")
 
-    with open("data/refined_conversations.jsonl", "a", encoding="utf-8") as f:
-        f.write(json.dumps(refined_data, ensure_ascii=False) + "\n")
+        refined_messages.append({"role": "user", "content": user_msg})
+        cskh_history.append(HumanMessage(content=user_msg))
 
-    return {**state.__dict__, "refined_conversation": refined_data}
+        # Update user_history for next round
+        user_history.append(AIMessage(content=user_msg))
+
+    return {**state.__dict__, "refined_messages": refined_messages}

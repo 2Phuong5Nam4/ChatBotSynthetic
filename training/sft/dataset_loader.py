@@ -11,6 +11,7 @@ from typing import Dict, Any, Callable, List, Optional, Tuple
 from transformers import TextStreamer
 import json
 
+
 class DatasetLoader:
     """Loads and prepares datasets for fine-tuning."""
 
@@ -71,6 +72,7 @@ class DatasetLoader:
         # seperate prompt and answer
         for msq in convo_clean:
             if msq["role"] == "tool":
+                msq["role"] = "user"
                 msq["content"] = json.dumps(msq["content"])
             if "tool_calls" in msq:
                 msq["tool_calls"] = json.dumps(msq["tool_calls"])
@@ -81,6 +83,7 @@ class DatasetLoader:
             formatted_anwser += answer['content']
         elif answer['tool_calls']:
             formatted_anwser += f"<tool_calls>\n{json.dumps(answer['tool_calls'][0])}\n</tool_calls>"
+
         return formatted_text, prompt, formatted_anwser
 
     def load_dataset(self, split: str = "train") -> List[Dict]:

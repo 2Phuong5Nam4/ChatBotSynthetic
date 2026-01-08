@@ -71,8 +71,9 @@ class DatasetLoader:
             convo_clean, tokenize=False, add_generation_prompt=False, enable_thinking=True)
         # seperate prompt and answer
         for msq in convo_clean:
+            # remove all None key
+            msq = {k: v for k, v in msq.items() if v is not None}
             if msq["role"] == "tool":
-                msq["role"] = "user"
                 msq["content"] = json.dumps(msq["content"])
             if "tool_calls" in msq:
                 msq["tool_calls"] = json.dumps(msq["tool_calls"])

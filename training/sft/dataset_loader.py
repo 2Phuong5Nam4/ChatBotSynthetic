@@ -91,7 +91,7 @@ class DatasetLoader:
         ]
 
         text_field = self.dataset_config.get("text_field", "text")
-        return {text_field: texts}
+        return {text_field: texts, "messages": convos}
 
     def load_dataset(self, split: str = "train") -> List[Dict]:
         """

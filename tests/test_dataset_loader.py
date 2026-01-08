@@ -73,11 +73,16 @@ class TestDatasetLoader:
         first_item = dataset[0]
         assert "text" in first_item
         # check first 10 text field
-        ten_first_texts = [dataset[i]["text"] for i in range(10)]
-        print("@@first 10 formatted texts:")
-        for text in ten_first_texts:
+        rows = [dataset[i] for i in range(3)]
+        print("@@first 3 formatted texts:")
+        for row in rows:
             print("==="*50)
-            print(text)
+            print(row["text"])
+            print("---"*50)
+            print(row["prompt"])
+            print(row["answer"])
+        print("@@"*50)
+        print(dataset[0])
         
     def test_prepare_validation_dataset(self, dataset_config, tokenizer):
         """Test preparing validation dataset with formatting function."""
@@ -91,10 +96,13 @@ class TestDatasetLoader:
         first_item = dataset[0]
         assert "text" in first_item
         # check first 10 text field
-        ten_first_texts = [dataset[i]["text"] for i in range(10)]
+        rows = [dataset[i] for i in range(3)]
         print("@@first 10 formatted texts in validation:")
-        for text in ten_first_texts:
+        for row in rows:
             print("==="*50)
-            print(text)
+            print(row["text"])
+            print("---"*50)
+            print(row["prompt"])
+            print(row["answer"])
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])

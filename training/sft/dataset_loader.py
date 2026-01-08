@@ -7,9 +7,9 @@ import re
 from datetime import date, datetime
 import pandas as pd
 from datasets import Dataset
-from typing import Dict, Any, Callable, List, Optional
+from typing import Dict, Any, Callable, List, Optional, Tuple
 from transformers import TextStreamer
-
+import json
 
 class DatasetLoader:
     """Loads and prepares datasets for fine-tuning."""
@@ -28,7 +28,7 @@ class DatasetLoader:
         """Remove <think>...</think> tags from content."""
         return re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
 
-    def apply_chat_template(self, convo: List[Dict]) -> str:
+    def apply_chat_template(self, convo: List[Dict]) -> Tuple[str, str, str]:
         """
         Apply ChatML template to a conversation.
 
@@ -68,30 +68,23 @@ class DatasetLoader:
         convo_clean.insert(0, {"role": "system", "content": system_prompt})
         formatted_text = self.tokenizer.apply_chat_template(
             convo_clean, tokenize=False, add_generation_prompt=False, enable_thinking=True)
-        return formatted_text
-
-    def formatting_prompts_func(self, examples: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Format conversation examples using chat template.
-
-        Args:
-            examples: Batch of examples containing messages
-
-        Returns:
-            Dictionary with formatted text
-        """
-        message_field = self.dataset_config.get("message_field", "messages")
-        convos = examples[message_field]
-
-        texts = [
-            self.apply_chat_template(
-                convo,
-            )
-            for convo in convos
-        ]
-
-        text_field = self.dataset_config.get("text_field", "text")
-        return {text_field: texts, "messages": convos}
+        # seperate prompt and answer
+        prompt = convo_clean[:-1]
+        answer = convo_clean[-1]
+        formatted_prompt = self.tokenizer.apply_chat_template(
+            prompt, tokenize=False, add_generation_prompt=True, enable_thinking=True)
+        
+        try:
+            formatted_answer = f"<|im_start|>assistant\n<think>\n{answer['reasoning_content']}\n</think>\n\n"
+            if answer['content']:
+                formatted_answer += answer['content']
+            elif answer['tool_calls']:
+                formatted_answer += f"<tool_calls>\n{json.dumps(answer['tool_calls'][0])}\n</tool_calls>"
+        except Exception as e:
+            print("Error formatting answer:", convo_clean)
+            raise e
+        formatted_answer += "<|im_end|>"
+        return formatted_text, formatted_prompt, formatted_answer
 
     def load_dataset(self, split: str = "train") -> List[Dict]:
         """
@@ -152,8 +145,10 @@ class DatasetLoader:
 
         formatted_data = []
         for convo in convos:
-            text = self.apply_chat_template(convo[message_field])
-            formatted_data.append({text_field: text})
+            text, prompt, answer = self.apply_chat_template(
+                convo[message_field])
+            formatted_data.append(
+                {text_field: text, "prompt": prompt, "answer": answer})
 
         # Now create Dataset with simple text-only structure (no mixed types)
         dataset = Dataset.from_list(formatted_data)

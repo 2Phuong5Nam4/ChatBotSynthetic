@@ -28,7 +28,8 @@ class ConfigLoader:
         config_file = Path(config_path)
 
         if not config_file.exists():
-            raise FileNotFoundError(f"Configuration file not found: {config_path}")
+            raise FileNotFoundError(
+                f"Configuration file not found: {config_path}")
 
         with open(config_file, 'r', encoding='utf-8') as f:
             config = yaml.safe_load(f)
@@ -50,6 +51,19 @@ class ConfigLoader:
         Returns:
             Configuration with resolved paths
         """
+        # Load chat template from file if specified
+        if "chat_template_file" in config:
+            template_path = Path(config["chat_template_file"])
+            if not template_path.is_absolute():
+                template_path = project_root / template_path
+
+            if template_path.exists():
+                with open(template_path, 'r', encoding='utf-8') as f:
+                    config["chat_template"] = f.read()
+            else:
+                raise FileNotFoundError(
+                    f"Chat template file not found: {template_path}")
+
         # Resolve dataset path
         if "dataset" in config and "data_path" in config["dataset"]:
             data_path = Path(config["dataset"]["data_path"])
@@ -60,7 +74,8 @@ class ConfigLoader:
         if "training" in config and "output_dir" in config["training"]:
             output_dir = Path(config["training"]["output_dir"])
             if not output_dir.is_absolute():
-                config["training"]["output_dir"] = str(project_root / output_dir)
+                config["training"]["output_dir"] = str(
+                    project_root / output_dir)
 
         # Resolve save path
         if "save" in config and "save_path" in config["save"]:
@@ -101,7 +116,8 @@ class ConfigLoader:
         # Check if dataset file exists
         data_path = Path(config["dataset"]["data_path"])
         if not data_path.exists():
-            raise FileNotFoundError(f"Dataset file not found: {config['dataset']['data_path']}")
+            raise FileNotFoundError(
+                f"Dataset file not found: {config['dataset']['data_path']}")
 
         # Validate training section
         if "output_dir" not in config["training"]:

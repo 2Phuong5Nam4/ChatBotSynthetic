@@ -24,6 +24,9 @@ class DatasetLoader:
         """
         self.dataset_config = config.get("dataset", {})
         self.tokenizer = tokenizer
+        self.tokenizer.chat_template = config.get("chat_template")
+        if not config.get("chat_template"):
+            raise ValueError("chat_template must be specified in config")
 
     def _strip_think_tags(self, content: str) -> str:
         """Remove <think>...</think> tags from content."""
@@ -75,7 +78,7 @@ class DatasetLoader:
             if msq["role"] == "tool":
                 msq["content"] = json.dumps(msq["content"])
             if "tool_calls" in msq:
-                msq["tool_calls"] = json.dumps(msq["tool_calls"])
+                msq["tool_calls"] = [json.dumps(tool_call) for tool_call in msq["tool_calls"]]
         prompt = convo_clean[:-1]
         answer = convo_clean[-1]
         formatted_anwser = f"<think>\n{answer['reasoning_content']}\n</think>\n\n"
@@ -83,8 +86,9 @@ class DatasetLoader:
             formatted_anwser += answer['content']
         elif answer['tool_calls']:
             formatted_anwser += f"<tool_calls>\n{json.dumps(answer['tool_calls'][0])}\n</tool_calls>"
-
-        return formatted_text, prompt, formatted_anwser
+        formatted_promt = self.tokenizer.apply_chat_template(
+            prompt, tokenize=False, add_generation_prompt=True, enable_thinking=False)
+        return formatted_text, formatted_promt, formatted_anwser
 
     def load_dataset(self, split: str = "train") -> List[Dict]:
         """

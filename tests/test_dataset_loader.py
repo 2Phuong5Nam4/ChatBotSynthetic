@@ -3,6 +3,7 @@ Tests for DatasetLoader class.
 Only loads tokenizer (not full model) for efficiency.
 """
 
+from transformers import DataCollator
 import importlib.util
 import sys
 from pathlib import Path
@@ -13,7 +14,8 @@ from transformers import AutoTokenizer
 
 # Load dataset_loader module directly without triggering __init__.py imports
 # This avoids loading unsloth which requires GPU
-module_path = Path(__file__).parent.parent / "training" / "sft" / "dataset_loader.py"
+module_path = Path(__file__).parent.parent / "training" / \
+    "sft" / "dataset_loader.py"
 spec = importlib.util.spec_from_file_location("dataset_loader", module_path)
 dataset_loader_module = importlib.util.module_from_spec(spec)
 sys.modules["dataset_loader"] = dataset_loader_module
@@ -21,14 +23,15 @@ spec.loader.exec_module(dataset_loader_module)
 
 DatasetLoader = dataset_loader_module.DatasetLoader
 
-from transformers import DataCollator
+
 @pytest.fixture(scope="session")
 def tokenizer():
     """
     Load tokenizer once for all tests.
     Uses TinyLlama tokenizer - small and fast to load.
     """
-    tokenizer = AutoTokenizer.from_pretrained("unsloth/Qwen3-8B", use_fast=True)
+    tokenizer = AutoTokenizer.from_pretrained(
+        "unsloth/Qwen3-8B", use_fast=True)
 
     # Ensure chat template exists
     if tokenizer.chat_template is None:
@@ -39,16 +42,13 @@ def tokenizer():
 
 @pytest.fixture
 def dataset_config():
-    """Dataset configuration using actual data files."""
-    return {
-        "dataset": {
-            "train_path": "data/train.jsonl",
-            "validation_path": "data/validation.jsonl",
-            "format": "json",  # Note: use "json" not "jsonl" for HF datasets
-            "message_field": "messages",
-            "text_field": "text"
-        }
-    }
+    """Dataset configuration loaded from YAML config file."""
+    from pathlib import Path
+    from training.sft.config_loader import ConfigLoader
+    config_path = Path(__file__).parent.parent / "configs" / "sft.yaml"
+    project_root = config_path.parent.parent
+    config = ConfigLoader.load_config(str(config_path))
+    return config
 
 
 class TestDatasetLoader:
@@ -74,16 +74,20 @@ class TestDatasetLoader:
         assert "text" in first_item
         # check first 10 text field
         rows = [dataset[i] for i in range(3)]
-        print("@@first 3 formatted texts:")
-        for row in rows:
-            print("==="*50)
-            print(row["text"])
-            print("---"*50)
-            print(row["prompt"])
-            print(row["answer"])
+        # print("@@first 3 formatted texts:")
+        # for row in rows:
+        #     print("==="*50)
+        #     print(row["text"])
+        #     print("---"*50)
+        #     print(row["prompt"])
+        #     print(row["answer"])
         print("@@"*50)
         print(dataset[0])
-        
+        print("@@"*50)
+        print(dataset[1])
+        print("@@"*50)
+        print(dataset[2])
+
     def test_prepare_validation_dataset(self, dataset_config, tokenizer):
         """Test preparing validation dataset with formatting function."""
         loader = DatasetLoader(dataset_config, tokenizer)
@@ -97,12 +101,14 @@ class TestDatasetLoader:
         assert "text" in first_item
         # check first 10 text field
         rows = [dataset[i] for i in range(3)]
-        print("@@first 10 formatted texts in validation:")
-        for row in rows:
-            print("==="*50)
-            print(row["text"])
-            print("---"*50)
-            print(row["prompt"])
-            print(row["answer"])
+
+
+        # print("@@first 10 formatted texts in validation:")
+        # for row in rows:
+        #     print("==="*50)
+        #     print(row["text"])
+        #     print("---"*50)
+        #     print(row["prompt"])
+        #     print(row["answer"])
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])

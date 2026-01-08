@@ -21,7 +21,7 @@ spec.loader.exec_module(dataset_loader_module)
 
 DatasetLoader = dataset_loader_module.DatasetLoader
 
-
+from transformers import DataCollator
 @pytest.fixture(scope="session")
 def tokenizer():
     """
@@ -76,6 +76,7 @@ class TestDatasetLoader:
         ten_first_texts = [dataset[i]["text"] for i in range(10)]
         print("@@first 10 formatted texts:")
         for text in ten_first_texts:
+            print("==="*50)
             print(text)
         
     def test_prepare_validation_dataset(self, dataset_config, tokenizer):
@@ -93,6 +94,7 @@ class TestDatasetLoader:
         ten_first_texts = [dataset[i]["text"] for i in range(10)]
         print("@@first 10 formatted texts in validation:")
         for text in ten_first_texts:
+            print("==="*50)
             print(text)
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])

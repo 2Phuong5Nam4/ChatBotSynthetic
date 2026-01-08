@@ -3,9 +3,12 @@ Dataset loader module for preparing training datasets.
 Handles formatting conversation data and applying chat templates.
 """
 
+import re
 from datetime import date, datetime
-from datasets import load_dataset, Dataset
+import pandas as pd
+from datasets import Dataset
 from typing import Dict, Any, Callable, List, Optional
+from transformers import TextStreamer
 
 
 class DatasetLoader:
@@ -20,6 +23,10 @@ class DatasetLoader:
         """
         self.dataset_config = config.get("dataset", {})
         self.tokenizer = tokenizer
+
+    def _strip_think_tags(self, content: str) -> str:
+        """Remove <think>...</think> tags from content."""
+        return re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
 
     def apply_chat_template(self, convo: List[Dict]) -> str:
         """
@@ -45,11 +52,22 @@ class DatasetLoader:
 
         # Deep copy and convert convo to avoid mutating original
         convo_clean: List[Dict] = convert_datetimes(convo)  # type: ignore
-        
+
+        # Strip <think> tags from non-last assistant messages
+        # The template will add <think> only for the last assistant turn
+        for i, msg in enumerate(convo_clean):
+            if msg["role"] == "assistant" and i < len(convo_clean) - 1:
+                # Strip think tags from content
+                if "content" in msg and msg["content"]:
+                    msg["content"] = self._strip_think_tags(msg["content"])
+                # Remove reasoning_content field for non-last turns
+                if "reasoning_content" in msg:
+                    del msg["reasoning_content"]
 
         system_prompt = "Bạn là nhân viên CSKH Heineken Vietnam đang hỗ trợ trợ khách hàng theo những quy trình có sẵn."
         convo_clean.insert(0, {"role": "system", "content": system_prompt})
-        formatted_text = self.tokenizer.apply_chat_template(convo_clean, tokenize=False, add_generation_prompt=False, enable_thinking=True)
+        formatted_text = self.tokenizer.apply_chat_template(
+            convo_clean, tokenize=False, add_generation_prompt=False, enable_thinking=True)
         return formatted_text
 
     def formatting_prompts_func(self, examples: Dict[str, Any]) -> Dict[str, Any]:
@@ -75,7 +93,7 @@ class DatasetLoader:
         text_field = self.dataset_config.get("text_field", "text")
         return {text_field: texts}
 
-    def load_dataset(self, split: str = "train") -> Dataset:
+    def load_dataset(self, split: str = "train") -> List[Dict]:
         """
         Load dataset from file.
 
@@ -83,31 +101,26 @@ class DatasetLoader:
             split: Dataset split to load ("train" or "validation")
 
         Returns:
-            Loaded dataset
+            List of conversation dicts (not Dataset, to avoid PyArrow type issues)
         """
         # Support both old 'data_path' and new 'train_path'/'validation_path' configs
-        train_path = self.dataset_config.get("train_path") or self.dataset_config.get("data_path")
+        train_path = self.dataset_config.get(
+            "train_path") or self.dataset_config.get("data_path")
         validation_path = self.dataset_config.get("validation_path")
 
         if not train_path:
-            raise ValueError("train_path or data_path must be specified in dataset config")
+            raise ValueError(
+                "train_path or data_path must be specified in dataset config")
 
-        dataset_format = self.dataset_config.get("format", "jsonl")
+        # Use pandas to load JSONL - it handles mixed types better than datasets
+        file_path = train_path if split == "train" else (
+            validation_path or train_path)
+        df = pd.read_json(file_path, lines=True)
+        records = df.to_dict(orient="records")
 
-        # Build data_files dictionary for train and validation splits
-        data_files = {"train": train_path}
-        if validation_path:
-            data_files["validation"] = validation_path
-
-        dataset = load_dataset(
-            dataset_format,
-            data_files=data_files,
-            split=split,
-        )
-        
         # flatten messages in dataset
         flatten_convos = []
-        for convo in dataset:
+        for convo in records:
             current_turn = []
             for message in convo["messages"]:
                 # Copy entire message dictionary to preserve all fields
@@ -118,11 +131,8 @@ class DatasetLoader:
                     flatten_convo = dict(convo)
                     flatten_convo["messages"] = current_turn.copy()
                     flatten_convos.append(flatten_convo)
-                    
-        dataset = Dataset.from_list(flatten_convos)
 
-        
-        return dataset
+        return flatten_convos
 
     def prepare_dataset(self, split: str = "train") -> Dataset:
         """
@@ -134,14 +144,18 @@ class DatasetLoader:
         Returns:
             Prepared dataset with formatted text
         """
-        dataset = self.load_dataset(split=split)
-        
+        convos = self.load_dataset(split=split)
 
-        # Apply formatting function
-        dataset = dataset.map(
-            self.formatting_prompts_func,
-            batched=True
-        )
+        # Apply chat template to each conversation
+        message_field = self.dataset_config.get("message_field", "messages")
+        text_field = self.dataset_config.get("text_field", "text")
+
+        formatted_data = []
+        for convo in convos:
+            text = self.apply_chat_template(convo[message_field])
+            formatted_data.append({text_field: text})
+
+        # Now create Dataset with simple text-only structure (no mixed types)
+        dataset = Dataset.from_list(formatted_data)
 
         return dataset
-

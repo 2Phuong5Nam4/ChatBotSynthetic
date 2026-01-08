@@ -28,7 +28,7 @@ class DatasetLoader:
         """Remove <think>...</think> tags from content."""
         return re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
 
-    def apply_chat_template(self, convo: List[Dict]) -> Tuple[str, str, str]:
+    def apply_chat_template(self, convo: List[Dict]):
         """
         Apply ChatML template to a conversation.
 
@@ -69,22 +69,19 @@ class DatasetLoader:
         formatted_text = self.tokenizer.apply_chat_template(
             convo_clean, tokenize=False, add_generation_prompt=False, enable_thinking=True)
         # seperate prompt and answer
+        for msq in convo_clean:
+            if msq["role"] == "tool":
+                msq["content"] = json.dumps(msq["content"])
+            if "tool_calls" in msq:
+                msq["tool_calls"] = json.dumps(msq["tool_calls"])
         prompt = convo_clean[:-1]
         answer = convo_clean[-1]
-        formatted_prompt = self.tokenizer.apply_chat_template(
-            prompt, tokenize=False, add_generation_prompt=True, enable_thinking=True)
-        
-        try:
-            formatted_answer = f"<|im_start|>assistant\n<think>\n{answer['reasoning_content']}\n</think>\n\n"
-            if answer['content']:
-                formatted_answer += answer['content']
-            elif answer['tool_calls']:
-                formatted_answer += f"<tool_calls>\n{json.dumps(answer['tool_calls'][0])}\n</tool_calls>"
-        except Exception as e:
-            print("Error formatting answer:", convo_clean)
-            raise e
-        formatted_answer += "<|im_end|>"
-        return formatted_text, formatted_prompt, formatted_answer
+        formatted_anwser = f"<think>\n{answer['reasoning_content']}\n</think>\n\n"
+        if answer['content']:
+            formatted_anwser += answer['content']
+        elif answer['tool_calls']:
+            formatted_anwser += f"<tool_calls>\n{json.dumps(answer['tool_calls'][0])}\n</tool_calls>"
+        return formatted_text, prompt, formatted_anwser
 
     def load_dataset(self, split: str = "train") -> List[Dict]:
         """

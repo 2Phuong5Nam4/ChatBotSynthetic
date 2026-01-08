@@ -116,7 +116,8 @@ def clean_messages(messages: list[dict]) -> list[dict]:
                     func_pattern, tool_call_content, re.DOTALL)
 
                 # Try format 2: tool_name{...} or tool_name:{...} or tool_name::{...}
-                direct_pattern = r'^(\w+)\s*:*\s*(\{.*\})$'
+                # Also handle trailing } characters by using greedy match then cleanup
+                direct_pattern = r'^(\w+)\s*:*\s*(\{.+)'
                 direct_match = re.match(
                     direct_pattern, tool_call_content, re.DOTALL)
 
@@ -129,6 +130,14 @@ def clean_messages(messages: list[dict]) -> list[dict]:
                     matched = func_match or direct_match
                     tool_name = matched.group(1)
                     args_str = matched.group(2)
+
+                    # Balance braces - remove extra trailing }
+                    open_count = args_str.count('{')
+                    close_count = args_str.count('}')
+                    while close_count > open_count and args_str.endswith('}'):
+                        args_str = args_str[:-1]
+                        close_count -= 1
+
                     arguments = {}
                     # Try JSON first (double quotes)
                     try:
@@ -175,23 +184,27 @@ def clean_messages(messages: list[dict]) -> list[dict]:
                             pass
 
                     if isinstance(parsed, dict):
+                        # Helper to get arguments - try multiple keys
+                        def get_args(d):
+                            return d.get("arguments") or d.get("params") or d.get("input") or d.get("args") or {}
+
                         # Handle format: {"name": "...", "arguments": {...}}
                         if 'name' in parsed:
                             tool_calls.append({
                                 "name": parsed.get("name"),
-                                "arguments": parsed.get("arguments", {})
+                                "arguments": get_args(parsed)
                             })
-                        # Handle format: {"tool": "...", "params": {...}}
+                        # Handle format: {"tool": "...", "params/input": {...}}
                         elif 'tool' in parsed:
                             tool_calls.append({
                                 "name": parsed.get("tool"),
-                                "arguments": parsed.get("params", {})
+                                "arguments": get_args(parsed)
                             })
-                        # Handle format: {"tool_name": "...", "params": {...}}
+                        # Handle format: {"tool_name": "...", "params/input": {...}}
                         elif 'tool_name' in parsed:
                             tool_calls.append({
                                 "name": parsed.get("tool_name"),
-                                "arguments": parsed.get("params", {})
+                                "arguments": get_args(parsed)
                             })
                         else:
                             tool_calls.append({

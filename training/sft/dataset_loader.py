@@ -86,9 +86,10 @@ class DatasetLoader:
             formatted_anwser += answer['content']
         elif answer['tool_calls']:
             formatted_anwser += f"<tool_calls>\n{json.dumps(answer['tool_calls'][0])}\n</tool_calls>"
-        formatted_promt = self.tokenizer.apply_chat_template(
-            prompt, tokenize=False, add_generation_prompt=True, enable_thinking=False)
-        return formatted_text, formatted_promt, formatted_anwser
+    
+        if prompt[-1]["role"] == "tool":
+          prompt[-1]["role"] = "user"
+        return formatted_text, prompt, formatted_anwser
 
     def load_dataset(self, split: str = "train") -> List[Dict]:
         """

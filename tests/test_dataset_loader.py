@@ -46,7 +46,6 @@ def dataset_config():
     from pathlib import Path
     from training.sft.config_loader import ConfigLoader
     config_path = Path(__file__).parent.parent / "configs" / "sft.yaml"
-    project_root = config_path.parent.parent
     config = ConfigLoader.load_config(str(config_path))
     return config
 

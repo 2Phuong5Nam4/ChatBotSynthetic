@@ -3,8 +3,8 @@ import pytest
 from training.grpo.rewards.format_think import format_thinking_reward
 from training.grpo.rewards.answer import answer_reward
 from training.sft.dataset_loader import DatasetLoader
-from transformers import AutoTokenizer
 
+from transformers import AutoTokenizer
 @pytest.fixture(scope="session")
 def tokenizer():
     """
@@ -40,14 +40,16 @@ def test_format_thinking_reward(dataset_loader: DatasetLoader  ):
     train = dataset_loader.prepare_dataset("train")
     train = train.map(lambda batch: {
     "thinking_reward": format_thinking_reward(
-        # Duyệt qua từng câu trả lời trong batch để tạo cấu trúc đúng
-        [[{"role": "assistant", "content": ans}] for ans in batch["answer"]]
+        prompts= batch["prompt"],
+        completions=[[{"role": "assistant", "content": ans}] for ans in batch["answer"]],
+        answer= batch["answer"],
+        tokenizer=dataset_loader.tokenizer
     )
     }, batched=True, batch_size=8)
     # all rewards of dataset must == 1.0
     
     def is_all_one(row):
-        if row["thinking_reward"] != 1.0:
+        if not abs(row["thinking_reward"] - 1.0) < 1e-6:
             return False
                 # raise ValueError(f"Found reward != 1.0: {row['answer']} -> {row['thinking_reward']}")
         return True
@@ -67,8 +69,9 @@ def test_format_thinking_reward(dataset_loader: DatasetLoader  ):
     val = dataset_loader.prepare_dataset("validation")
     val = val.map(lambda batch: {
     "thinking_reward": format_thinking_reward(
-        # Duyệt qua từng câu trả lời trong batch để tạo cấu trúc đúng
-        [[{"role": "assistant", "content": ans}] for ans in batch["answer"]]
+        prompts= batch["prompt"],
+        completions=[[{"role": "assistant", "content": ans}] for ans in batch["answer"]],
+        answer= batch["answer"]
     )
     }, batched=True, batch_size=8)
     # all rewards of dataset must == 1.0    
@@ -78,12 +81,12 @@ def test_format_thinking_reward(dataset_loader: DatasetLoader  ):
     
     count_invalid_val = val.filter(lambda row: not row["check_all_one"])
     # print rows with thinking_reward != 1.0
-    for row in count_invalid_val:
-        if row["thinking_reward"] != 1.0:
-            print("==="*50)
-            print(f"Thinking Reward: {row['thinking_reward']}")
-            print(f"Answer: {row['answer']}")
-            print("==="*50)   
+    # for row in count_invalid_val:
+    #     if row["thinking_reward"] != 1.0:
+    #         print("==="*50)
+    #         print(f"Thinking Reward: {row['thinking_reward']}")
+    #         print(f"Answer: {row['answer']}")
+    #         print("==="*50)   
     assert len(count_invalid_val) == 0, f"Found {len(count_invalid_val)} rows with thinking_reward != 1.0"
     
         

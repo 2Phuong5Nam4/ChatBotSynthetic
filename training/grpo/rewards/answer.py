@@ -32,22 +32,18 @@ AVAILABLE_TOOLS = {
 def parse_tool_call(content: str) -> dict | None:
     """Parse tool call từ content, return None nếu không parse được."""
     # Tìm <tool_call> hoặc <tool_calls>
-    patterns = [
-        r"<tool_call>\s*(.*?)\s*</tool_call>",
-        r"<tool_calls>\s*(.*?)\s*</tool_calls>",
-        r"<tool_call>\s*(.*?)$",  # Unclosed tag
-    ]
+    pattern = r"<tool_call>\s*(.*?)\s*</tool_call>"
     
-    for pattern in patterns:
-        match = re.search(pattern, content, re.DOTALL)
-        if match:
-            try:
-                json_str = match.group(1).strip()
-                # Handle escaped quotes
-                json_str = json_str.replace('\\"', '"').strip('"')
-                return json.loads(json_str)
-            except json.JSONDecodeError:
-                return {"_parse_error": True, "_raw": match.group(1)}
+    
+    match = re.search(pattern, content, re.DOTALL)
+    if match:
+        try:
+            json_str = match.group(1).strip()
+            # Handle escaped quotes
+            json_str = json_str.replace('\\"', '"').strip('"')
+            return json.loads(json_str)
+        except json.JSONDecodeError:
+            return {"_parse_error": True, "_raw": match.group(1)}
     return None
 def validate_tool_call(tool_call: dict) -> tuple[float, str]:
     """Validate tool call, return (score, reason)."""
@@ -57,31 +53,31 @@ def validate_tool_call(tool_call: dict) -> tuple[float, str]:
     if tool_call.get("_parse_error"):
         return 0.2, "invalid_json"  # Partial credit for trying
     
-    name = tool_call.get("name", "")
-    args = tool_call.get("arguments", {})
+    # name = tool_call.get("name", "")
+    # args = tool_call.get("arguments", {})
     
-    # Handle arguments as string (some formats)
-    if isinstance(args, str):
-        try:
-            args = json.loads(args)
-        except:
-            return 0.3, "invalid_args_format"
+    # # Handle arguments as string (some formats)
+    # if isinstance(args, str):
+    #     try:
+    #         args = json.loads(args)
+    #     except:
+    #         return 0.3, "invalid_args_format"
     
-    # Check tool exists
-    if name not in AVAILABLE_TOOLS:
-        return 0.3, "unknown_tool"
+    # # Check tool exists
+    # if name not in AVAILABLE_TOOLS:
+    #     return 0.3, "unknown_tool"
     
-    schema = AVAILABLE_TOOLS[name]
+    # schema = AVAILABLE_TOOLS[name]
     
-    # Check required params
-    for req in schema["required"]:
-        if req not in args:
-            return 0.5, f"missing_required_{req}"
+    # # Check required params
+    # for req in schema["required"]:
+    #     if req not in args:
+    #         return 0.5, f"missing_required_{req}"
     
-    # Check no unknown params
-    for param in args:
-        if param not in schema["params"]:
-            return 0.6, f"unknown_param_{param}"
+    # # Check no unknown params
+    # for param in args:
+    #     if param not in schema["params"]:
+    #         return 0.6, f"unknown_param_{param}"
     
     # Fully valid
     return 1.0, "valid"

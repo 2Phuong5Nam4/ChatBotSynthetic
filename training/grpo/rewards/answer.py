@@ -152,8 +152,6 @@ def answer_reward(
                 response=response[-1]["content"].split("</think>")[-1].strip(),
                 ground_truth=gt.split("</think>")[-1].strip()
             )
-            if score < 1.0:
-                print(f"Answer validation score: {score} | Response: {response[-1]['content']}")
             rewards.append(score)
     
     return rewards

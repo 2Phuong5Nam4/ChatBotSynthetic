@@ -97,6 +97,28 @@ def check_buoc_valid(buoc_content: str) -> bool:
     
     return False
 
+def extract_buoc_steps(buoc_content: str) -> Optional[str]:
+    """
+    Extract phần bước từ content: số bước hoặc 'ngoại lệ' hoặc None nếu bỏ trống.
+    """
+    content = buoc_content.strip()
+    
+    if not content:
+        return None
+    
+    # Format: "ngoại lệ - [mô tả]"
+    if content.lower().startswith("ngoại lệ"):
+        return "ngoại lệ"
+    
+    # Format: "1, 2, 3 - [mô tả]"
+    match = re.match(r"^(\d+(?:\s*,\s*\d+)*)\s*-", content)
+    if match:
+        # Chuẩn hóa: loại bỏ space, sort số
+        steps = [int(x.strip()) for x in match.group(1).split(",")]
+        return ",".join(map(str, sorted(steps)))
+    
+    return None
+
 def evaluate_thinking_content(think_content: str, ground_truth: str, tokenizer: Optional[Any] = None) -> float:
     # thưởng think tag
     score = 0.1
@@ -114,7 +136,13 @@ def evaluate_thinking_content(think_content: str, ground_truth: str, tokenizer: 
                 case "Bước":
                     if check_buoc_valid(field_content_str):
                         score += 0.05
-                        # check đúng bươc
+                        
+                        # Check đúng bước: so sánh số bước hoặc "ngoại lệ"
+                        gen_steps = extract_buoc_steps(field_content_str)
+                        gt_steps = extract_buoc_steps(ground_truth_content)
+                        if gen_steps == gt_steps:
+                            score += 0.05  # Bonus cho đúng bước
+                        
                 case _:
                     # Both empty = perfect match, give full score
                     if not field_content_str and not ground_truth_content:
@@ -158,6 +186,6 @@ def format_thinking_reward(
             continue  # No think tag, reward 0.0
         think_block = think_match.group(1).strip()
         score += evaluate_thinking_content(think_block, ground_truth, tokenizer=tokenizer)
-        rewards.append(score)  # Cap at 1.0
+        rewards.append(score) 
     
     return rewards

@@ -90,23 +90,41 @@ def test_format_thinking_reward(dataset_loader: DatasetLoader  ):
     assert len(count_invalid_val) == 0, f"Found {len(count_invalid_val)} rows with thinking_reward != 1.0"
     
         
-        
-# def test_answer_reward(dataset_loader: DatasetLoader  ):
+def test_answer_reward(dataset_loader: DatasetLoader):
+    train = dataset_loader.prepare_dataset("train")
+    train = train.map(lambda batch: {
+    "answer_reward": answer_reward(
+        prompts= batch["prompt"],
+        completions=[[{"role": "assistant", "content": ans}] for ans in batch["answer"]],
+        answer= batch["answer"]
+    )
+    }, batched=True, batch_size=8)
+    # all rewards of dataset must == 1.0
     
-#     train = dataset_loader.prepare_dataset("train")
-#     train = train.map(lambda batch: {
-#     "answer_reward": answer_reward(
-#         prompts = batch["prompt"],
-#         completions = [[{"role": "assistant", "content": ans}] for ans in batch["answer"]],
-#         answer= batch["answer"]
-#     )
-#     }, batched=True, batch_size=8)
-#     # all rewards of dataset must == 1.0
-#     def is_all_one(row):
-#         if row["answer_reward"] != 1.0:
-#                 raise ValueError(f"Found reward != 1.0: {row['answer']} -> {row['answer_reward']}")
-#         return True 
-#     train.map(lambda row: {
-#         "check_all_one": is_all_one(row),
-#     }, batched=False)
+    def is_all_one(row):
+        if not abs(row["answer_reward"] - 1.0) < 1e-6:
+            return False
+                # raise ValueError(f"Found reward != 1.0: {row['answer']} -> {row['answer_reward']}")
+        return True
     
+    train = train.map(lambda row: {
+        "check_all_one": is_all_one(row),
+    }, batched=False)
+    count_invalid = train.filter(lambda row: not row["check_all_one"])
+    assert len(count_invalid) == 0, f"Found {len(count_invalid)} rows with answer_reward != 1.0"
+    
+    # val = dataset_loader.prepare_dataset("validation")
+    # val = val.map(lambda batch: {
+    # "answer_reward": answer_reward(
+    #     prompts= batch["prompt"],
+    #     completions=[[{"role": "assistant", "content": ans}] for ans in batch["answer"]],
+    #     answer= batch["answer"]
+    # )
+    # }, batched=True, batch_size=8)
+    # # all rewards of dataset must == 1.0    
+    # val = val.map(lambda row: {
+    #     "check_all_one": is_all_one(row),
+    # }, batched=False)
+    
+    # count_invalid_val = val.filter(lambda row: not row["check_all_one"])
+    # assert len(count_invalid_val) == 0, f"Found {len(count_invalid_val)} rows with answer_reward != 1.0"

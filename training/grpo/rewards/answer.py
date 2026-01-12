@@ -1,7 +1,19 @@
 import json
 import re
 from typing import List
-from difflib import SequenceMatcher
+
+from rouge_score import rouge_scorer
+
+# Load ROUGE scorer once at module level for efficiency
+_rouge_scorer = None
+
+def get_rouge_scorer() -> rouge_scorer.RougeScorer:
+    """Lazy load the ROUGE scorer."""
+    global _rouge_scorer
+    if _rouge_scorer is None:
+        # Use ROUGE-L for longest common subsequence matching
+        _rouge_scorer = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=False)
+    return _rouge_scorer
 # Tool schema
 AVAILABLE_TOOLS = {
     "tra_cuu_thong_tin": {
@@ -45,42 +57,77 @@ def parse_tool_call(content: str) -> dict | None:
         except json.JSONDecodeError:
             return {"_parse_error": True, "_raw": match.group(1)}
     return None
-def validate_tool_call(tool_call: dict) -> tuple[float, str]:
-    """Validate tool call, return (score, reason)."""
+
+
+def check_tool_call(
+    response: str,
+    ground_truth: str
+) -> float:
+    """Check tool call trong response so với ground truth."""
+    tool_call = parse_tool_call(response)
     if tool_call is None:
-        return 0.0, "no_tool_call"
+        return 0.0 # No tool call found
     
     if tool_call.get("_parse_error"):
-        return 0.2, "invalid_json"  # Partial credit for trying
+        return 0.2 # Parse error
+    name = tool_call.get("name", "")
+    args = tool_call.get("arguments", {})
     
-    # name = tool_call.get("name", "")
-    # args = tool_call.get("arguments", {})
+    # Handle arguments as string (some formats)
+    if isinstance(args, str):
+        try:
+            args = json.loads(args)
+        except:
+            return 0.3 # Argument parse error
     
-    # # Handle arguments as string (some formats)
-    # if isinstance(args, str):
-    #     try:
-    #         args = json.loads(args)
-    #     except:
-    #         return 0.3, "invalid_args_format"
+    # Check tool exists
+    if name not in AVAILABLE_TOOLS:
+        return 0.3 # Unknown tool
     
-    # # Check tool exists
-    # if name not in AVAILABLE_TOOLS:
-    #     return 0.3, "unknown_tool"
+    schema = AVAILABLE_TOOLS[name]
     
-    # schema = AVAILABLE_TOOLS[name]
+    # Check required params
+    for req in schema["required"]:
+        if req not in args:
+            return 0.5 # Missing required param
     
-    # # Check required params
-    # for req in schema["required"]:
-    #     if req not in args:
-    #         return 0.5, f"missing_required_{req}"
+    # Check no unknown params
+    for param in args:
+        if param not in schema["params"]:
+            return 0.6 # Unknown param
+            return 0.6 # Unknown param
+        
+    return 1.0 # Fully valid
+
+def check_answer(
+    response: str,
+    ground_truth: str
+) -> float:
+    """Check similarity using ROUGE-L score."""
+    if not response or not ground_truth:
+        return 0.0
+
+    scorer = get_rouge_scorer()
+
+    # ROUGE-L returns precision, recall, fmeasure
+    scores = scorer.score(ground_truth, response)
     
-    # # Check no unknown params
-    # for param in args:
-    #     if param not in schema["params"]:
-    #         return 0.6, f"unknown_param_{param}"
-    
-    # Fully valid
-    return 1.0, "valid"
+    # Return F1 score (fmeasure) - already in 0-1 range
+    score = scores['rougeL'].fmeasure
+    return score
+
+def process_single_example(
+    response: str,
+    ground_truth: str
+) -> float:
+    if "<tool_call>" in ground_truth:
+        tool_score = check_tool_call(response, ground_truth)
+        return tool_score
+    else:
+        
+        answer_score = check_answer(response, ground_truth)
+        return answer_score
+
 def answer_reward(
     prompts: List[List[dict]], 
     completions: List[List[dict]], 
@@ -93,70 +140,20 @@ def answer_reward(
     """
     rewards = []
     
-    for i, completion in enumerate(completions):
-        content = completion[0].get("content", "")
-        ground_truth = answer[i] if i < len(answer) else ""
-        
-        score = 0.0
-        
-        # Parse both completion and ground truth
-        completion_tool = parse_tool_call(content)
-        gt_tool = parse_tool_call(ground_truth)
-        
-        # Case 1: Ground truth expects tool call
-        if gt_tool is not None:
-            if completion_tool is not None:
-                # Validate tool call format (0.4 điểm)
-                format_score, reason = validate_tool_call(completion_tool)
-                score += format_score * 0.4
-                
-                # Compare with ground truth tool name (0.3 điểm)
-                if completion_tool.get("name") == gt_tool.get("name"):
-                    score += 0.3
-                
-                # Compare arguments (0.3 điểm)
-                comp_args = completion_tool.get("arguments", {})
-                gt_args = gt_tool.get("arguments", {})
-                
-                if isinstance(comp_args, str):
-                    try: comp_args = json.loads(comp_args)
-                    except: comp_args = {}
-                if isinstance(gt_args, str):
-                    try: gt_args = json.loads(gt_args)
-                    except: gt_args = {}
-                
-                # Check key overlap
-                if comp_args and gt_args:
-                    common_keys = set(comp_args.keys()) & set(gt_args.keys())
-                    matching_values = sum(
-                        1 for k in common_keys 
-                        if str(comp_args.get(k)) == str(gt_args.get(k))
-                    )
-                    if common_keys:
-                        score += 0.3 * (matching_values / len(gt_args))
-            else:
-                # Ground truth expects tool but completion doesn't have one
-                score = 0.1
-        
-        # Case 2: Ground truth expects text response (no tool)
+    # split anwser into think and answer part
+    for response, gt in zip(completions, answer):
+        # Lấy phần content của assistant
+        reponse = response[-1]["content"]
+        if "</think>" not in reponse:
+            # No think part, return 0.0
+            rewards.append(0.0)
         else:
-            if completion_tool is None:
-                # Extract response content (after </think>)
-                response_match = re.search(r"</think>\s*(.*)", content, re.DOTALL)
-                if response_match:
-                    response = response_match.group(1).strip()
-                    gt_response_match = re.search(r"</think>\s*(.*)", ground_truth, re.DOTALL)
-                    gt_response = gt_response_match.group(1).strip() if gt_response_match else ground_truth
-                    
-                    # Semantic similarity (simple: SequenceMatcher)
-                    similarity = SequenceMatcher(None, response.lower(), gt_response.lower()).ratio()
-                    score = similarity
-                else:
-                    score = 0.2
-            else:
-                # Expected text but got tool call
-                score = 0.1
-        
-        rewards.append(min(score, 1.0))
+            score = process_single_example(
+                response=response[-1]["content"].split("</think>")[-1].strip(),
+                ground_truth=gt.split("</think>")[-1].strip()
+            )
+            if score < 1.0:
+                print(f"Answer validation score: {score} | Response: {response[-1]['content']}")
+            rewards.append(score)
     
     return rewards

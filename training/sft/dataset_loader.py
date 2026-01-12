@@ -85,7 +85,8 @@ class DatasetLoader:
         if answer['content']:
             formatted_anwser += answer['content']
         elif answer['tool_calls']:
-            formatted_anwser += f"<tool_calls>\n{json.dumps(answer['tool_calls'][0])}\n</tool_calls>"
+            formatted_anwser += f"<tool_call>\n{json.dumps(answer['tool_calls'][0])}\n</tool_call>"
+            # print("Answer with tool calls:", formatted_anwser)
     
         if prompt[-1]["role"] == "tool":
           prompt[-1]["role"] = "user"

@@ -165,7 +165,8 @@ def format_thinking_reward(
     prompts: List[List[dict]],
     completions: List[List[dict]],
     answer: List[str],
-    tokenizer: Optional[Any] = None
+    tokenizer: Optional[Any] = None,
+    **kwargs,
 ) -> List[float]:
     """
     Reward function cho việc validate format thinking.

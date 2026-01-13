@@ -154,8 +154,6 @@ def evaluate_thinking_content(think_content: str, ground_truth: str, tokenizer: 
                             score += 0.1
                     else:
                         sim = calculate_token_ngram_similarity(field_content_str, ground_truth_content, n=2, tokenizer=tokenizer)
-                        if sim != 1.0:
-                            print(f"Thông tin có similarity: {sim} | Generated: {field_content_str} | Ground truth: {ground_truth_content}")
                         score += sim * 0.1
                     
     # max 0.15 + 0.30 = 0.45

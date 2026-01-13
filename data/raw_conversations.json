@@ -6,7 +6,7 @@
     "Targeted_Customers": "- Outlet\n- Sales Force\n- Distributor/Sub-Distributor",
     "Intentions": "C1.1.3 - Đổi mật khẩu",
     "Solutions": "C1.1.3 - Đổi mật khẩu\n- Kiểm tra xem KH đã có tài khoản HVN chưa\n- Hướng dẫn KH thao tác ''Quên mật khẩu'' để đặt lại mật khẩu mởi. Chi tiết các bước:\nB1: Nhấn vào dòng chữ ''Quên mật khẩu'' trên giao diện app.\nB2: Nhập mã khách hàng (Outlet ID)\nB3: Nhập OTP được gửi về SDT đăng ký của KH\nB4: Đặt lại mật khẩu mới\nB5: Tiến hành đăng nhập lại",
-    "Script": "External Participant(s):\t2682235726208557646\nDecember 2, 2025 4:39:20 PM\tExternal\t\n2682235726208557646\t#hvn_other\nDecember 2, 2025 4:39:23 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\n2682235726208557646\tMình có outlet Thượng Hải - 460 minh khai\n2682235726208557646\tTrước họ đăng nhập được vào bằng app\n2682235726208557646\tGiờ đăng nhập k được và bị khóa\n2682235726208557646\t 63235514 code outlet\nDecember 3, 2025 9:28:21 AM\tInternal\t\nDương Lâm Phụng\tDạ outlet bị khóa và báo lỗi như thế nào ạ?\nDecember 3, 2025 9:31:33 AM\tExternal\t\n2682235726208557646\tImage\nDecember 3, 2025 9:40:41 AM\tInternal\t\nDương Lâm Phụng:\tDạ về lỗi này anh nhờ KH nhấn vào quên mật khẩu nha -> nhập mã cửa hàng để hệ thống gửi OTP về máy ạ\nDương Lâm Phụng:\tSau đó tạo mật khẩu mới và nhập lại mật khẩu\nDương Lâm Phụng: Cuối cùng quay về lại giao diện đăng nhập và điện lại mã cửa hàng và mật khẩu mới nhé\nDương Lâm Phụng: Do nếu nhập mật khẩu sai nhiều lần thì tài khoản sẽ bị khóa\nDương Lâm Phụng\t:Dạ, ngoài vấn đề này ra anh còn cần em hỗ trợ vấn đề gì khác không ạ?\nDương Lâm Phụng\t:Hiện tại quá 5 phút em không nhận được tín hiệu phản hồi từ anh, em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp anh cần hỗ trợ thêm hoặc có bất kỳ vấn đề nào khác, nhờ anh vui lòng liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em. Em cảm ơn và xin phép chào anh ạ.",
+    "Script": "External Participant(s):\t2682235726208557646\nDecember 2, 2025 4:39:20 PM\tExternal\t\n2682235726208557646\t#hvn_other\nDecember 2, 2025 4:39:23 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\n2682235726208557646\tMình có outlet Thượng Hải - 460 minh khai\n2682235726208557646\tTrước họ đăng nhập được vào bằng app\n2682235726208557646\tGiờ đăng nhập k được và bị khóa\n2682235726208557646\t 63235514 code outlet\nDecember 3, 2025 9:28:21 AM\tInternal\t\nDương Lâm Phụng\tDạ outlet bị khóa và báo lỗi như thế nào ạ?\nDecember 3, 2025 9:31:33 AM\tExternal\t\n2682235726208557646\t\nDecember 3, 2025 9:40:41 AM\tInternal\t\nDương Lâm Phụng:\tDạ về lỗi này anh nhờ KH nhấn vào quên mật khẩu nha -> nhập mã cửa hàng để hệ thống gửi OTP về máy ạ\nDương Lâm Phụng:\tSau đó tạo mật khẩu mới và nhập lại mật khẩu\nDương Lâm Phụng: Cuối cùng quay về lại giao diện đăng nhập và điện lại mã cửa hàng và mật khẩu mới nhé\nDương Lâm Phụng: Do nếu nhập mật khẩu sai nhiều lần thì tài khoản sẽ bị khóa\nDương Lâm Phụng\t:Dạ, ngoài vấn đề này ra anh còn cần em hỗ trợ vấn đề gì khác không ạ?\nDương Lâm Phụng\t:Hiện tại quá 5 phút em không nhận được tín hiệu phản hồi từ anh, em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp anh cần hỗ trợ thêm hoặc có bất kỳ vấn đề nào khác, nhờ anh vui lòng liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em. Em cảm ơn và xin phép chào anh ạ.",
     "Script_num": "Script_1",
     "messages": [
       {
@@ -35,7 +35,7 @@
       },
       {
         "role": "user",
-        "content": "Image"
+        "content": "Mình vào app đăng nhập thì màn hình cứ báo lỗi bị khóa tài khoản đó ạ"
       },
       {
         "role": "assistant",
@@ -70,200 +70,16 @@
     "Targeted_Customers": "- Outlet\n- Sales Force\n- Distributor/Sub-Distributor",
     "Intentions": "C1.1.3 - Đổi mật khẩu",
     "Solutions": "C1.1.3 - Đổi mật khẩu\n- Kiểm tra xem KH đã có tài khoản HVN chưa\n- Hướng dẫn KH thao tác ''Quên mật khẩu'' để đặt lại mật khẩu mởi. Chi tiết các bước:\nB1: Nhấn vào dòng chữ ''Quên mật khẩu'' trên giao diện app.\nB2: Nhập mã khách hàng (Outlet ID)\nB3: Nhập OTP được gửi về SDT đăng ký của KH\nB4: Đặt lại mật khẩu mới\nB5: Tiến hành đăng nhập lại",
-    "Script": "External Participant(s):\t5804259758958027515\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 19, 2025 1:46:49 PM\tExternal\t\n5804259758958027515\tdạ còn ak\nNovember 19, 2025 1:46:51 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\t\n5804259758958027515\tE bị mất mật khẩu HVN đặt hàng\nNovember 19, 2025 1:50:30 PM\tExternal\t\n5804259758958027515\tHỗ trợ e lại mật khẩu được không\nNovember 19, 2025 1:52:22 PM\tExternal\t\n5804259758958027515\tE chưa cài được luôn\nNovember 19, 2025 1:53:48 PM\tExternal\t\n5804259758958027515\tSáng thì e vào được\nNovember 19, 2025 1:53:56 PM\tExternal\t\n5804259758958027515\t Bây giờ nó hiện thị sai mật khẩu\nNovember 19, 2025 1:54:01 PM\tExternal\t\n5804259758958027515\tNên giờ em vô không được\nNovember 19, 2025 1:54:11 PM\tInternal\t\nLìu Hy Minh\tChị nhấn quên mật khẩu trên HVN nhé.\nNovember 19, 2025 1:54:52 PM\tInternal\t\nLìu Hy Minh\tChị nhấn Quên Mật Khẩu >> nhập tên đăng nhập 10409303 >> nhận mã otp>> tạo mật khẩu mới bao gồm 12 ký tự.\nNovember 19, 2025 1:55:11 PM\tExternal\t\n5804259758958027515\tdạ\nNovember 19, 2025 1:56:02 PM\tExternal\t\n5804259758958027515\tImage\nNovember 19, 2025 1:57:09 PM\tInternal\t\nLìu Hy Minh\tChị sử dụng mật khẩu mới giúp em, không sử dụng lại mật khẩu cũ.\nNovember 19, 2025 1:57:43 PM\tInternal\t\nNovember 19, 2025 1:57:51 PM\tExternal\t\n5804259758958027515\tImage\nNovember 19, 2025 1:57:57 PM\tExternal\t\n5804259758958027515\tNày là sao\nNovember 19, 2025 1:58:03 PM\tExternal\t\n5804259758958027515\tKiu mật khẩu mới\nNovember 19, 2025 1:58:07 PM\tExternal\t\n5804259758958027515\tXác nhận lại mật khẩu\nNovember 19, 2025 1:59:32 PM\tInternal\t\nLìu Hy Minh\tChị thay thế 3 số trong mật khẩu, trước đó chưa từng sử dụng nhé.\nNovember 19, 2025 1:59:42 PM\tInternal\t\nLìu Hy Minh\tvi dụ 1111 của chị thay bằng số khác.\nNovember 19, 2025 2:03:32 PM\tExternal\t\n5804259758958027515\tImage\nNovember 19, 2025 2:03:44 PM\tExternal\t\n5804259758958027515\te biết số nào không sử dụng\nNovember 19, 2025 2:05:50 PM\tExternal\t\n5804259758958027515\t66801876 66801897 66801931\nNovember 19, 2025 2:08:28 PM\tInternal\t\nLìu Hy Minh\tDạ chị,nhờ chị tạo mật khẩu mới khác giúp em nhé.\nNovember 19, 2025 2:09:26 PM\tInternal\t\nLìu Hy Minh\tHệ thống báo vậy là mình đã nhập lại mật khẩu đã sử dụng trước đó ạ.\nNovember 19, 2025 2:17:09 PM\tInternal\t\nLìu Hy Minh\tDạ bên em ghi nhận và chuyển đến bộ phận liên quan để kiểm tra cho mình vấn đề đổi mật khẩu mới trên HVN Trường hợp này có thể sẽ mất một ít thời gian, Chị thông cảm đợi thông tin phản hồi giúp em nha.\nNovember 19, 2025 2:17:18 PM\tInternal\t\nLìu Hy Minh\tNgoài vấn đề này, chị cần em hỗ trợ gì thêm không ạ?\nNovember 19, 2025 2:17:37 PM\tExternal\t\n5804259758958027515\tdạ\nNovember 19, 2025 2:17:44 PM\tExternal\t\n5804259758958027515\tdạ\nNovember 19, 2025 2:17:47 PM\tInternal\t\nLìu Hy Minh\tNếu chị cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, chị liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào chị ạ, chúc chị một ngày tốt lành và nhiều sức khỏe.",
-    "Script_num": "Script_2",
-    "messages": [
-      {
-        "role": "user",
-        "content": "dạ còn ak"
-      },
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "user",
-        "content": "E bị mất mật khẩu HVN đặt hàng"
-      },
-      {
-        "role": "user",
-        "content": "Hỗ trợ e lại mật khẩu được không"
-      },
-      {
-        "role": "user",
-        "content": "E chưa cài được luôn"
-      },
-      {
-        "role": "user",
-        "content": "Sáng thì e vào được"
-      },
-      {
-        "role": "user",
-        "content": "Bây giờ nó hiện thị sai mật khẩu"
-      },
-      {
-        "role": "user",
-        "content": "Nên giờ em vô không được"
-      },
-      {
-        "role": "assistant",
-        "content": "Chị nhấn quên mật khẩu trên HVN nhé."
-      },
-      {
-        "role": "assistant",
-        "content": "Chị nhấn Quên Mật Khẩu >> nhập tên đăng nhập 10409303 >> nhận mã otp>> tạo mật khẩu mới bao gồm 12 ký tự."
-      },
-      {
-        "role": "user",
-        "content": "dạ"
-      },
-      {
-        "role": "user",
-        "content": "Image"
-      },
-      {
-        "role": "assistant",
-        "content": "Chị sử dụng mật khẩu mới giúp em, không sử dụng lại mật khẩu cũ."
-      },
-      {
-        "role": "user",
-        "content": "Image"
-      },
-      {
-        "role": "user",
-        "content": "Này là sao"
-      },
-      {
-        "role": "user",
-        "content": "Kiu mật khẩu mới"
-      },
-      {
-        "role": "user",
-        "content": "Xác nhận lại mật khẩu"
-      },
-      {
-        "role": "assistant",
-        "content": "Chị thay thế 3 số trong mật khẩu, trước đó chưa từng sử dụng nhé."
-      },
-      {
-        "role": "assistant",
-        "content": "vi dụ 1111 của chị thay bằng số khác."
-      },
-      {
-        "role": "user",
-        "content": "Image"
-      },
-      {
-        "role": "user",
-        "content": "e biết số nào không sử dụng"
-      },
-      {
-        "role": "user",
-        "content": "66801876 66801897 66801931"
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ chị,nhờ chị tạo mật khẩu mới khác giúp em nhé."
-      },
-      {
-        "role": "assistant",
-        "content": "Hệ thống báo vậy là mình đã nhập lại mật khẩu đã sử dụng trước đó ạ."
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ bên em ghi nhận và chuyển đến bộ phận liên quan để kiểm tra cho mình vấn đề đổi mật khẩu mới trên HVN Trường hợp này có thể sẽ mất một ít thời gian, Chị thông cảm đợi thông tin phản hồi giúp em nha."
-      },
-      {
-        "role": "assistant",
-        "content": "Ngoài vấn đề này, chị cần em hỗ trợ gì thêm không ạ?"
-      },
-      {
-        "role": "user",
-        "content": "dạ"
-      },
-      {
-        "role": "user",
-        "content": "dạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Nếu chị cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, chị liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào chị ạ, chúc chị một ngày tốt lành và nhiều sức khỏe."
-      }
-    ]
-  },
-  {
-    "cations": "HVN",
-    "Category": "C1 - Online Portal",
-    "Sub_Category": "C1.1 - User Management",
-    "Targeted_Customers": "- Outlet\n- Sales Force\n- Distributor/Sub-Distributor",
-    "Intentions": "C1.1.3 - Đổi mật khẩu",
-    "Solutions": "C1.1.3 - Đổi mật khẩu\n- Kiểm tra xem KH đã có tài khoản HVN chưa\n- Hướng dẫn KH thao tác ''Quên mật khẩu'' để đặt lại mật khẩu mởi. Chi tiết các bước:\nB1: Nhấn vào dòng chữ ''Quên mật khẩu'' trên giao diện app.\nB2: Nhập mã khách hàng (Outlet ID)\nB3: Nhập OTP được gửi về SDT đăng ký của KH\nB4: Đặt lại mật khẩu mới\nB5: Tiến hành đăng nhập lại",
-    "Script": "External Participant(s):\t3698195764550278949\nNovember 18, 2025 3:50:18 PM\tExternal\t\n3698195764550278949\tCho anh mả NV giới thiệu\nNovember 18, 2025 3:50:20 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 18, 2025 3:50:46 PM\tExternal\t\n3698195764550278949\tCho anh mả NV giới thiệu\n3698195764550278949\tĐể cài app\n3698195764550278949\tImage\n3698195764550278949\tAnh mua hàng\nNovember 18, 2025 3:53:13 PM\tInternal\t\nLìu Hy Minh   Dạ anh cho em xin mã số và tên cửa hàng mình nhé ví dụ số 6*******.\nNovember 18, 2025 3:53:52 PM\tInternal\t\nLìu Hy Minh\t Em xác nhận anh là chủ điểm bán 67254580 TRI KỶ QUÁN\nNovember 18, 2025 3:54:00 PM\tInternal\t\nLìu Hy Minh \tAnh đợi em kiểm tra nhé.\nNovember 18, 2025 4:16:28 PM\tInternal\t\nLìu Hy Minh \t67254580 TRI KỶ QUÁN đã đăng ký HVN rồi ạ, anh đăng nhập ứng dụng nhé.\nLìu Hy Minh \tNếu anh không nhớ mật khẩu anh thao tác như sau:\nLìu Hy Minh\t Cách 1: Anh nhấn Quên Mật Khẩu>> nhập tên đăng nhập ( mã số cửa hàng ) >> nhận mã otp>> tạo mật khẩu mới bao gồm 12 ký tự. Cách 2: Đăng nhập bằng số điện thoại ( SĐT đăng ký app hvn ) > đăng nhập bằng số điện thoại bỏ số 0 đầu tiên>>OTP sẽ gửi vào số điện thoại đăng ký app của mình.\nNovember 18, 2025 4:20:38 PM\tInternal\t\nLìu Hy Minh\t Ngoài vấn đề này, anh cần em hỗ trợ gì thêm không ạ?\nNovember 18, 2025 4:25:26 PM\tInternal\t\nLìu Hy Minh\t Nếu anh cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, anh liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào anh ạ, chúc anh một ngày tốt lành và nhiều sức khỏe.",
-    "Script_num": "Script_3",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Cho anh mả NV giới thiệu"
-      },
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "user",
-        "content": "Cho anh mả NV giới thiệu"
-      },
-      {
-        "role": "user",
-        "content": "Để cài app"
-      },
-      {
-        "role": "user",
-        "content": "Anh mua hàng"
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ anh cho em xin mã số và tên cửa hàng mình nhé ví dụ số 6*******."
-      },
-      {
-        "role": "assistant",
-        "content": "Em xác nhận anh là chủ điểm bán 67254580 TRI KỶ QUÁN"
-      },
-      {
-        "role": "assistant",
-        "content": "Anh đợi em kiểm tra nhé."
-      },
-      {
-        "role": "assistant",
-        "content": "67254580 TRI KỶ QUÁN đã đăng ký HVN rồi ạ, anh đăng nhập ứng dụng nhé."
-      },
-      {
-        "role": "assistant",
-        "content": "Nếu anh không nhớ mật khẩu anh thao tác như sau:\nCách 1: Anh nhấn Quên Mật Khẩu>> nhập tên đăng nhập ( mã số cửa hàng ) >> nhận mã otp>> tạo mật khẩu mới bao gồm 12 ký tự. Cách 2: Đăng nhập bằng số điện thoại ( SĐT đăng ký app hvn ) > đăng nhập bằng số điện thoại bỏ số 0 đầu tiên>>OTP sẽ gửi vào số điện thoại đăng ký app của mình."
-      },
-      {
-        "role": "assistant",
-        "content": "Ngoài vấn đề này, anh cần em hỗ trợ gì thêm không ạ?"
-      },
-      {
-        "role": "assistant",
-        "content": "Nếu anh cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, anh liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào anh ạ, chúc anh một ngày tốt lành và nhiều sức khỏe."
-      }
-    ]
-  },
-  {
-    "cations": "HVN",
-    "Category": "C1 - Online Portal",
-    "Sub_Category": "C1.1 - User Management",
-    "Targeted_Customers": "- Outlet\n- Sales Force\n- Distributor/Sub-Distributor",
-    "Intentions": "C1.1.3 - Đổi mật khẩu",
-    "Solutions": "C1.1.3 - Đổi mật khẩu\n- Kiểm tra xem KH đã có tài khoản HVN chưa\n- Hướng dẫn KH thao tác ''Quên mật khẩu'' để đặt lại mật khẩu mởi. Chi tiết các bước:\nB1: Nhấn vào dòng chữ ''Quên mật khẩu'' trên giao diện app.\nB2: Nhập mã khách hàng (Outlet ID)\nB3: Nhập OTP được gửi về SDT đăng ký của KH\nB4: Đặt lại mật khẩu mới\nB5: Tiến hành đăng nhập lại",
-    "Script": "\nExternal Participant(s):  7965146521202760190\n\nNovember 15, 2025 2:22:51 PM\tExternal\t\n7965146521202760190\tImage\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 15, 2025 2:23:22 PM \tInternal\t\nLìu Hy Minh \tChào anh, nhằm đảm bảo an toàn thông tin khách hàng, anh vui lòng cho em hỏi mình là Chủ điểm bán/NPP hay nhân viên Heineken ạ.\nNovember 15, 2025 2:24:01 PM\t External\t\n7965146521202760190\tmình là NPP ạ\nNovember 15, 2025 2:25:08 PM\t Internal\t\nLìu Hy Minh\tAnh cho em mã và tên nhà phân phối cần hỗ trợ nhé.\nNovember 15, 2025 2:27:59 PM \tExternal\t\n7965146521202760190\t10399522 VP17 ạ\nNovember 15, 2025 2:30:44 PM \tInternal\t\nLìu Hy Minh\t Dạ theo hình ảnh anh cung cấp ô tên đăng nhập anh đang bỏ trống ạ.\nNovember 15, 2025 2:31:00 PM\tInternal\t\nLìu Hy Minh\t: Tên đăng nhập 10399522 anh nhập lại nhé.\nNovember 15, 2025 2:34:15 PM\tExternal\t\n7965146521202760190\tMk thì sao ạ\nNovember 15, 2025 2:34:45 PM\tInternal\t\nLìu Hy Minh :\tDạ mật khẩu anh nhập mật khẩu anh tự tạo trước đó.\nNovember 15, 2025 2:34:58 PM\tExternal\t\n7965146521202760190\tE đang quên ý\nNovember 15, 2025 2:35:02 PM\tExternal\t\n7965146521202760190\t: Giờ muốn lấy lại\nNovember 15, 2025 2:35:04 PM\tInternal\t\nLìu Hy Minh\t: Nếu anh không nhớ mật khẩu thì tạo mật khẩu mới nhé.\nNovember 15, 2025 2:35:20 PM\tExternal\t7\n965146521202760190\tB hướng dẫn mình tạo mới với ạ\nNovember 15, 2025 2:35:58 PM\tInternal\t\nLìu Hy Minh\t: Anh nhấn quên Mật Khẩu >> nhập tên đăng nhập ( mã số cửa hàng ) >> nhận mã OTP >> tạo mật khẩu mới bao gồm 12 ký tự.\nNovember 15, 2025 2:42:20 PM\tInternal\t\nLìu Hy Minh  \tNgoài vấn đề này, anh cần em hỗ trợ gì thêm không ạ?\nNovember 15, 2025 2:43:30 PM\tInternal\t\nLìu Hy Minh\t Nếu anh cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, anh liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào anh ạ, chúc anh một ngày tốt lành và nhiều sức khỏe.",
+    "Script": "\nExternal Participant(s):  7965146521202760190\n\nNovember 15, 2025 2:22:51 PM\tExternal\t\n7965146521202760190\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 15, 2025 2:23:22 PM \tInternal\t\nLìu Hy Minh \tChào anh, nhằm đảm bảo an toàn thông tin khách hàng, anh vui lòng cho em hỏi mình là Chủ điểm bán/NPP hay nhân viên Heineken ạ.\nNovember 15, 2025 2:24:01 PM\t External\t\n7965146521202760190\tmình là NPP ạ\nNovember 15, 2025 2:25:08 PM\t Internal\t\nLìu Hy Minh\tAnh cho em mã và tên nhà phân phối cần hỗ trợ nhé.\nNovember 15, 2025 2:27:59 PM \tExternal\t\n7965146521202760190\t10399522 VP17 ạ\nNovember 15, 2025 2:30:44 PM \tInternal\t\nLìu Hy Minh\t Dạ theo hình ảnh anh cung cấp ô tên đăng nhập anh đang bỏ trống ạ.\nNovember 15, 2025 2:31:00 PM\tInternal\t\nLìu Hy Minh\t: Tên đăng nhập 10399522 anh nhập lại nhé.\nNovember 15, 2025 2:34:15 PM\tExternal\t\n7965146521202760190\tMk thì sao ạ\nNovember 15, 2025 2:34:45 PM\tInternal\t\nLìu Hy Minh :\tDạ mật khẩu anh nhập mật khẩu anh tự tạo trước đó.\nNovember 15, 2025 2:34:58 PM\tExternal\t\n7965146521202760190\tE đang quên ý\nNovember 15, 2025 2:35:02 PM\tExternal\t\n7965146521202760190\t: Giờ muốn lấy lại\nNovember 15, 2025 2:35:04 PM\tInternal\t\nLìu Hy Minh\t: Nếu anh không nhớ mật khẩu thì tạo mật khẩu mới nhé.\nNovember 15, 2025 2:35:20 PM\tExternal\t7\n965146521202760190\tB hướng dẫn mình tạo mới với ạ\nNovember 15, 2025 2:35:58 PM\tInternal\t\nLìu Hy Minh\t: Anh nhấn quên Mật Khẩu >> nhập tên đăng nhập ( mã số cửa hàng ) >> nhận mã OTP >> tạo mật khẩu mới bao gồm 12 ký tự.\nNovember 15, 2025 2:42:20 PM\tInternal\t\nLìu Hy Minh  \tNgoài vấn đề này, anh cần em hỗ trợ gì thêm không ạ?\nNovember 15, 2025 2:43:30 PM\tInternal\t\nLìu Hy Minh\t Nếu anh cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, anh liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào anh ạ, chúc anh một ngày tốt lành và nhiều sức khỏe.",
     "Script_num": "Script_4",
     "messages": [
       {
         "role": "assistant",
         "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
+      },
+      {
+        "role": "user",
+        "content": "Mình đang không đăng nhập được vào app HVN ạ"   
       },
       {
         "role": "assistant",
@@ -283,11 +99,7 @@
       },
       {
         "role": "assistant",
-        "content": "Dạ theo hình ảnh anh cung cấp ô tên đăng nhập anh đang bỏ trống ạ."
-      },
-      {
-        "role": "assistant",
-        "content": "Tên đăng nhập 10399522 anh nhập lại nhé."
+        "content": "Anh dùng tên đăng nhập 10399522 anh nhập lại nhé."
       },
       {
         "role": "user",
@@ -334,7 +146,7 @@
     "Targeted_Customers": "- Outlet\n- Sales Force\n- Distributor/Sub-Distributor",
     "Intentions": "C1.1.3 - Đổi mật khẩu",
     "Solutions": "C1.1.3 - Đổi mật khẩu\n- Kiểm tra xem KH đã có tài khoản HVN chưa\n- Hướng dẫn KH thao tác ''Quên mật khẩu'' để đặt lại mật khẩu mởi. Chi tiết các bước:\nB1: Nhấn vào dòng chữ ''Quên mật khẩu'' trên giao diện app.\nB2: Nhập mã khách hàng (Outlet ID)\nB3: Nhập OTP được gửi về SDT đăng ký của KH\nB4: Đặt lại mật khẩu mới\nB5: Tiến hành đăng nhập lại",
-    "Script": "\nExternal Participant(s):\t3356090384827663332\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 3, 2025 3:03:40 PM\tExternal\n3356090384827663332\t.\nDecember 3, 2025 3:03:42 PM\tInternal\t\nBot/Flow\t Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 3, 2025 3:03:55 PM\tExternal\t\n3356090384827663332\tTôi ko đăng nhập được vào app HVN\nDecember 3, 2025 3:04:02 PM\tExternal\t\n3356090384827663332\tQuên mật khẩu\nDecember 3, 2025 3:06:20 PM\tInternal\t\nLìu Hy Minh \tChào chị, nhằm đảm bảo an toàn thông tin khách hàng, chị vui lòng cho em hỏi mình là Chủ điểm bán/NPP hay nhân viên Heineken ạ.\nDecember 3, 2025 3:06:51 PM\tExternal\t\n3356090384827663332\tChủ cửa hàng Nhã vy\nDecember 3, 2025 3:07:27 PM\tInternal\t\nLìu Hy Minh \tDạ chị cho em xin mã số và tên cửa hàng mình nhé ví dụ số 6******* nhé.\nDecember 3, 2025 3:07:53 PM\tExternal\t\n3356090384827663332\tKo nhớ\nDecember 3, 2025 3:08:07 PM\tExternal\t\n3356090384827663332\tSdt 0564382859\nDecember 3, 2025 3:08:56 PM\tInternal\t\nLìu Hy Minh\tDạ em thấy số điện thoại 0564382859 được gắn với mã số cửa hàng 64903867 Nhã vy.\nDecember 3, 2025 3:14:59 PM\tExternal\t\n3356090384827663332\tImage\nDecember 3, 2025 3:15:30 PM\tExternal\t\n3356090384827663332\tNhập gì ạ? E ko biết tên đăng nhập và mật khẩu\nDecember 3, 2025 3:16:33 PM\tInternal\t\nLìu Hy Minh\t 64903867 Nhã vy quên mật khẩu trên ứng dụng HVN đặt hàng em hướng dẫn chị thao tác như sau: Cách 1: Quên Mật Khẩu>> nhập tên đăng nhập ( mã số cửa hàng ) >> nhận mã otp>> tạo mật khẩu mới bao gồm 12 ký tự. Cách 2: Đăng nhập bằng số điện thoại ( số điện thoại đăng ký app hvn ) > đăng nhập bằng số điện thoại bỏ số 0 đầu tiên>>OTP sẽ gửi vào số điện thoại đăng ký app của mình.\nDecember 3, 2025 3:17:05 PM\tInternal\t\nLìu Hy Minh \tTên đăng nhập là mã số cửa hàng 64903867 chị nhé.\nDecember 3, 2025 3:17:15 PM\tExternal\t\n3356090384827663332\tImage\nDecember 3, 2025 3:17:21 PM\tExternal\t\n3356090384827663332\tOk\nDecember 3, 2025 3:17:28 PM\tExternal\t\n3356090384827663332\tCảm ơn bạn\nDecember 3, 2025 3:20:11 PM\tInternal\t\nLìu Hy Minh \tNgoài vấn đề này, chị cần em hỗ trợ gì thêm không ạ?\nDecember 3, 2025 3:20:33 PM\tExternal\t\n3356090384827663332\tKo e\nDecember 3, 2025 3:20:48 PM\tInternal\t\nLìu Hy Minh\tNếu chị cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, chị liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào chị ạ, chúc chị một ngày tốt lành và nhiều sức khỏe.",
+    "Script": "\nExternal Participant(s):\t3356090384827663332\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 3, 2025 3:03:40 PM\tExternal\n3356090384827663332\t.\nDecember 3, 2025 3:03:42 PM\tInternal\t\nBot/Flow\t Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 3, 2025 3:03:55 PM\tExternal\t\n3356090384827663332\tTôi ko đăng nhập được vào app HVN\nDecember 3, 2025 3:04:02 PM\tExternal\t\n3356090384827663332\tQuên mật khẩu\nDecember 3, 2025 3:06:20 PM\tInternal\t\nLìu Hy Minh \tChào chị, nhằm đảm bảo an toàn thông tin khách hàng, chị vui lòng cho em hỏi mình là Chủ điểm bán/NPP hay nhân viên Heineken ạ.\nDecember 3, 2025 3:06:51 PM\tExternal\t\n3356090384827663332\tChủ cửa hàng Nhã vy\nDecember 3, 2025 3:07:27 PM\tInternal\t\nLìu Hy Minh \tDạ chị cho em xin mã số và tên cửa hàng mình nhé ví dụ số 6******* nhé.\nDecember 3, 2025 3:07:53 PM\tExternal\t\n3356090384827663332\tKo nhớ\nDecember 3, 2025 3:08:07 PM\tExternal\t\n3356090384827663332\tSdt 0564382859\nDecember 3, 2025 3:08:56 PM\tInternal\t\nLìu Hy Minh\tDạ em thấy số điện thoại 0564382859 được gắn với mã số cửa hàng 64903867 Nhã vy.\nDecember 3, 2025 3:14:59 PM\tExternal\t\n3356090384827663332\t\nDecember 3, 2025 3:15:30 PM\tExternal\t\n3356090384827663332\tNhập gì ạ? E ko biết tên đăng nhập và mật khẩu\nDecember 3, 2025 3:16:33 PM\tInternal\t\nLìu Hy Minh\t 64903867 Nhã vy quên mật khẩu trên ứng dụng HVN đặt hàng em hướng dẫn chị thao tác như sau: Cách 1: Quên Mật Khẩu>> nhập tên đăng nhập ( mã số cửa hàng ) >> nhận mã otp>> tạo mật khẩu mới bao gồm 12 ký tự. Cách 2: Đăng nhập bằng số điện thoại ( số điện thoại đăng ký app hvn ) > đăng nhập bằng số điện thoại bỏ số 0 đầu tiên>>OTP sẽ gửi vào số điện thoại đăng ký app của mình.\nDecember 3, 2025 3:17:05 PM\tInternal\t\nLìu Hy Minh \tTên đăng nhập là mã số cửa hàng 64903867 chị nhé.\nDecember 3, 2025 3:17:15 PM\tExternal\t\n3356090384827663332\t\nDecember 3, 2025 3:17:21 PM\tExternal\t\n3356090384827663332\tOk\nDecember 3, 2025 3:17:28 PM\tExternal\t\n3356090384827663332\tCảm ơn bạn\nDecember 3, 2025 3:20:11 PM\tInternal\t\nLìu Hy Minh \tNgoài vấn đề này, chị cần em hỗ trợ gì thêm không ạ?\nDecember 3, 2025 3:20:33 PM\tExternal\t\n3356090384827663332\tKo e\nDecember 3, 2025 3:20:48 PM\tInternal\t\nLìu Hy Minh\tNếu chị cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, chị liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào chị ạ, chúc chị một ngày tốt lành và nhiều sức khỏe.",
     "Script_num": "Script_5",
     "messages": [
       {
@@ -423,18 +235,6 @@
       },
       {
         "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "user",
-        "content": "mã giới thiệu cửa hàng tạp hoá 66111870"
-      },
-      {
-        "role": "user",
-        "content": "đúng rồi. cho em xin mã giới thiệu cửa hàng mình ạ"
-      },
-      {
-        "role": "assistant",
         "content": "Hiện tại cửa hàng mình đã đóng cửa trên hệ thống nên sẽ không đăng nhập được ạ. Nếu anh chị muốn kích hoạt lại tài khoản thì cần có nhân viên Heineken hỗ trợ"
       },
       {
@@ -470,16 +270,12 @@
     "Targeted_Customers": "- Outlet\n- Sales Force",
     "Intentions": "C5.1.1 - Đăng nhập",
     "Solutions": "C5.1.1 - Đăng nhập\n- Kiểm tra thông tin tài khoản (tên đăng nhập, số điện thoại)\n- Hướng dẫn thao tác đăng nhập",
-    "Script": "External Participant(s):\t521175349784003148\n\nNovember 17, 2025 2:36:49 PM\tExternal\t\n521175349784003148\tImage\nNovember 17, 2025 2:36:51 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 17, 2025 2:37:26 PM\tExternal\n521175349784003148\tSao lại ko hợp lệ\nNovember 17, 2025 2:38:54 PM\tInternal\t\nHuỳnh Hồng Ngọc\tChị cho em xin mã cửa hàng hoặc SDT đăng ký em kiểm tra nha\nNovember 17, 2025 2:39:29 PM\tExternal\t\n521175349784003148\t61504764\n521175349784003148\tMã cửa hàng\nNovember 17, 2025 2:40:02 PM\tInternal\t\nHuỳnh Hồng Ngọc\tMình là SHOP CHỊ ĐIỆP phải không chị?\nNovember 17, 2025 2:40:14 PM\tExternal\n521175349784003148\tĐúng rồi\nNovember 17, 2025 2:41:12 PM\tInternal\t\nHuỳnh Hồng Ngọc\tChị vui lòng chờ em kiểm tra thông tin giây lát nhé\nNovember 17, 2025 3:05:02 PM\tInternal\t\nHuỳnh Hồng Ngọc\tChị ơi, chị thêm giúp em số 0 vào đầu SDT rồi thử lại giúp em nha\nNovember 17, 2025 3:13:43 PM\tInternal\t\nHuỳnh Hồng Ngọc\tDạ chị đăng nhập được chưa vậy ạ?\nNovember 17, 2025 3:19:14 PM\tInternal\t\nHuỳnh Hồng Ngọc\tHiện tại bên em chưa nhận được phản hồi từ chị. Em xin phép kết thúc trò chuyện trước. Nếu cần hỗ trợ chị vui lòng liên hệ lại tổng đài cung cấp thông tin giúp em nhé. Em cám ơn và xin phép chào chị ạ.",
+    "Script": "External Participant(s):\t521175349784003148\n\nNovember 17, 2025 2:36:49 PM\tExternal\t\n521175349784003148\t\nNovember 17, 2025 2:36:51 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 17, 2025 2:37:26 PM\tExternal\n521175349784003148\tSao lại ko hợp lệ\nNovember 17, 2025 2:38:54 PM\tInternal\t\nHuỳnh Hồng Ngọc\tChị cho em xin mã cửa hàng hoặc SDT đăng ký em kiểm tra nha\nNovember 17, 2025 2:39:29 PM\tExternal\t\n521175349784003148\t61504764\n521175349784003148\tMã cửa hàng\nNovember 17, 2025 2:40:02 PM\tInternal\t\nHuỳnh Hồng Ngọc\tMình là SHOP CHỊ ĐIỆP phải không chị?\nNovember 17, 2025 2:40:14 PM\tExternal\n521175349784003148\tĐúng rồi\nNovember 17, 2025 2:41:12 PM\tInternal\t\nHuỳnh Hồng Ngọc\tChị vui lòng chờ em kiểm tra thông tin giây lát nhé\nNovember 17, 2025 3:05:02 PM\tInternal\t\nHuỳnh Hồng Ngọc\tChị ơi, chị thêm giúp em số 0 vào đầu SDT rồi thử lại giúp em nha\nNovember 17, 2025 3:13:43 PM\tInternal\t\nHuỳnh Hồng Ngọc\tDạ chị đăng nhập được chưa vậy ạ?\nNovember 17, 2025 3:19:14 PM\tInternal\t\nHuỳnh Hồng Ngọc\tHiện tại bên em chưa nhận được phản hồi từ chị. Em xin phép kết thúc trò chuyện trước. Nếu cần hỗ trợ chị vui lòng liên hệ lại tổng đài cung cấp thông tin giúp em nhé. Em cám ơn và xin phép chào chị ạ.",
     "Script_num": "Script_2",
     "messages": [
       {
         "role": "user",
-        "content": "Sao lại ko hợp lệ"
-      },
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
+        "content": "Mình đang đăng nhập mà sao app lại báo ko hợp lệ"
       },
       {
         "role": "assistant",
@@ -531,7 +327,7 @@
     "messages": [
       {
         "role": "user",
-        "content": "Mua ạ"
+        "content": "Alo"
       },
       {
         "role": "assistant",
@@ -566,72 +362,8 @@
         "content": "Dạ mình là cửa hàng Thanh Vinh phải không ạ?"
       },
       {
-        "role": "user",
-        "content": "Đúng rồi ạ"
-      },
-      {
         "role": "assistant",
-        "content": "Dạ trước giờ chị đã từng sử dụng ứng dụng HVN Đặt Hàng bao giờ chưa chị. Hay chị đặt bia qua tổng đài của các bạn Telesale?"
-      },
-      {
-        "role": "user",
-        "content": "Đặt qua Sale ạ"
-      },
-      {
-        "role": "user",
-        "content": "Mình mới tải app"
-      },
-      {
-        "role": "user",
-        "content": "Mà ở biết vào cách nào ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ mình tải app HVN Đặt Hàng phải không ạ?"
-      },
-      {
-        "role": "user",
-        "content": "Đr ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Chị nhấn vào phần đăng nhập giúp em. Sau đó nhập mã cửa hàng + mật khẩu. Trường hợp chị quên mật khẩu => nhấn vào mục Quên Mật Khẩu/ hoặc mục Đăng nhập bằng SDT (bên dưới)\nChị thử đăng nhập giúp em. Nếu không rõ bước nào chị nhắn em hỗ trợ nha"
-      },
-      {
-        "role": "user",
-        "content": "Quên mk bấm vô đăng nhập sao ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Chỗ đăng nhập có mục Quên Mật Khẩu ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Em gửi hình ảnh minh họa nha"
-      },
-      {
-        "role": "user",
-        "content": "Dạ nhấn vô quên mk rồi ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ, mình nhập mã cửa hàng 67803609 giúp em"
-      },
-      {
-        "role": "user",
-        "content": "Xong tiếp đó vui lòng điền tên đăng nhập"
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ mình nhập 67803609 nha"
-      },
-      {
-        "role": "user",
-        "content": "Tên người dùng chưa đăng kí ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ vậy nghĩa là mình chưa đăng ký ứng dụng rồi ạ. Trường hợp này chị vui lòng liên hệ Sale thị trường để được hỗ trợ giúp em nha"
+        "content": "Em kiểm tra thấy cửa hàng mình chưa đăng ký ứng dụng rồi ạ. Trường hợp này chị vui lòng liên hệ Sale thị trường để được hỗ trợ giúp em nha"
       },
       {
         "role": "assistant",
@@ -726,16 +458,12 @@
     "Targeted_Customers": "- Outlet\n- Sales Force",
     "Intentions": "C5.1.1 - Đăng nhập",
     "Solutions": "C5.1.1 - Đăng nhập\n- Kiểm tra thông tin tài khoản (tên đăng nhập, số điện thoại)\n- Hướng dẫn thao tác đăng nhập",
-    "Script": "\nExternal Participant(s):\t6879058838153385472\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 25, 2025 2:19 External\t\n6879058838153385472\tHiếu cáo  66155112 098 5020323 Cập nhật số điện thoại\nNovember 25, 2025 2:19:55 PM\tExternal\t\n6879058838153385472\tImage\nNovember 25, 2025 2:19:55 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 25, 2025 2:19:57 PM\tExternal\t\n6879058838153385472\tHiếu cáo vẫn để số dt cũ em à\nNovember 25, 2025 2:20:52 PM\tInternal\t\nHuỳnh Hồng Ngọc\tAnh vui lòng đợi em kiểm tra thông tin giây lát nha\nNovember 25, 2025 2:21:02 PM\tExternal\t\n6879058838153385472\t66155122\nNovember 25, 2025 2:21:45 PM\tInternal\t\nHuỳnh Hồng Ngọc\tAnh ơi, anh kiểm tra lại mã code anh nhập trên app nha\nNovember 25, 2025 2:21:57 PM\tInternal\t\nHuỳnh Hồng Ngọc\tTrong hình mình nhập mã code 66155112 ấy ạ\nNovember 25, 2025 2:22:58 PM\tInternal\t\nHuỳnh Hồng Ngọc\tHôm qua em có báo anh mã code 66155112 tên ANH TUYÊN - Mẫn Nhi không phải quán Hiếu Cáo\nNovember 25, 2025 2:23:02 PM\tExternal\t\n6879058838153385472\tÀ anh xin lỗi\nNovember 25, 2025 2:23:04 PM\tExternal\t\n6879058838153385472\tA nhằm\nNovember 25, 2025 2:23:30 PM\tInternal\t\nHuỳnh Hồng Ngọc\tDạ vâng. Anh đăng ký lại cho code nha. Nếu cần hỗ trợ thêm, anh liên hệ tổng đài nha\nNovember 25, 2025 2:23:44 PM\tInternal\t\nHuỳnh Hồng Ngọc\tHVN xin chúc anh một ngày tốt lành ạ",
+    "Script": "\nExternal Participant(s):\t6879058838153385472\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 25, 2025 2:19 External\t\n6879058838153385472\tHiếu cáo  66155112 098 5020323 Cập nhật số điện thoại\nNovember 25, 2025 2:19:55 PM\tExternal\t\n6879058838153385472\tNovember 25, 2025 2:19:55 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 25, 2025 2:19:57 PM\tExternal\t\n6879058838153385472\tHiếu cáo vẫn để số dt cũ em à\nNovember 25, 2025 2:20:52 PM\tInternal\t\nHuỳnh Hồng Ngọc\tAnh vui lòng đợi em kiểm tra thông tin giây lát nha\nNovember 25, 2025 2:21:02 PM\tExternal\t\n6879058838153385472\t66155122\nNovember 25, 2025 2:21:45 PM\tInternal\t\nHuỳnh Hồng Ngọc\tAnh ơi, anh kiểm tra lại mã code anh nhập trên app nha\nNovember 25, 2025 2:21:57 PM\tInternal\t\nHuỳnh Hồng Ngọc\tTrong hình mình nhập mã code 66155112 ấy ạ\nNovember 25, 2025 2:22:58 PM\tInternal\t\nHuỳnh Hồng Ngọc\tHôm qua em có báo anh mã code 66155112 tên ANH TUYÊN - Mẫn Nhi không phải quán Hiếu Cáo\nNovember 25, 2025 2:23:02 PM\tExternal\t\n6879058838153385472\tÀ anh xin lỗi\nNovember 25, 2025 2:23:04 PM\tExternal\t\n6879058838153385472\tA nhằm\nNovember 25, 2025 2:23:30 PM\tInternal\t\nHuỳnh Hồng Ngọc\tDạ vâng. Anh đăng ký lại cho code nha. Nếu cần hỗ trợ thêm, anh liên hệ tổng đài nha\nNovember 25, 2025 2:23:44 PM\tInternal\t\nHuỳnh Hồng Ngọc\tHVN xin chúc anh một ngày tốt lành ạ",
     "Script_num": "Script_5",
     "messages": [
       {
         "role": "user",
         "content": "Hiếu cáo  66155112 0985020323 Cập nhật số điện thoại"
-      },
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
       },
       {
         "role": "user",
@@ -744,18 +472,6 @@
       {
         "role": "assistant",
         "content": "Anh vui lòng đợi em kiểm tra thông tin giây lát nha"
-      },
-      {
-        "role": "user",
-        "content": "66155122"
-      },
-      {
-        "role": "assistant",
-        "content": "Anh ơi, anh kiểm tra lại mã code anh nhập trên app nha"
-      },
-      {
-        "role": "assistant",
-        "content": "Trong hình mình nhập mã code 66155112 ấy ạ"
       },
       {
         "role": "assistant",
@@ -795,15 +511,11 @@
       },
       {
         "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "assistant",
         "content": "Em là Quỳnh Anh, rất sẵn lòng được hỗ trợ."
       },
       {
         "role": "assistant",
-        "content": "Dạ anh cung cấp giúp em hình ảnh mã đơn hàng nhé ạ"
+        "content": "Dạ anh cung cấp giúp em thông tin mã đơn hàng nhé ạ"
       },
       {
         "role": "user",
@@ -847,11 +559,11 @@
       },
       {
         "role": "assistant",
-        "content": "Dạ tất cả đơn hàng này đúng không ạ"
+        "content": "Dạ tất cả 17 này đúng không ạ"
       },
       {
         "role": "user",
-        "content": "đấy 17 đơn đó b"
+        "content": "đr"
       },
       {
         "role": "assistant",
@@ -886,7 +598,7 @@
     "Targeted_Customers": "- Sales Force",
     "Intentions": "C2.2.1-Check đơn hàng",
     "Solutions": "C2.2.1-Check đơn hang\n-Xin mã đơn hàng  \n-Check mối  quan hệ  với NPP/SUBD\n-Check trạng thái đơn hàng đã giao hay pending\n-Mối quan hệ hợp lệ đơn hàng pending  thì log l2 để hỗ trợ push đơn hàng\n-Mối quan hệ không hợp lệ từ chối hỗ trợ",
-    "Script": "\n\nDate/Time\tParticipant Type\tParticipant\tText\nSeptember 8, 2025 1:32:17 PM\tExterna\n  1098402284056190282\t#hvn_sem\nSeptember 8, 2025 1:32:20 PM\tInternal   \nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nSeptember 8, 2025 1:33:02 PM\tInternal \nPhạm Thị Phương Trúc\tEm là Trúc, xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nSeptember 8, 2025 1:33:06 PM\tExternal  \n  1098402284056190282\tDear Team ! Hỗ trơ giúp mình add npp để mình tạo đơn hàng với ạ. 68903869 - TRUONG THAO MART 68903907 - KOK PHUONG ANH 10402194 - SHY9A - Cong Ty TNHH Kinh Doanh Thuong Mai The Duong THE DUONG Thanks team !\nSeptember 8, 2025 1:33:45 PM\tExternal     \n1098402284056190282\tImage\nSeptember 8, 2025 1:34:19 PM\tExternal\t \n1098402284056190282\t10402194 - SHY9A - Cong Ty TNHH Kinh Doanh Thuong Mai The Duong THE DUONG Gắn MQH giúp mình npp này ah\nSeptember 8, 2025 1:36:01 PM\tInternal \n Phạm Thị Phương Trúc\tDạ để add mqh anh liên hệ Sale Admin hỗ trợ giúp em nhé\nSeptember 8, 2025 1:37:51 PM\tInternal \n  Phạm Thị Phương Trúc\tKhông biết ngoài vấn đề này ra anh cần em hỗ trợ thêm thông tin nào khác không ạ ?\nSeptember 8, 2025 1:42:14 PM\tInternal  \nPhạm Thị Phương Trúc\tNếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh liên hệ lại kênh Zalo hỗ trợ này cho bên em nhé. Em cảm ơn và xin phép chào anh ạ",
+    "Script": "\n\nDate/Time\tParticipant Type\tParticipant\tText\nSeptember 8, 2025 1:32:17 PM\tExterna\n  1098402284056190282\t#hvn_sem\nSeptember 8, 2025 1:32:20 PM\tInternal   \nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nSeptember 8, 2025 1:33:02 PM\tInternal \nPhạm Thị Phương Trúc\tEm là Trúc, xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nSeptember 8, 2025 1:33:06 PM\tExternal  \n  1098402284056190282\tDear Team ! Hỗ trơ giúp mình add npp để mình tạo đơn hàng với ạ. 68903869 - TRUONG THAO MART 68903907 - KOK PHUONG ANH 10402194 - SHY9A - Cong Ty TNHH Kinh Doanh Thuong Mai The Duong THE DUONG Thanks team !\nSeptember 8, 2025 1:33:45 PM\tExternal     \n1098402284056190282\nSeptember 8, 2025 1:34:19 PM\tExternal\t \n1098402284056190282\t10402194 - SHY9A - Cong Ty TNHH Kinh Doanh Thuong Mai The Duong THE DUONG Gắn MQH giúp mình npp này ah\nSeptember 8, 2025 1:36:01 PM\tInternal \n Phạm Thị Phương Trúc\tDạ để add mqh anh liên hệ Sale Admin hỗ trợ giúp em nhé\nSeptember 8, 2025 1:37:51 PM\tInternal \n  Phạm Thị Phương Trúc\tKhông biết ngoài vấn đề này ra anh cần em hỗ trợ thêm thông tin nào khác không ạ ?\nSeptember 8, 2025 1:42:14 PM\tInternal  \nPhạm Thị Phương Trúc\tNếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh liên hệ lại kênh Zalo hỗ trợ này cho bên em nhé. Em cảm ơn và xin phép chào anh ạ",
     "Script_num": "Script_2",
     "messages": [
       {
@@ -953,18 +665,7 @@
         "role": "user",
         "content": "check giúp mình shop thiêm lý đã đặt đơn hôm qua nhưng k lên subdist để duyệt đơn"
       },
-      {
-        "role": "assistant",
-        "content": "Dạ SubD không thấy đơn hàng để duyệt trên Dis Lite đúng không ạ"
-      },
-      {
-        "role": "user",
-        "content": "mã đơn hàng: 250828636771"
-      },
-      {
-        "role": "user",
-        "content": "đúng rồi ạ"
-      },
+  
       {
         "role": "assistant",
         "content": "Dạ em kiểm tra code 63400187 đã có mqh với SubD trên SEM , nếu SubD không thấy đơn hàng để duyệt trên Dis Lite chị liên hệ qua zalo này hỗ trợ nhé. Heineken HVN Đặt Hàng (B2B/DIS Lite/HVN): https://zalo.me/1896978230422342919"
@@ -1008,14 +709,6 @@
       {
         "role": "user",
         "content": "Kiểm tra dùm a gratis này đã approved finish chưa nha"
-      },
-      {
-        "role": "assistant",
-        "content": "Anh chờ em chuyển team SEM hỗ trợ nha"
-      },
-      {
-        "role": "assistant",
-        "content": "Em là Linh, xin phép được hỗ trợ vấn đề cho anh/chị ạ."
       },
       {
         "role": "assistant",
@@ -1096,14 +789,6 @@
       {
         "role": "assistant",
         "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "user",
-        "content": "#hvn_sem"
-      },
-      {
-        "role": "assistant",
-        "content": "Em là Hương, rất sẵn lòng được hỗ trợ."
       },
       {
         "role": "user",
@@ -1201,14 +886,7 @@
         "role": "user",
         "content": "Em ơi, gratis anh raise giờ Asm approve được chưa em ?."
       },
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "assistant",
-        "content": "Em là Đạo, rất sẵn lòng được hỗ trợ."
-      },
+
       {
         "role": "assistant",
         "content": "Dạ hiện tại đã quá 4 tiếng tính từ lúc bên em thông báo nên có thể raise gratis được rồi nha anh."
@@ -1239,15 +917,7 @@
     "messages": [
       {
         "role": "user",
-        "content": "Sao rồi team ơi"
-      },
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "user",
-        "content": "Dạ mình đợi em chuyển thông tin cho team SEM kiểm tra nha"
+        "content": "Sao order của tôi chưa có subdist vậy team ơi"
       },
       {
         "role": "assistant",
@@ -1276,11 +946,8 @@
       {
         "role": "assistant",
         "content": "Dạ nếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh liên hệ lại kênh zalo support này nhé. Em cảm ơn và xin phép chào anh ạ."
-      },
-      {
-        "role": "user",
-        "content": "#hvn_ce360"
       }
+
     ]
   },
   {
@@ -1299,19 +966,7 @@
       },
       {
         "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "assistant",
         "content": "Em là Quỳnh Anh, rất sẵn lòng được hỗ trợ."
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ Anh/Chị chờ em chuyển thông tin này đến bộ phận SEM để được hỗ trợ nhé ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Em là Hương, rất sẵn lòng được hỗ trợ."
       },
       {
         "role": "assistant",
@@ -1334,7 +989,7 @@
     "Targeted_Customers": "- Sales Force",
     "Intentions": "C2.2.3- Hướng dẫn thao tác order",
     "Solutions": "C2.2.3- Hướng dẫn thao tác order\n- Gửi thao tác hướng dẫn order trên SEM cho sale",
-    "Script": "\n\nDate/Time\tParticipant Type\tParticipant\tText\nMay 27, 2025 9:16:27 AM\tExternal9\n\t3165866262592874651\t#hvn_sem\nMay 27, 2025 9:16:28 AM\tExternal\t\n3165866262592874651\t#hvn_sem\nMay 27, 2025 9:16:29 AM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nMay 27, 2025 9:16:53 AM\tInternal\t\nVũ Lê Phương Linh\tEm là Linh, xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nMay 27, 2025 9:17:07 AM\tExternal\t\n3165866262592874651\tTrên mục đặt hàng của e k hiện nhãn sản phẩm heineken ạ. C Linh hỗ trợ e với\nMay 27, 2025 9:19:59 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cung cấp code outlet + NPP/SubD + mã SKU order để bên em kiểm tra nha.\nMay 27, 2025 9:21:39 AM\tExternal\t\n3165866262592874651\tMa code outlet: 61400511 Npp: QNI29 Mã sku: 10079514\nMay 27, 2025 9:30:28 AM\tInternal\t\nVũ Lê Phương Linh\tDạ bên em nhận thông tin kiểm tra ạ.\nMay 27, 2025 9:33:43 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cho em xin thêm mã code NPP QNI29 nha.\nMay 27, 2025 9:35:10 AM\tExternal\t\n3165866262592874651\t10375694\nMay 27, 2025 9:44:33 AM\tExternal\t\n3165866262592874651\tSao rồi ad ơi\nMay 27, 2025 9:46:37 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh vào order tìm tên SKU này xem có hiển thị không nha.\nMay 27, 2025 9:52:35 AM\tExternal\t\n3165866262592874651\tMình vừa tìm tên thì có, nhưng trong thiết lập bộ lọc thì không có. Vậy đến điểm nào cũng tìm thì rất mất thời gian, nhờ admin xử lý giúp mình cái này\nMay 27, 2025 10:01:46 AM\tExternal\t\n3165866262592874651\t#hvn_sem\nMay 27, 2025 10:03:51 AM\tExternal\t\n3165866262592874651\tImage\nMay 27, 2025 10:04:11 AM\tExternal\t\n3165866262592874651\tDanh sách khách hàng của e k hiện mối quan hệ với npp. Nhờ anh chị hỗ trợ\nMay 27, 2025 10:06:35 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cung cấp code outlet + NPP/SubD để bên em kiểm tra nha.\nMay 27, 2025 10:06:54 AM\tExternal\t\n3165866262592874651\tTất cả oulet đều k hiển thị npp\nMay 27, 2025 10:07:18 AM\tExternal\t\n3165866262592874651\tNpp QNI29\nMay 27, 2025 10:11:40 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cung cấp 1 vài code outlet để bên em kiểm tra nha, và code NPP QNI29 10375694 phải không ạ.\nMay 27, 2025 10:14:52 AM\tExternal\t\n3165866262592874651\tCode outlet: 61400498 - shop nguyệt ánh Code oulet: 61400913 - shop thuỷ cương Code outlet: 61405423 - shop anh tuấn\nMay 27, 2025 10:15:43 AM\tExternal\t\n3165866262592874651\tXử lý nhanh giúp mình với. Chị admin khu vực có báo là đã update và trên hệ thống có đầy đủ rồi, thế nhưng trên danh sách của mình thì k thấy có\nMay 27, 2025 10:17:19 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh sync lại nha, sync xong anh báo lại liền bên em hỗ trợ force sync để đồng bộ lại nha.\nMay 27, 2025 10:18:02 AM\tExternal\t\n3165866262592874651\tVâng c\nMay 27, 2025 10:18:54 AM\tExternal\t\n3165866262592874651\tE sync lại máy rồi đó\nMay 27, 2025 10:19:03 AM\tExternal\t\n3165866262592874651\tĐã sync xong\nMay 27, 2025 10:19:19 AM\tExternal\t\n3165866262592874651\t#hvn_sem\nMay 27, 2025 10:20:02 AM\tInternal\t\nVũ Lê Phương Linh\tDạ em vừa Force Sync cho mình trên hệ thống, bây giờ anh sync lại 1 lần nữa giúp em. Lần này Sync hơi lâu nên mình lưu ý khi sync đừng để tắt màn hình và chuyển sang tab khác nhé.\nMay 27, 2025 10:20:49 AM\tExternal\t\n3165866262592874651\tVâng c\nMay 27, 2025 10:28:40 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh kiểm tra order đã hiển thị NPP chưa ạ?\nMay 27, 2025 10:28:53 AM\tExternal\t\n3165866262592874651\tAd ơi xử lý giúp mình cái này với\nMay 27, 2025 10:29:00 AM\tExternal\t\n3165866262592874651\tDạ đã hiển thị npp r c ạ\nMay 27, 2025 10:31:34 AM\tInternal\t\nVũ Lê Phương Linh\tDạ hiện tại không tìm SKU bằng bộ lọc như vậy nữa, anh chịu khó nhập tên vào tìm nha, tìm tên sẽ ra 2 mã là mã thường và sự kiện rồi chọn thôi nha.\nMay 27, 2025 10:33:24 AM\tExternal\t\n3165866262592874651\tE thấy mấy anh chị em cùng team đều hiện lên theo bộ lọc có luôn, nhưng máy của e thì phải gõ tên ấy c ạ\nMay 27, 2025 10:39:11 AM\tInternal\t\nVũ Lê Phương Linh\tDạ tùy theo SKU nếu bộ lọc không có thì mình sẽ tìm theo tên nha anh vì SKU này vẫn đang hoạt động bình thường, khi nào tìm tất cả các cách không thấy SKU thì kỹ thuật sẽ can thiệp hỗ trợ nhé.\nMay 27, 2025 10:43:39 AM\tExternal\t\n3165866262592874651\tE cảm ơn c nhé\nMay 27, 2025 10:47:00 AM\tInternal\t\nVũ Lê Phương Linh\tDạ nếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh liên hệ lại kênh zalo support này nhé. Em cảm ơn và xin phép chào anh ạ.",
+    "Script": "\n\nDate/Time\tParticipant Type\tParticipant\tText\nMay 27, 2025 9:16:27 AM\tExternal9\n\t3165866262592874651\t#hvn_sem\nMay 27, 2025 9:16:28 AM\tExternal\t\n3165866262592874651\t#hvn_sem\nMay 27, 2025 9:16:29 AM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nMay 27, 2025 9:16:53 AM\tInternal\t\nVũ Lê Phương Linh\tEm là Linh, xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nMay 27, 2025 9:17:07 AM\tExternal\t\n3165866262592874651\tTrên mục đặt hàng của e k hiện nhãn sản phẩm heineken ạ. C Linh hỗ trợ e với\nMay 27, 2025 9:19:59 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cung cấp code outlet + NPP/SubD + mã SKU order để bên em kiểm tra nha.\nMay 27, 2025 9:21:39 AM\tExternal\t\n3165866262592874651\tMa code outlet: 61400511 Npp: QNI29 Mã sku: 10079514\nMay 27, 2025 9:30:28 AM\tInternal\t\nVũ Lê Phương Linh\tDạ bên em nhận thông tin kiểm tra ạ.\nMay 27, 2025 9:33:43 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cho em xin thêm mã code NPP QNI29 nha.\nMay 27, 2025 9:35:10 AM\tExternal\t\n3165866262592874651\t10375694\nMay 27, 2025 9:44:33 AM\tExternal\t\n3165866262592874651\tSao rồi ad ơi\nMay 27, 2025 9:46:37 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh vào order tìm tên SKU này xem có hiển thị không nha.\nMay 27, 2025 9:52:35 AM\tExternal\t\n3165866262592874651\tMình vừa tìm tên thì có, nhưng trong thiết lập bộ lọc thì không có. Vậy đến điểm nào cũng tìm thì rất mất thời gian, nhờ admin xử lý giúp mình cái này\nMay 27, 2025 10:01:46 AM\tExternal\t\n3165866262592874651\t#hvn_sem\nMay 27, 2025 10:03:51 AM\tExternal\t\n3165866262592874651\nMay 27, 2025 10:04:11 AM\tExternal\t\n3165866262592874651\tDanh sách khách hàng của e k hiện mối quan hệ với npp. Nhờ anh chị hỗ trợ\nMay 27, 2025 10:06:35 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cung cấp code outlet + NPP/SubD để bên em kiểm tra nha.\nMay 27, 2025 10:06:54 AM\tExternal\t\n3165866262592874651\tTất cả oulet đều k hiển thị npp\nMay 27, 2025 10:07:18 AM\tExternal\t\n3165866262592874651\tNpp QNI29\nMay 27, 2025 10:11:40 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh cung cấp 1 vài code outlet để bên em kiểm tra nha, và code NPP QNI29 10375694 phải không ạ.\nMay 27, 2025 10:14:52 AM\tExternal\t\n3165866262592874651\tCode outlet: 61400498 - shop nguyệt ánh Code oulet: 61400913 - shop thuỷ cương Code outlet: 61405423 - shop anh tuấn\nMay 27, 2025 10:15:43 AM\tExternal\t\n3165866262592874651\tXử lý nhanh giúp mình với. Chị admin khu vực có báo là đã update và trên hệ thống có đầy đủ rồi, thế nhưng trên danh sách của mình thì k thấy có\nMay 27, 2025 10:17:19 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh sync lại nha, sync xong anh báo lại liền bên em hỗ trợ force sync để đồng bộ lại nha.\nMay 27, 2025 10:18:02 AM\tExternal\t\n3165866262592874651\tVâng c\nMay 27, 2025 10:18:54 AM\tExternal\t\n3165866262592874651\tE sync lại máy rồi đó\nMay 27, 2025 10:19:03 AM\tExternal\t\n3165866262592874651\tĐã sync xong\nMay 27, 2025 10:19:19 AM\tExternal\t\n3165866262592874651\t#hvn_sem\nMay 27, 2025 10:20:02 AM\tInternal\t\nVũ Lê Phương Linh\tDạ em vừa Force Sync cho mình trên hệ thống, bây giờ anh sync lại 1 lần nữa giúp em. Lần này Sync hơi lâu nên mình lưu ý khi sync đừng để tắt màn hình và chuyển sang tab khác nhé.\nMay 27, 2025 10:20:49 AM\tExternal\t\n3165866262592874651\tVâng c\nMay 27, 2025 10:28:40 AM\tInternal\t\nVũ Lê Phương Linh\tDạ anh kiểm tra order đã hiển thị NPP chưa ạ?\nMay 27, 2025 10:28:53 AM\tExternal\t\n3165866262592874651\tAd ơi xử lý giúp mình cái này với\nMay 27, 2025 10:29:00 AM\tExternal\t\n3165866262592874651\tDạ đã hiển thị npp r c ạ\nMay 27, 2025 10:31:34 AM\tInternal\t\nVũ Lê Phương Linh\tDạ hiện tại không tìm SKU bằng bộ lọc như vậy nữa, anh chịu khó nhập tên vào tìm nha, tìm tên sẽ ra 2 mã là mã thường và sự kiện rồi chọn thôi nha.\nMay 27, 2025 10:33:24 AM\tExternal\t\n3165866262592874651\tE thấy mấy anh chị em cùng team đều hiện lên theo bộ lọc có luôn, nhưng máy của e thì phải gõ tên ấy c ạ\nMay 27, 2025 10:39:11 AM\tInternal\t\nVũ Lê Phương Linh\tDạ tùy theo SKU nếu bộ lọc không có thì mình sẽ tìm theo tên nha anh vì SKU này vẫn đang hoạt động bình thường, khi nào tìm tất cả các cách không thấy SKU thì kỹ thuật sẽ can thiệp hỗ trợ nhé.\nMay 27, 2025 10:43:39 AM\tExternal\t\n3165866262592874651\tE cảm ơn c nhé\nMay 27, 2025 10:47:00 AM\tInternal\t\nVũ Lê Phương Linh\tDạ nếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh liên hệ lại kênh zalo support này nhé. Em cảm ơn và xin phép chào anh ạ.",
     "Script_num": "Script_5",
     "messages": [
       {
@@ -1342,7 +997,7 @@
         "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
       },
       {
-        "role": "user",
+        "role": "assistant",
         "content": "Em là Linh, xin phép được hỗ trợ vấn đề cho anh/chị ạ."
       },
       {
@@ -1383,28 +1038,9 @@
       },
       {
         "role": "user",
-        "content": "#hvn_sem"
-      },
-      {
-        "role": "user",
-        "content": "Image"
-      },
-      {
-        "role": "user",
         "content": "Danh sách khách hàng của e k hiện mối quan hệ với npp. Nhờ anh chị hỗ trợ"
       },
-      {
-        "role": "assistant",
-        "content": "Dạ anh cung cấp code outlet + NPP/SubD để bên em kiểm tra nha."
-      },
-      {
-        "role": "user",
-        "content": "Tất cả oulet đều k hiển thị npp"
-      },
-      {
-        "role": "user",
-        "content": "Npp QNI29"
-      },
+
       {
         "role": "assistant",
         "content": "Dạ anh cung cấp 1 vài code outlet để bên em kiểm tra nha, và code NPP QNI29 10375694 phải không ạ."
@@ -1434,10 +1070,6 @@
         "content": "Đã sync xong"
       },
       {
-        "role": "user",
-        "content": "#hvn_sem"
-      },
-      {
         "role": "assistant",
         "content": "Dạ em vừa Force Sync cho mình trên hệ thống, bây giờ anh sync lại 1 lần nữa giúp em. Lần này Sync hơi lâu nên mình lưu ý khi sync đừng để tắt màn hình và chuyển sang tab khác nhé."
       },
@@ -1448,10 +1080,6 @@
       {
         "role": "assistant",
         "content": "Dạ anh kiểm tra order đã hiển thị NPP chưa ạ?"
-      },
-      {
-        "role": "user",
-        "content": "Ad ơi xử lý giúp mình cái này với"
       },
       {
         "role": "user",
@@ -1547,10 +1175,6 @@
       },
       {
         "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "assistant",
         "content": "Em là Đạo, rất sẵn lòng được hỗ trợ."
       },
       {
@@ -1595,10 +1219,6 @@
       },
       {
         "role": "assistant",
-        "content": "Em là Hương , xin phép được hỗ trợ vấn đề cho anh/chị ạ."
-      },
-      {
-        "role": "assistant",
         "content": "Dạ anh cung cấp mã đơn hàng giúp em nhé."
       },
       {
@@ -1630,7 +1250,7 @@
     "Targeted_Customers": "- Sales Force",
     "Intentions": "C5.5.1-Check mối quan hệ NPP/SUBD",
     "Solutions": "C5.5.1-Check mối quan hệ\n-Xin thông tin  outlet với NPP/SUBD\n-Check mối quan hệ trên DB",
-    "Script": "\nDate/Time\tParticipant Type\tParticipant\tText\nSeptember 30, 2025 2:17:43 PM\tExternal\t\n9092272050930318426\t#hvn_sem\nSeptember 30, 2025 2:17:45 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nSeptember 30, 2025 2:17:52 PM\tInternal\t\nBùi Thị Cẩm Hương\tEm là Hương , xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nSeptember 30, 2025 2:18:52 PM\tExternal\t\n9092272050930318426\tImage\nSeptember 30, 2025 2:19:08 PM\tExternal\t\n9092272050930318426\tKiểm tra giúp mình 3 outlet này k có mqh với sub\nSeptember 30, 2025 2:19:16 PM\tExternal\t\n9092272050930318426\tMà báo cáo đổ ra vẫn có mqh nhỉ bạn\nSeptember 30, 2025 2:19:27 PM\tExternal\t\n9092272050930318426\tMã nv 1704504\nSeptember 30, 2025 2:22:11 PM\tInternal\t\nBùi Thị Cẩm Hương\tDạ em kiểm tra code 61502610 không có mqh với SubD Cát Tiên trên SEM ạ . Còn 2 code outlet còn lại có mqh\nSeptember 30, 2025 2:22:54 PM\tInternal\t\nBùi Thị Cẩm Hương\tDạ code 61506873 không có mqh SUB CƯỜNG HẢI. Code 6158003 có mqh với SUB CƯỜNG HẢI ạ .\nSeptember 30, 2025 2:23:17 PM\tInternal\t\nBùi Thị Cẩm Hương\tDạ anh cần em hỗ trợ vấn đề nào khác không ạ ?\nSeptember 30, 2025 2:29:02 PM\tInternal\t\nBùi Thị Cẩm Hương\tNếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh/chị liên hệ lại kênh Zalo hỗ trợ này cho bên em nhé.",
+    "Script": "\nDate/Time\tParticipant Type\tParticipant\tText\nSeptember 30, 2025 2:17:43 PM\tExternal\t\n9092272050930318426\t#hvn_sem\nSeptember 30, 2025 2:17:45 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nSeptember 30, 2025 2:17:52 PM\tInternal\t\nBùi Thị Cẩm Hương\tEm là Hương , xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nSeptember 30, 2025 2:18:52 PM\tExternal\t\n9092272050930318426\nSeptember 30, 2025 2:19:08 PM\tExternal\t\n9092272050930318426\tKiểm tra giúp mình 3 outlet này k có mqh với sub\nSeptember 30, 2025 2:19:16 PM\tExternal\t\n9092272050930318426\tMà báo cáo đổ ra vẫn có mqh nhỉ bạn\nSeptember 30, 2025 2:19:27 PM\tExternal\t\n9092272050930318426\tMã nv 1704504\nSeptember 30, 2025 2:22:11 PM\tInternal\t\nBùi Thị Cẩm Hương\tDạ em kiểm tra code 61502610 không có mqh với SubD Cát Tiên trên SEM ạ . Còn 2 code outlet còn lại có mqh\nSeptember 30, 2025 2:22:54 PM\tInternal\t\nBùi Thị Cẩm Hương\tDạ code 61506873 không có mqh SUB CƯỜNG HẢI. Code 6158003 có mqh với SUB CƯỜNG HẢI ạ .\nSeptember 30, 2025 2:23:17 PM\tInternal\t\nBùi Thị Cẩm Hương\tDạ anh cần em hỗ trợ vấn đề nào khác không ạ ?\nSeptember 30, 2025 2:29:02 PM\tInternal\t\nBùi Thị Cẩm Hương\tNếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh/chị liên hệ lại kênh Zalo hỗ trợ này cho bên em nhé.",
     "Script_num": "Script_4",
     "messages": [
       {
@@ -1678,7 +1298,7 @@
     "Targeted_Customers": "- Sales Force",
     "Intentions": "C5.5.1-Check mối quan hệ NPP/SUBD",
     "Solutions": "C5.5.1-Check mối quan hệ\n-Xin thông tin  outlet với NPP/SUBD\n-Check mối quan hệ trên DB",
-    "Script": "\nDate/Time\tParticipant Type\tParticipant\tText\nSeptember 30, 2025 2:08:32 PM\tExternal\t\n824651580272727557\tImage\nSeptember 30, 2025 2:08:34 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nSeptember 30, 2025 2:08:47 PM\tInternal\t\nVũ Lê Phương Linh\tEm là Linh, xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nSeptember 30, 2025 2:10:13 PM\tExternal\t\n824651580272727557\tEm cho anh hỏi. E check giúp xem Outlets này còn gán Mối Quan Hệ với Sub Cô Là ko em nhé.\nSeptember 30, 2025 2:11:01 PM\tExternal\t\n824651580272727557\tImage\nSeptember 30, 2025 2:13:43 PM\tInternal\t\nVũ Lê Phương Linh\tDạ em kiểm tra outlet 61700645 không có mqh với Sub CÔ LÀ trên SEM ạ.\nSeptember 30, 2025 2:14:46 PM\tExternal\t\n824651580272727557\tCảm ơn em nhé.\nSeptember 30, 2025 2:15:06 PM\tInternal\t\nVũ Lê Phương Linh\tDạ ngoài vấn đề trên, anh cần em hỗ trợ thêm thông tin nào khác không ạ?\nSeptember 30, 2025 2:15:25 PM\tExternal\t\n824651580272727557\tKo, cảm ơn em\nSeptember 30, 2025 2:16:03 PM\tInternal\t\nVũ Lê Phương Linh\tDạ nếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh liên hệ lại kênh zalo support này nhé. Em cảm ơn và xin phép chào anh ạ.",
+    "Script": "\nDate/Time\tParticipant Type\tParticipant\tText\nSeptember 30, 2025 2:08:32 PM\tExternal\t\n824651580272727557\\nSeptember 30, 2025 2:08:34 PM\tInternal\t\nBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nSeptember 30, 2025 2:08:47 PM\tInternal\t\nVũ Lê Phương Linh\tEm là Linh, xin phép được hỗ trợ vấn đề cho anh/chị ạ.\nSeptember 30, 2025 2:10:13 PM\tExternal\t\n824651580272727557\tEm cho anh hỏi. E check giúp xem Outlets này còn gán Mối Quan Hệ với Sub Cô Là ko em nhé.\nSeptember 30, 2025 2:11:01 PM\tExternal\t\n824651580272727557\nSeptember 30, 2025 2:13:43 PM\tInternal\t\nVũ Lê Phương Linh\tDạ em kiểm tra outlet 61700645 không có mqh với Sub CÔ LÀ trên SEM ạ.\nSeptember 30, 2025 2:14:46 PM\tExternal\t\n824651580272727557\tCảm ơn em nhé.\nSeptember 30, 2025 2:15:06 PM\tInternal\t\nVũ Lê Phương Linh\tDạ ngoài vấn đề trên, anh cần em hỗ trợ thêm thông tin nào khác không ạ?\nSeptember 30, 2025 2:15:25 PM\tExternal\t\n824651580272727557\tKo, cảm ơn em\nSeptember 30, 2025 2:16:03 PM\tInternal\t\nVũ Lê Phương Linh\tDạ nếu không có vấn đề khác cần hỗ trợ em xin phép kết thúc cuộc trò chuyện tại đây. Cần hỗ trợ thêm thông tin khác anh liên hệ lại kênh zalo support này nhé. Em cảm ơn và xin phép chào anh ạ.",
     "Script_num": "Script_5",
     "messages": [
       {
@@ -1735,10 +1355,6 @@
       },
       {
         "role": "user",
-        "content": "Nhờ team hỗ trợ nhé"
-      },
-      {
-        "role": "user",
         "content": "Mình có 1 đơn hàng Pending, đã Older nhưng không về hệ thống của Sub : 1/ TH Thanh Thảo ( 67404607 ) Nhờ team hỗ trợ giúp"
       },
       {
@@ -1755,27 +1371,7 @@
       },
       {
         "role": "assistant",
-        "content": "Khi có thông tin sẽ phản hồi lại cho anh nhé"
-      },
-      {
-        "role": "assistant",
-        "content": "Anh cho em xin thêm thông tin sdt của mình để khi có kết quả em gọi ra thông báo cho anh ạ"
-      },
-      {
-        "role": "user",
-        "content": "ok tks team"
-      },
-      {
-        "role": "assistant",
-        "content": "Anh cho em xin thêm thông tin sdt của mình để khi có kết quả em gọi ra thông báo cho anh ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "Anh còn trong cuộc trò chuyện không ạ"
-      },
-      {
-        "role": "assistant",
-        "content": "0972946507 -Đây là thông tin số điện thoại của anh đúng không ạ"
+        "content": "Khi có thông tin sẽ phản hồi lại về số đt 0972946507 cho anh nhé"
       },
       {
         "role": "assistant",
@@ -1783,7 +1379,7 @@
       },
       {
         "role": "user",
-        "content": "đúng chị"
+        "content": "oke"
       },
       {
         "role": "assistant",
@@ -1798,7 +1394,7 @@
     "Targeted_Customers": "-Sub-Distributor\n- Sales Force",
     "Intentions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT",
     "Solutions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT\n- Yêu cầu cung cấp mã đơn hàng\n- Kiểm tra thông tin đơn hàng trên Dashboard và Business Central 365\n- Log GSD cho L2 hỗ trợ repush đơn hàng",
-    "Script": "Interaction Type:\tMessage\nInteraction ID:\tf577dc7b-3956-4f8a-8570-fcf5e1beb9f5\nMessage Type:\tOpen\nStart Time:\tMonday, November 24, 2025 9:09:16 AM (UTC+07:00) \nEnd Time:\tMonday, November 24, 2025 9:58:11 AM (UTC+07:00) \nDuration:\t48:55\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t2611718834639135817\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 24, 2025 9:09:16 AM\tExternal\t2611718834639135817\tHi team\nNovember 24, 2025 9:09:18 AM\tExternal\t2611718834639135817\tỨng dụng HVN Đặt hàng\nNovember 24, 2025 9:09:19 AM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 24, 2025 9:09:23 AM\tExternal\t2611718834639135817\tImage\nNovember 24, 2025 9:09:51 AM\tExternal\t2611718834639135817\tĐặt hàng mà k về. Sud team ưoi\nNovember 24, 2025 9:09:53 AM\tExternal\t2611718834639135817\tOi\nNovember 24, 2025 9:14:05 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ anh cần hỗ trợ đơn hàng không về DIS Lite của SubD đúng không ạ\nNovember 24, 2025 9:15:14 AM\tExternal\t2611718834639135817\tĐúng rồi em\nNovember 24, 2025 9:18:13 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh cung cấp các thông tin sau giúp em nhé: 1. Mã code + Tên SubD 2. Mã code + Tên outlet 3. mã đơn hàng tương ứng\nNovember 24, 2025 9:23:27 AM\tExternal\t2611718834639135817\t66002105 Việt Anh Nga 66016555 Cô Hà C 0251124-01481\nNovember 24, 2025 9:24:56 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ code nào là code SubD ạ\nNovember 24, 2025 9:25:58 AM\tExternal\t2611718834639135817\tanh ghi giống em yêu cầu áh em\nNovember 24, 2025 9:26:36 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh vui lòng đợi em kiểm tra thông tin nhé\nNovember 24, 2025 9:52:20 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện em kiểm tra đơn hàng CO251124-01481 đã hiển thị trên DIS Lite của SubD với trạng thái Created rồi anh nhé\nNovember 24, 2025 9:52:34 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh báo SubD 66002105 VIỆT ANH NGA kiểm tra lại giúp em nhé\nNovember 24, 2025 9:58:05 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện tại em không nhận được tín hiệu phản hồi nên em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em cảm ơn và xin phép chào ạ",
+    "Script": "Interaction Type:\tMessage\nInteraction ID:\tf577dc7b-3956-4f8a-8570-fcf5e1beb9f5\nMessage Type:\tOpen\nStart Time:\tMonday, November 24, 2025 9:09:16 AM (UTC+07:00) \nEnd Time:\tMonday, November 24, 2025 9:58:11 AM (UTC+07:00) \nDuration:\t48:55\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t2611718834639135817\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 24, 2025 9:09:16 AM\tExternal\t2611718834639135817\tHi team\nNovember 24, 2025 9:09:18 AM\tExternal\t2611718834639135817\tỨng dụng HVN Đặt hàng\nNovember 24, 2025 9:09:19 AM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 24, 2025 9:09:23 AM\tExternal\t2611718834639135817\nNovember 24, 2025 9:09:51 AM\tExternal\t2611718834639135817\tĐặt hàng mà k về. Sud team ưoi\nNovember 24, 2025 9:09:53 AM\tExternal\t2611718834639135817\tOi\nNovember 24, 2025 9:14:05 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ anh cần hỗ trợ đơn hàng không về DIS Lite của SubD đúng không ạ\nNovember 24, 2025 9:15:14 AM\tExternal\t2611718834639135817\tĐúng rồi em\nNovember 24, 2025 9:18:13 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh cung cấp các thông tin sau giúp em nhé: 1. Mã code + Tên SubD 2. Mã code + Tên outlet 3. mã đơn hàng tương ứng\nNovember 24, 2025 9:23:27 AM\tExternal\t2611718834639135817\t66002105 Việt Anh Nga 66016555 Cô Hà C 0251124-01481\nNovember 24, 2025 9:24:56 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ code nào là code SubD ạ\nNovember 24, 2025 9:25:58 AM\tExternal\t2611718834639135817\tanh ghi giống em yêu cầu áh em\nNovember 24, 2025 9:26:36 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh vui lòng đợi em kiểm tra thông tin nhé\nNovember 24, 2025 9:52:20 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện em kiểm tra đơn hàng CO251124-01481 đã hiển thị trên DIS Lite của SubD với trạng thái Created rồi anh nhé\nNovember 24, 2025 9:52:34 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh báo SubD 66002105 VIỆT ANH NGA kiểm tra lại giúp em nhé\nNovember 24, 2025 9:58:05 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện tại em không nhận được tín hiệu phản hồi nên em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em cảm ơn và xin phép chào ạ",
     "Script_num": "Script_2",
     "messages": [
       {
@@ -1837,18 +1433,7 @@
         "role": "user",
         "content": "66002105 Việt Anh Nga 66016555 Cô Hà C 0251124-01481"
       },
-      {
-        "role": "assistant",
-        "content": "Dạ code nào là code SubD ạ"
-      },
-      {
-        "role": "user",
-        "content": "anh ghi giống em yêu cầu áh em"
-      },
-      {
-        "role": "assistant",
-        "content": "Anh vui lòng đợi em kiểm tra thông tin nhé"
-      },
+
       {
         "role": "assistant",
         "content": "Hiện em kiểm tra đơn hàng CO251124-01481 đã hiển thị trên DIS Lite của SubD với trạng thái Created rồi anh nhé"
@@ -1870,13 +1455,9 @@
     "Targeted_Customers": "-Sub-Distributor\n- Sales Force",
     "Intentions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT",
     "Solutions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT\n- Yêu cầu cung cấp mã đơn hàng\n- Kiểm tra thông tin đơn hàng trên Dashboard và Business Central 365\n- Log GSD cho L2 hỗ trợ repush đơn hàng",
-    "Script": "Interaction Type:\tMessage\nInteraction ID:\ta312869d-fac9-46a6-ac1f-2539d7e9062a\nMessage Type:\tOpen\nStart Time:\tMonday, December 1, 2025 2:12:21 PM (UTC+07:00) \nEnd Time:\tMonday, December 1, 2025 2:34:18 PM (UTC+07:00) \nDuration:\t21:57\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t7499324561596777573\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 1, 2025 2:12:21 PM\tExternal\t7499324561596777573\t#hvn_dislite\nDecember 1, 2025 2:12:23 PM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 1, 2025 2:12:29 PM\tExternal\t7499324561596777573\tImage\nDecember 1, 2025 2:12:37 PM\tExternal\t7499324561596777573\tXem giúp đơn này ko về Dis lite\nDecember 1, 2025 2:12:46 PM\tExternal\t7499324561596777573\tBida 92 Luxury 69228169 lấy Dưỡng Nhánh 69200667\nDecember 1, 2025 2:28:03 PM\tInternal\tNguyễn Thị Huyền Trâm\tTeam kiểm tra đơn hàng 2512017604183 không có mqh hợp lệ với SubD 69200667 Dưỡng Nhánh trên DIS Lite. Anh nhờ Sale Admin kiểm tra/điều chỉnh mối quan hệ cho đơn hàng này. Sau 24h đồng bộ, anh nhắn lại để team kiểm tra mối quan hệ và repush đơn lên hệ thống giúp mình.\nDecember 1, 2025 2:34:13 PM\tInternal\tNguyễn Thị Huyền Trâm\tHiện tại em không nhận được tín hiệu phản hồi nên em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em cảm ơn và xin phép chào ạ",
+    "Script": "Interaction Type:\tMessage\nInteraction ID:\ta312869d-fac9-46a6-ac1f-2539d7e9062a\nMessage Type:\tOpen\nStart Time:\tMonday, December 1, 2025 2:12:21 PM (UTC+07:00) \nEnd Time:\tMonday, December 1, 2025 2:34:18 PM (UTC+07:00) \nDuration:\t21:57\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t7499324561596777573\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 1, 2025 2:12:21 PM\tExternal\t7499324561596777573\t#hvn_dislite\nDecember 1, 2025 2:12:23 PM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 1, 2025 2:12:29 PM\tExternal\t7499324561596777573\nDecember 1, 2025 2:12:37 PM\tExternal\t7499324561596777573\tXem giúp đơn này ko về Dis lite\nDecember 1, 2025 2:12:46 PM\tExternal\t7499324561596777573\tBida 92 Luxury 69228169 lấy Dưỡng Nhánh 69200667\nDecember 1, 2025 2:28:03 PM\tInternal\tNguyễn Thị Huyền Trâm\tTeam kiểm tra đơn hàng 2512017604183 không có mqh hợp lệ với SubD 69200667 Dưỡng Nhánh trên DIS Lite. Anh nhờ Sale Admin kiểm tra/điều chỉnh mối quan hệ cho đơn hàng này. Sau 24h đồng bộ, anh nhắn lại để team kiểm tra mối quan hệ và repush đơn lên hệ thống giúp mình.\nDecember 1, 2025 2:34:13 PM\tInternal\tNguyễn Thị Huyền Trâm\tHiện tại em không nhận được tín hiệu phản hồi nên em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em cảm ơn và xin phép chào ạ",
     "Script_num": "Script_3",
     "messages": [
-      {
-        "role": "user",
-        "content": "#hvn_dislite"
-      },
       {
         "role": "assistant",
         "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
@@ -1887,7 +1468,7 @@
       },
       {
         "role": "user",
-        "content": "Bida 92 Luxury 69228169 lấy Dưỡng Nhánh 69200667"
+        "content": "Bida 92 Luxury 69228169 lấy Dưỡng Nhánh 69200667, đơn hàng 2512017604183"
       },
       {
         "role": "assistant",
@@ -1899,6 +1480,7 @@
       }
     ]
   },
+
   {
     "cations": "DIS Lite",
     "Category": "Order",
@@ -1906,43 +1488,7 @@
     "Targeted_Customers": "-Sub-Distributor\n- Sales Force",
     "Intentions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT",
     "Solutions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT\n- Yêu cầu cung cấp mã đơn hàng\n- Kiểm tra thông tin đơn hàng trên Dashboard và Business Central 365\n- Log GSD cho L2 hỗ trợ repush đơn hàng",
-    "Script": "\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 29, 2025 4:56:48 PM\tExternal\t5238353348229498053\tMaiv02@heiway.net\nNovember 29, 2025 4:56:50 PM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 29, 2025 5:00:45 PM\tInternal\tLìu Hy Minh\tDạ anh liên hệ lại vấn đề subdis không nhận được đơn hàng - Anh cho em code với tên subdis - Code outlet - Mã đơn hàng nhé.\nNovember 29, 2025 5:01:15 PM\tExternal\t5238353348229498053\tImage\nNovember 29, 2025 5:01:17 PM\tExternal\t5238353348229498053\tImage\nNovember 29, 2025 5:01:19 PM\tExternal\t5238353348229498053\tImage\nNovember 29, 2025 5:01:47 PM\tExternal\t5238353348229498053\tSub : Minh quang 67511303\nNovember 29, 2025 5:02:13 PM\tExternal\t5238353348229498053\tOutlet : Hoa sơn quán: 67508467\nNovember 29, 2025 5:10:12 PM\tInternal\tLìu Hy Minh\tDạ anh anh đợi em kiểm tra nhé.\nNovember 29, 2025 5:16:45 PM\tInternal\tLìu Hy Minh\tSubdis 67511303 MINH QUANG Outlet67508467 HOA SƠN QUÁN 2511297580678 2511297580464 2511277554329 Em kiểm tra mối quan hệ hết hạn trên dislite, nên subdis không nhận được đơn hàng, anh liên hệ anh/chị Sale admin kiểm tra và điều chỉnh mối quan hệ, rồi đợi 24h hệ thống đồng bộ sau đó liên hệ lại bên em kiểm tra nhé!\nNovember 29, 2025 5:17:48 PM\tInternal\tLìu Hy Minh\tNgoài vấn đề này, anh cần em hỗ trợ gì thêm không ạ?\nNovember 29, 2025 5:24:05 PM\tInternal\tLìu Hy Minh\tNếu anh cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, anh liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào anh ạ, chúc anh một ngày tốt lành và nhiều sức khỏe.",
-    "Script_num": "Script_4",
-    "messages": [
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
-      },
-      {
-        "role": "user",
-        "content": "Dạ anh liên hệ lại vấn đề subdis không nhận được đơn hàng - Anh cho em code với tên subdis - Code outlet - Mã đơn hàng nhé."
-      },
-      {
-        "role": "assistant",
-        "content": "Dạ anh anh đợi em kiểm tra nhé."
-      },
-      {
-        "role": "assistant",
-        "content": "Subdis 67511303 MINH QUANG Outlet67508467 HOA SƠN QUÁN 2511297580678 2511297580464 2511277554329 Em kiểm tra mối quan hệ hết hạn trên dislite, nên subdis không nhận được đơn hàng, anh liên hệ anh/chị Sale admin kiểm tra và điều chỉnh mối quan hệ, rồi đợi 24h hệ thống đồng bộ sau đó liên hệ lại bên em kiểm tra nhé!"
-      },
-      {
-        "role": "assistant",
-        "content": "Ngoài vấn đề này, anh cần em hỗ trợ gì thêm không ạ?"
-      },
-      {
-        "role": "assistant",
-        "content": "Nếu anh cần phản hồi thông tin hoặc có bất kỳ vấn đề nào khác, anh liên hệ lại kênh chat này hoặc tổng đài hotline app HVN 1800234522 nhấn phím 1 giúp em. Em xin phép chào anh ạ, chúc anh một ngày tốt lành và nhiều sức khỏe."
-      }
-    ]
-  },
-  {
-    "cations": "DIS Lite",
-    "Category": "Order",
-    "Sub_Category": "C2.1 - Missing order(s) from other platform",
-    "Targeted_Customers": "-Sub-Distributor\n- Sales Force",
-    "Intentions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT",
-    "Solutions": "C2.1.1 - SubD không nhận được đơn hàng từ SEM/DOT\n- Yêu cầu cung cấp mã đơn hàng\n- Kiểm tra thông tin đơn hàng trên Dashboard và Business Central 365\n- Log GSD cho L2 hỗ trợ repush đơn hàng",
-    "Script": "Interaction Type:\tMessage\nInteraction ID:\td4e5ab63-c99d-4566-9c26-a6981961d2a7\nMessage Type:\tOpen\nStart Time:\tMonday, November 17, 2025 9:04:57 AM (UTC+07:00) \nEnd Time:\tMonday, November 17, 2025 9:53:04 AM (UTC+07:00) \nDuration:\t48:07\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t3508788022154690502\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 17, 2025 9:04:57 AM\tExternal\t3508788022154690502\thi em\nNovember 17, 2025 9:04:58 AM\tExternal\t3508788022154690502\tỨng dụng Seller Portal (Dis Lite)\nNovember 17, 2025 9:04:59 AM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 17, 2025 9:05:05 AM\tExternal\t3508788022154690502\tImage\nNovember 17, 2025 9:05:13 AM\tExternal\t3508788022154690502\tkiểm tra dùm anh tình trạng đơn hàng này nha em\nNovember 17, 2025 9:07:03 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh cần kiểm tra trạng thái đơn hàng trên DIS LIte đúng không anh\nNovember 17, 2025 9:07:16 AM\tExternal\t3508788022154690502\tđúng rồi em\nNovember 17, 2025 9:10:15 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh đợi em kiểm tra thông tin nhé\nNovember 17, 2025 9:10:35 AM\tExternal\t3508788022154690502\tok em\nNovember 17, 2025 9:37:12 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện Team kiểm tra đơn hàng CO251108-08280 đang có MQH hết hạn trên DIS Lite nên đơn chưa về DIS Lite của SubD 67001012 HỒNG GẤM nhé anh. Anh nhờ Sale Admin kiểm tra/điều chỉnh mối quan hệ cho đơn hàng này. Sau 24h đồng bộ, anh nhắn lại để team kiểm tra mối quan hệ và repush đơn lên hệ thống giúp mình.\nNovember 17, 2025 9:42:13 AM\tExternal\t3508788022154690502\tok cảm ơn em\nNovember 17, 2025 9:46:02 AM\tInternal\tNguyễn Thị Huyền Trâm\tNgoài vấn đề này, anh cần em hỗ trợ thêm thông tin gì không ạ ?\nNovember 17, 2025 9:46:07 AM\tExternal\t3508788022154690502\tko em\nNovember 17, 2025 9:52:38 AM\tInternal\tNguyễn Thị Huyền Trâm\tNếu không còn vấn đề gì cần hỗ trợ thì em xin phép được kết thúc trò chuyện tại đây. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em xin phép chào ạ.",
+    "Script": "Interaction Type:\tMessage\nInteraction ID:\td4e5ab63-c99d-4566-9c26-a6981961d2a7\nMessage Type:\tOpen\nStart Time:\tMonday, November 17, 2025 9:04:57 AM (UTC+07:00) \nEnd Time:\tMonday, November 17, 2025 9:53:04 AM (UTC+07:00) \nDuration:\t48:07\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t3508788022154690502\n\nDate/Time\tParticipant Type\tParticipant\tText\nNovember 17, 2025 9:04:57 AM\tExternal\t3508788022154690502\thi em\nNovember 17, 2025 9:04:58 AM\tExternal\t3508788022154690502\tỨng dụng Seller Portal (Dis Lite)\nNovember 17, 2025 9:04:59 AM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nNovember 17, 2025 9:05:05 AM\tExternal\t3508788022154690502\nNovember 17, 2025 9:05:13 AM\tExternal\t3508788022154690502\tkiểm tra dùm anh tình trạng đơn hàng này nha em\nNovember 17, 2025 9:07:03 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh cần kiểm tra trạng thái đơn hàng trên DIS LIte đúng không anh\nNovember 17, 2025 9:07:16 AM\tExternal\t3508788022154690502\tđúng rồi em\nNovember 17, 2025 9:10:15 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh đợi em kiểm tra thông tin nhé\nNovember 17, 2025 9:10:35 AM\tExternal\t3508788022154690502\tok em\nNovember 17, 2025 9:37:12 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện Team kiểm tra đơn hàng CO251108-08280 đang có MQH hết hạn trên DIS Lite nên đơn chưa về DIS Lite của SubD 67001012 HỒNG GẤM nhé anh. Anh nhờ Sale Admin kiểm tra/điều chỉnh mối quan hệ cho đơn hàng này. Sau 24h đồng bộ, anh nhắn lại để team kiểm tra mối quan hệ và repush đơn lên hệ thống giúp mình.\nNovember 17, 2025 9:42:13 AM\tExternal\t3508788022154690502\tok cảm ơn em\nNovember 17, 2025 9:46:02 AM\tInternal\tNguyễn Thị Huyền Trâm\tNgoài vấn đề này, anh cần em hỗ trợ thêm thông tin gì không ạ ?\nNovember 17, 2025 9:46:07 AM\tExternal\t3508788022154690502\tko em\nNovember 17, 2025 9:52:38 AM\tInternal\tNguyễn Thị Huyền Trâm\tNếu không còn vấn đề gì cần hỗ trợ thì em xin phép được kết thúc trò chuyện tại đây. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em xin phép chào ạ.",
     "Script_num": "Script_5",
     "messages": [
       {
@@ -1959,7 +1505,7 @@
       },
       {
         "role": "user",
-        "content": "kiểm tra dùm anh tình trạng đơn hàng này nha em"
+        "content": "kiểm tra dùm anh tình trạng đơn hàng này nha em CO251108-08280"
       },
       {
         "role": "assistant",
@@ -2082,7 +1628,7 @@
     "Targeted_Customers": "-Sub-Distributor\n- Sales Force",
     "Intentions": "C2.4.1 - Trạng thái đơn hàng",
     "Solutions": "C2.4.1 - Trạng thái đơn hàng\n- Yêu cầu cung cấp mã đơn hàng\n- Kiểm tra thông tin đơn hàng trên Dashboard hoặc Business Central 365",
-    "Script": "Interaction Type:\tMessage\nInteraction ID:\t382b6ee9-7e11-4ec2-891a-0885b83fc1f3\nMessage Type:\tOpen\nStart Time:\tMonday, December 1, 2025 9:39:19 AM (UTC+07:00) \nEnd Time:\tMonday, December 1, 2025 11:07:23 AM (UTC+07:00) \nDuration:\t1:28:03\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t8862359388800153994\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 1, 2025 9:39:19 AM\tExternal\t8862359388800153994\tImage\nDecember 1, 2025 9:39:22 AM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 1, 2025 9:39:30 AM\tExternal\t8862359388800153994\tImage\nDecember 1, 2025 9:40:46 AM\tExternal\t8862359388800153994\tCó sdip bé liên -64700667, có đơn treo nhưng sáng nay vào kiểm tra không thấy.\nDecember 1, 2025 9:40:56 AM\tExternal\t8862359388800153994\tNhờ em kiểm tra giup\nDecember 1, 2025 9:48:02 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện em chưa rõ vấn đề anh cần hỗ trợ ạ? Anh cần kiểm tra SubD 64700667 Bé Liên đăng nhập vào app DIS Lite không hiển thị các chỉ số như trên hình ảnh đúng không anh\nDecember 1, 2025 9:51:00 AM\tExternal\t8862359388800153994\tCó 3 đơn treo hôm qua nay không thấy đó em\nDecember 1, 2025 9:54:31 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh vào mục nào không thấy vậy ạ\nDecember 1, 2025 10:05:27 AM\tExternal\t8862359388800153994\tTrên hình này ko hiện đơn luon em\nDecember 1, 2025 10:09:48 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ tức là anh kiểm tra trong mục tháng này không có thông tin đơn hàng đúng không anh\nDecember 1, 2025 10:10:30 AM\tExternal\t8862359388800153994\tImage\nDecember 1, 2025 10:10:39 AM\tExternal\t8862359388800153994\tĐơn treo sẽ hiện trên này\nDecember 1, 2025 10:13:09 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh đợi em kiểm tra thông tin nhé\nDecember 1, 2025 10:57:44 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ hiện team kiểm tra 3 đơn hàng trong hình đang ở trạng thái Cancelled trên DIS Lite rồi nhé anh. Anh báo SubD kiểm tra lại giúp em\nDecember 1, 2025 10:57:50 AM\tInternal\tNguyễn Thị Huyền Trâm\t2511307599040 2511307598986 CO251130-10717\nDecember 1, 2025 11:07:18 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện tại em không nhận được tín hiệu phản hồi nên em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em cảm ơn và xin phép chào ạ",
+    "Script": "Interaction Type:\tMessage\nInteraction ID:\t382b6ee9-7e11-4ec2-891a-0885b83fc1f3\nMessage Type:\tOpen\nStart Time:\tMonday, December 1, 2025 9:39:19 AM (UTC+07:00) \nEnd Time:\tMonday, December 1, 2025 11:07:23 AM (UTC+07:00) \nDuration:\t1:28:03\nInternal Participant(s):\tNguyễn Thị Huyền Trâm\nExternal Participant(s):\t8862359388800153994\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 1, 2025 9:39:19 AM\tExternal\t8862359388800153994\tImage\nDecember 1, 2025 9:39:22 AM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 1, 2025 9:39:30 AM\tExternal\t8862359388800153994\nDecember 1, 2025 9:40:46 AM\tExternal\t8862359388800153994\tCó sdip bé liên -64700667, có đơn treo nhưng sáng nay vào kiểm tra không thấy.\nDecember 1, 2025 9:40:56 AM\tExternal\t8862359388800153994\tNhờ em kiểm tra giup\nDecember 1, 2025 9:48:02 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện em chưa rõ vấn đề anh cần hỗ trợ ạ? Anh cần kiểm tra SubD 64700667 Bé Liên đăng nhập vào app DIS Lite không hiển thị các chỉ số như trên hình ảnh đúng không anh\nDecember 1, 2025 9:51:00 AM\tExternal\t8862359388800153994\tCó 3 đơn treo hôm qua nay không thấy đó em\nDecember 1, 2025 9:54:31 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh vào mục nào không thấy vậy ạ\nDecember 1, 2025 10:05:27 AM\tExternal\t8862359388800153994\tTrên hình này ko hiện đơn luon em\nDecember 1, 2025 10:09:48 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ tức là anh kiểm tra trong mục tháng này không có thông tin đơn hàng đúng không anh\nDecember 1, 2025 10:10:30 AM\tExternal\t8862359388800153994\nDecember 1, 2025 10:10:39 AM\tExternal\t8862359388800153994\tĐơn treo sẽ hiện trên này\nDecember 1, 2025 10:13:09 AM\tInternal\tNguyễn Thị Huyền Trâm\tAnh đợi em kiểm tra thông tin nhé\nDecember 1, 2025 10:57:44 AM\tInternal\tNguyễn Thị Huyền Trâm\tDạ hiện team kiểm tra 3 đơn hàng trong hình đang ở trạng thái Cancelled trên DIS Lite rồi nhé anh. Anh báo SubD kiểm tra lại giúp em\nDecember 1, 2025 10:57:50 AM\tInternal\tNguyễn Thị Huyền Trâm\t2511307599040 2511307598986 CO251130-10717\nDecember 1, 2025 11:07:18 AM\tInternal\tNguyễn Thị Huyền Trâm\tHiện tại em không nhận được tín hiệu phản hồi nên em xin phép được kết thúc cuộc hội thoại trước. Trong trường hợp cần hỗ trợ thêm các vấn đề về app HVN Đặt Hàng và Seller Portal, mình liên hệ lại kênh Zalo Heineken HVN Đặt Hàng giúp em nhé. Em cảm ơn và xin phép chào ạ",
     "Script_num": "Script_2",
     "messages": [
       {
@@ -2104,10 +1650,6 @@
       {
         "role": "user",
         "content": "Đơn treo sẽ hiện trên này"
-      },
-      {
-        "role": "assistant",
-        "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
       },
       {
         "role": "assistant",
@@ -2146,16 +1688,12 @@
     "Script_num": "Script_3",
     "messages": [
       {
-        "role": "user",
-        "content": "Vào là đá ra nha em"
-      },
-      {
         "role": "assistant",
         "content": "Cảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?"
       },
       {
         "role": "user",
-        "content": "Huye đơn treo"
+        "content": "Huye đơn treo 69352321SI-001885 69352321SI-001888"
       },
       {
         "role": "assistant",
@@ -2214,7 +1752,7 @@
     "Targeted_Customers": "-Sub-Distributor\n- Sales Force",
     "Intentions": "C2.4.1 - Trạng thái đơn hàng",
     "Solutions": "C2.4.1 - Trạng thái đơn hàng\n- Yêu cầu cung cấp mã đơn hàng\n- Kiểm tra thông tin đơn hàng trên Dashboard hoặc Business Central 365",
-    "Script": "Interaction Type:\tMessage\nInteraction ID:\t17d0befc-eb6f-4988-809f-4ddcdf744573\nMessage Type:\tOpen\nStart Time:\tMonday, December 1, 2025 5:51:31 PM (UTC+07:00) \nEnd Time:\tMonday, December 1, 2025 6:37:15 PM (UTC+07:00) \nDuration:\t45:44\nInternal Participant(s):\tHuỳnh Hồng Ngọc\nExternal Participant(s):\t2332638406501105960\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 1, 2025 5:51:31 PM\tExternal\t2332638406501105960\tNhờ team hổ trợ\nDecember 1, 2025 5:51:33 PM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 1, 2025 5:51:38 PM\tExternal\t2332638406501105960\tImage\nDecember 1, 2025 5:52:10 PM\tInternal\tHuỳnh Hồng Ngọc\tDạ anh cần hỗ trợ vấn đề gì vậy ạ\nDecember 1, 2025 5:52:29 PM\tExternal\t2332638406501105960\tĐơn hàng này đã duyệt mà ko nhảy lên hệ thống của sdu. Còn hiện chưa sử lý\nDecember 1, 2025 5:53:49 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh cho em xin mã code, tên SubD ạ\nDecember 1, 2025 5:58:02 PM\tExternal\t2332638406501105960\t67750799\nDecember 1, 2025 6:01:47 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh ơi, anh cho em hỏi lại mình đề cập đơn không nhảy lên hệ thống của SubD là sao vậy ạ?\nDecember 1, 2025 6:02:14 PM\tInternal\tHuỳnh Hồng Ngọc\tMình đang cần hỗ trợ đơn SubD mua bia NPP không được cộng tồn kho\nDecember 1, 2025 6:02:24 PM\tInternal\tHuỳnh Hồng Ngọc\tHay như thế nào, anh đề cập rõ hơn giúp em nha\nDecember 1, 2025 6:08:13 PM\tExternal\t2332638406501105960\tĐơn hàng sdu đã duyệt mà ko nhảy lên hệ thống nên bị rớt sale out của sdu á\nDecember 1, 2025 6:10:33 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh đề cập rõ hơn hệ thống mình đang cần hỗ trợ giúp em nha. Hiện zalo bên em đang hỗ trợ hệ thống DIS Lite và B2B. Đơn hàng này đã được SubD duyệt trên Dis Lite rồi ạ\nDecember 1, 2025 6:10:48 PM\tInternal\tHuỳnh Hồng Ngọc\tÝ mình đơn không nhảy lên hệ thống nào anh?\nDecember 1, 2025 6:14:56 PM\tExternal\t2332638406501105960\tÝ là khách đã duyệt đơn hàng mà vẫn nhảy lên hệ thống chưa sử lý nên nhảy lên hệ thống sale out của sdu ko đạt 100% ảnh hưởng đên tiền thưởng của sdu tháng 11\nDecember 1, 2025 6:16:38 PM\tInternal\tHuỳnh Hồng Ngọc\tEm kiểm tra đơn này trạng thái fully delivered bên phía SubD rồi ạ\nDecember 1, 2025 6:16:48 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh vui lòng chụp hình hệ thống anh cần kiểm tra\nDecember 1, 2025 6:17:04 PM\tInternal\tHuỳnh Hồng Ngọc\tHoặc hình ảnh hệ thống chưa xử lý đơn hàng\nDecember 1, 2025 6:17:13 PM\tInternal\tHuỳnh Hồng Ngọc\tĐể bên em có thông tin hỗ trợ mình\nDecember 1, 2025 6:21:03 PM\tExternal\t2332638406501105960\tImage\nDecember 1, 2025 6:21:11 PM\tExternal\t2332638406501105960\tĐơn hàng chưa sử lý\nDecember 1, 2025 6:26:07 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh kiểm tra lại mã đơn hàng giúp em nhé\nDecember 1, 2025 6:26:21 PM\tInternal\tHuỳnh Hồng Ngọc\tĐơn SubD duyệt là 67750799SI-000055 ạ\nDecember 1, 2025 6:27:32 PM\tInternal\tHuỳnh Hồng Ngọc\tĐơn 67750799SI-000050 đang ở trạng thái Open\nDecember 1, 2025 6:28:11 PM\tInternal\tHuỳnh Hồng Ngọc\tĐơn 67750799SI-000056 cũng đang ở trạng thái Open nha ạ\nDecember 1, 2025 6:29:01 PM\tInternal\tHuỳnh Hồng Ngọc\tVới đơn trạng thái Open hiện không còn hỗ trợ trên phiên bản ứng dụng. Anh báo SubD sử dụng phiên bản web máy tính để duyệt đơn giúp em nhé\nDecember 1, 2025 6:29:03 PM\tInternal\tHuỳnh Hồng Ngọc\tNgoài ra anh cần em hỗ trợ thêm thông tin nào khác không ạ?\nDecember 1, 2025 6:37:09 PM\tInternal\tHuỳnh Hồng Ngọc\tNếu cần được hỗ trợ thêm, mình liên hệ lại kênh Zalo: Heineken HVN Đặt Hàng để được giải đáp nhé. HVN xin cảm ơn và chúc anh chị một ngày tốt lành ạ.",
+    "Script": "Interaction Type:\tMessage\nInteraction ID:\t17d0befc-eb6f-4988-809f-4ddcdf744573\nMessage Type:\tOpen\nStart Time:\tMonday, December 1, 2025 5:51:31 PM (UTC+07:00) \nEnd Time:\tMonday, December 1, 2025 6:37:15 PM (UTC+07:00) \nDuration:\t45:44\nInternal Participant(s):\tHuỳnh Hồng Ngọc\nExternal Participant(s):\t2332638406501105960\n\nDate/Time\tParticipant Type\tParticipant\tText\nDecember 1, 2025 5:51:31 PM\tExternal\t2332638406501105960\tNhờ team hổ trợ\nDecember 1, 2025 5:51:33 PM\tInternal\tBot/Flow\tCảm ơn anh/chị đã liên hệ. Anh/chị đang cần hỗ trợ về vấn đề gì ạ?\nDecember 1, 2025 5:51:38 PM\tExternal\t2332638406501105960\nDecember 1, 2025 5:52:10 PM\tInternal\tHuỳnh Hồng Ngọc\tDạ anh cần hỗ trợ vấn đề gì vậy ạ\nDecember 1, 2025 5:52:29 PM\tExternal\t2332638406501105960\tĐơn hàng này đã duyệt mà ko nhảy lên hệ thống của sdu. Còn hiện chưa sử lý\nDecember 1, 2025 5:53:49 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh cho em xin mã code, tên SubD ạ\nDecember 1, 2025 5:58:02 PM\tExternal\t2332638406501105960\t67750799\nDecember 1, 2025 6:01:47 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh ơi, anh cho em hỏi lại mình đề cập đơn không nhảy lên hệ thống của SubD là sao vậy ạ?\nDecember 1, 2025 6:02:14 PM\tInternal\tHuỳnh Hồng Ngọc\tMình đang cần hỗ trợ đơn SubD mua bia NPP không được cộng tồn kho\nDecember 1, 2025 6:02:24 PM\tInternal\tHuỳnh Hồng Ngọc\tHay như thế nào, anh đề cập rõ hơn giúp em nha\nDecember 1, 2025 6:08:13 PM\tExternal\t2332638406501105960\tĐơn hàng sdu đã duyệt mà ko nhảy lên hệ thống nên bị rớt sale out của sdu á\nDecember 1, 2025 6:10:33 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh đề cập rõ hơn hệ thống mình đang cần hỗ trợ giúp em nha. Hiện zalo bên em đang hỗ trợ hệ thống DIS Lite và B2B. Đơn hàng này đã được SubD duyệt trên Dis Lite rồi ạ\nDecember 1, 2025 6:10:48 PM\tInternal\tHuỳnh Hồng Ngọc\tÝ mình đơn không nhảy lên hệ thống nào anh?\nDecember 1, 2025 6:14:56 PM\tExternal\t2332638406501105960\tÝ là khách đã duyệt đơn hàng mà vẫn nhảy lên hệ thống chưa sử lý nên nhảy lên hệ thống sale out của sdu ko đạt 100% ảnh hưởng đên tiền thưởng của sdu tháng 11\nDecember 1, 2025 6:16:38 PM\tInternal\tHuỳnh Hồng Ngọc\tEm kiểm tra đơn này trạng thái fully delivered bên phía SubD rồi ạ\nDecember 1, 2025 6:16:48 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh vui lòng chụp hình hệ thống anh cần kiểm tra\nDecember 1, 2025 6:17:04 PM\tInternal\tHuỳnh Hồng Ngọc\tHoặc hình ảnh hệ thống chưa xử lý đơn hàng\nDecember 1, 2025 6:17:13 PM\tInternal\tHuỳnh Hồng Ngọc\tĐể bên em có thông tin hỗ trợ mình\nDecember 1, 2025 6:21:03 PM\tExternal\t2332638406501105960\nDecember 1, 2025 6:21:11 PM\tExternal\t2332638406501105960\tĐơn hàng chưa sử lý\nDecember 1, 2025 6:26:07 PM\tInternal\tHuỳnh Hồng Ngọc\tAnh kiểm tra lại mã đơn hàng giúp em nhé\nDecember 1, 2025 6:26:21 PM\tInternal\tHuỳnh Hồng Ngọc\tĐơn SubD duyệt là 67750799SI-000055 ạ\nDecember 1, 2025 6:27:32 PM\tInternal\tHuỳnh Hồng Ngọc\tĐơn 67750799SI-000050 đang ở trạng thái Open\nDecember 1, 2025 6:28:11 PM\tInternal\tHuỳnh Hồng Ngọc\tĐơn 67750799SI-000056 cũng đang ở trạng thái Open nha ạ\nDecember 1, 2025 6:29:01 PM\tInternal\tHuỳnh Hồng Ngọc\tVới đơn trạng thái Open hiện không còn hỗ trợ trên phiên bản ứng dụng. Anh báo SubD sử dụng phiên bản web máy tính để duyệt đơn giúp em nhé\nDecember 1, 2025 6:29:03 PM\tInternal\tHuỳnh Hồng Ngọc\tNgoài ra anh cần em hỗ trợ thêm thông tin nào khác không ạ?\nDecember 1, 2025 6:37:09 PM\tInternal\tHuỳnh Hồng Ngọc\tNếu cần được hỗ trợ thêm, mình liên hệ lại kênh Zalo: Heineken HVN Đặt Hàng để được giải đáp nhé. HVN xin cảm ơn và chúc anh chị một ngày tốt lành ạ.",
     "Script_num": "Script_4",
     "messages": [
       {

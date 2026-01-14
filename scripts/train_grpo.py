@@ -23,7 +23,7 @@ from training.grpo.rewards import answer_reward, format_thinking_reward
 # ============================================================================
 # Environment Configuration
 # ============================================================================
-os.environ["UNSLOTH_VLLM_STANDBY"] = "1"
+# os.environ["UNSLOTH_VLLM_STANDBY"] = "1"
 # os.environ["PYTORCH_CUDA_ALLOC_CONF"] = ""
 # os.environ["PYTORCH_HIP_ALLOC_CONF"] = ""
 # os.environ["PYTORCH_ALLOC_CONF"] = ""
@@ -175,10 +175,11 @@ def run():
         max_prompt_length=MAX_PROMPT_LENGTH,
         max_completion_length=MAX_SEQ_LENGTH - MAX_PROMPT_LENGTH,
         # max_steps=300,
-        num_train_epochs=2,
-        save_steps=400,
-        report_to="none",
+        num_train_epochs=1,
+        save_steps=100,
+        report_to="wandb",
         output_dir="outputs",
+        run_name = "unsloth-run-1",
     )
     
     patched_format_thinking_reward = partial(

@@ -3,7 +3,7 @@ import torch
 
 # 1. Load model gốc và adapter
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name="grpo_chat_model",  # Thư mục chứa adapter của bạn
+    model_name="Heineken_qwen-3-8B_chatbot_grpo",  # Thư mục chứa adapter của bạn
     max_seq_length=2048,
     # dtype=None,  # Auto detect
     load_in_16bit=True,
@@ -14,7 +14,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 
 
 # 3. Save merged model
-output_dir = "./grpo_merged_model"
+output_dir = "./Heineken_qwen-3-8B_chatbot_merged"
 model.save_pretrained_merged(output_dir, tokenizer, save_method = "merged_16bit")
 
 print(f"✅ Model đã được merge và lưu tại: {output_dir}")

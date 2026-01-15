@@ -35,7 +35,7 @@ tools = [
 ]
 
 resp = client.chat.completions.create(
-    model="grpo_merged_model",
+    model="Heineken_qwen-3-8B-8bit",
     messages=[
         {"role": "system", "content": "Bạn là nhân viên CSKH Heineken Vietnam đang hỗ trợ trợ khách hàng theo những quy trình có sẵn."},
         {"role": "user", "content": "Alo"},

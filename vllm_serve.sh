@@ -1,8 +1,9 @@
 vllm serve \
-    --model Qwen/Qwen3-VL-4B-Instruct \
+    --model Heineken_qwen-3-8B_chatbot_merged \
+    --chat-template configs/chat_template.jinja2  \
     --enable-auto-tool-choice \
     --tool-call-parser hermes \
-    --max-model-len 16384 \
+    --max-model-len 2048 \
     --attention-backend FLASHINFER \
     --tensor-parallel-size 1 \
     --enable-prefix-caching \
@@ -15,7 +16,7 @@ vllm serve \
     --block-size 32 \
     --disable-sliding-window \
     --quantization fp8 \
-    --trust-remote-code
+    --reasoning-parser qwen3 
 
 ###
     # --chat-template configs/chat_template.jinja2 \
